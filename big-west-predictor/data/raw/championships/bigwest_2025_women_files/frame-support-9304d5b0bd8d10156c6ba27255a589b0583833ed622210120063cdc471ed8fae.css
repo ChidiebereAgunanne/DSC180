@@ -1,0 +1,6 @@
+turbo-frame[busy] .frame-loading-hide, turbo-frame .frame-loading-show {
+    display: none;
+}
+turbo-frame[busy] .frame-loading-show {
+    display: inline-block;
+}

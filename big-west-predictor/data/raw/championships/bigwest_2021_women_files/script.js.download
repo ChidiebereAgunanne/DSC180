@@ -1,0 +1,1214 @@
+waitForDOM().then(() => {
+    let time = 0;
+    let animationDuration = 15;
+    let animationComplete = false;
+
+    let numImages = 0;
+    let loadedImages = 0;
+    let images = {};
+    const img = {};
+
+    let tlMain;
+    let devToolInstance;
+    let draggableInstance;
+
+    const weatherActions = {
+        "snow": () => { isSnowing = true; snowing(); },
+        "rain": () => { isRaining = true; raining(); },
+        "lightning": () => { lightningAnimation.start(); }
+    };
+
+    // ==> Get Ad Meta Size <== //
+    const dimensionsStr = document.querySelector('meta[name="ad.size"]').content;
+    const obj = dimensionsStr.split(",").reduce((obj, s) => {
+        const [key, value] = s.match(/[^\s;=]+/g);
+        obj[key] = isNaN(value) ? value : +value;
+        return obj;
+    }, {});
+
+    // Get the root element
+    const _root = document.querySelector(":root");
+    _root.style.setProperty("--unit-width", obj.width + "px");
+    _root.style.setProperty("--unit-height", obj.height + "px");
+
+    (function (window) {
+        window.DEBUG = false;
+
+        const cta1 = document.getElementById('cta1');
+        const cta2 = document.getElementById('cta2');
+        const legalButton = document.getElementById('legalButton');
+        const legalContainer = document.getElementById('legalContainer');
+        const ad = document.getElementById('ad');
+        rainContainer = document.getElementById('rain-container');
+        snowContainer = document.getElementById('snow-container');
+        container = ad;
+        const time1 = 3;
+        const time2 = 2;
+
+        const offerMapOMS = {
+            apr: offer_apr_oms,
+            lease: offer_lease_oms,
+            cash: offer_cash_oms,
+            text: offer_text_oms,
+            compound: offer_compound_oms,
+            msrp: offer_msrp_oms,
+            fallback: offer_fallback_oms,
+            simple: offer_simple_oms,
+        };
+
+        const offerMapLocal = {
+            apr: offer_apr,
+            lease: offer_lease,
+            text: offer_text,
+            match: offer_match,
+            conquest: offer_conquest,
+            cash: offer_cash,
+            plus: offer_plus,
+            employee: offer_employee,
+            combo: offer_combo,
+            loyalty: offer_loyalty,
+            msrp: offer_msrp,
+            exception: offer_exception,
+            msrp2: offer_msrp2,
+            nopay: offer_nopayment,
+            nopay2: offer_nopayment2
+        };
+
+        //SLIDER DEFINITION
+        const colorButtons = [];
+        const carImages = [];
+        let currentCarIndex = 0
+
+        for (let i = 1; i <= 6; i++) {
+            const colorBtn = document.getElementById(`color_option${i}`);
+            const carImg = document.getElementById(`jellybean_color${i}`);
+
+            if (colorBtn) colorButtons.push(colorBtn);
+            if (carImg) carImages.push(carImg);
+        }
+
+        function changeCarColor(newIndex) {
+            if (newIndex === currentCarIndex) return;
+
+            const currentCar = carImages[currentCarIndex];
+            const newCar = carImages[newIndex];
+
+            const currentButton = colorButtons[currentCarIndex];
+            const newButton = colorButtons[newIndex];
+
+            currentButton.classList.remove('active');
+            newButton.classList.add('active');
+
+            gsap.timeline()
+                .to(currentCar, { duration: 0.4, scale: 1.2, autoAlpha: 0, ease: "sine.out" }, 0)
+                .to(newCar, { duration: 0.4, scale: 1, autoAlpha: 1, ease: "sine.out" }, 0);
+
+            currentCarIndex = newIndex;
+        }
+
+        function setupColorSlider() {
+            if (carImages.length > 0) {
+                gsap.set(carImages.slice(1), { autoAlpha: 0 });
+            }
+
+            if (colorButtons.length > 0) {
+                colorButtons[0].classList.add('active');
+            }
+
+            colorButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    changeCarColor(index);
+                });
+            });
+        }
+
+
+
+        let offerTarget;
+
+        const snowCanvas = document.getElementById('snow');
+
+        let CTAs = [cta1, cta2];
+
+        if (typeof String.prototype.autoformat !== 'function') {
+            String.prototype.autoformat = function () {
+                let s = this.toString();
+                return s;
+            };
+        }
+
+        function loadImages() {
+            for (var src in img) {
+                numImages++;
+                images[src] = isIE() ? document.createElement('img') : new Image();
+                images[src].onload = function () {
+                    if (++loadedImages >= numImages)
+                        Banner.instance.animate();
+                };
+                images[src].src = img[src];
+            }
+        }
+
+        function isIE() { return /Trident\/|MSIE/.test(window.navigator.userAgent); }
+
+
+        function Banner() {
+            window.tlMain = tlMain = gsap.timeline();
+            setDynamicContent();
+            loadImages();
+            gsap.set([
+                F2_img, F2_img2, F2_img2, F3_img, F4_img,
+                f1_txt_container,
+                f2_txt_container,
+                f2_txt_container2,
+                f4_txt_container,
+                f5_endemic_container,
+                f7_no_offer,
+                jeep_logo2,
+                jellybean_carImg,
+                offer_cash, offer_cash_oms, offer_apr, offer_apr_oms,
+                offer_lease, offer_lease_oms, offer_text, offer_match,
+                offer_conquest, offer_plus, offer_employee, offer_combo, offer_loyalty,
+                offer_msrp, offer_exception, offer_msrp2, offer_nopayment, offer_nopayment2,
+
+                offer_fallback_oms, offer_text_oms, offer_msrp_oms, offer_compound_oms, offer_simple_oms,
+
+                offer_fallback_oms, f6_colorize_container, tagline_vehname,
+                jellybean_color2, jellybean_color3, jellybean_color4, jellybean_color5, jellybean_color6], { autoAlpha: 0 });
+            gsap.set([cta_container, legalButton], { y: "+=35", autoAlpha: 0 });
+            gsap.set([jellybean_carImg, jellybean_car_color_container, f3_jellybean], { x: "+=70", autoAlpha: 0 });
+            gsap.set([F1_img, F2_img, F2_img2, F4_img, F7_img], { scale: 1.4, z: 0.1, force3D: true, transformOrigin: "right center" });
+            gsap.set(legalContainer, { y: '+=100' });
+            gsap.set(legal_closeBtn, { autoAlpha: 0, y: '+=50' });
+
+            // setupColorSlider();
+            // ==> 020526 INIT <== //
+            animation();
+        }
+        function parseJsonSafely(value, fallback = []) {
+            if (!value || typeof value !== "string" || value.trim() === "") {
+                return fallback;
+            }
+
+            try {
+                return JSON.parse(value);
+            } catch {
+                try {
+                    return JSON.parse(JSON.parse(value));
+                } catch {
+                    console.error("Fail try to fetch:", finalError);
+                    return fallback;
+                }
+            }
+        }
+        function extractDisclaimer(text) {
+            const match = text.match(/\*$/);
+            const marker = match ? match[0] : null;
+            const cleanText = text.replace(marker || '', '').trim();
+            return { cleanText, marker };
+        }
+        const cleanAsterisksOnly = (str) => {
+            if (!str) return '';
+            const text = Array.isArray(str) ? str.join('') : String(str);
+            return text.replace(/[\s*]/g, '').length === 0 ? '' : text;
+        };
+        function wrapLastWordWithValue(text, data) {
+            const trimmed = (text || '').trim();
+            const lastSpaceIndex = trimmed.lastIndexOf(' ');
+
+            if (lastSpaceIndex === -1) {
+                return `<span style="white-space: nowrap;">${trimmed ? `${trimmed}&nbsp;` : ''}${data}</span>`;
+            }
+
+            const firstPart = trimmed.slice(0, lastSpaceIndex);
+            const lastWord = trimmed.slice(lastSpaceIndex + 1);
+
+            return `${firstPart} <span style="white-space: nowrap;">${lastWord}&nbsp;${data}</span>`;
+        }
+        function findElement(name) {
+            return window[name] ?? null;
+        }
+        function setContent(element, content) {
+            if (element) element.innerHTML = content;
+        }
+        function applyStyles(elements, styles) {
+            const targets = Array.isArray(elements) ? elements : [elements];
+            targets.forEach(element => {
+                if (element) Object.assign(element.style, styles);
+            });
+        }
+        function normalizeSpacing(val) {
+            if (!val) return '';
+            let text = '';
+            if (Array.isArray(val)) {
+                text = val.join(' ').replace(/\s+/g, ' ').trim();
+            } else if (typeof val === 'string') {
+                text = val.replace(/\s+/g, ' ').trim();
+            } else {
+                text = String(val).trim();
+            }
+            if (!text || text === '*') return '';
+            return text.replace(/\s+\*/g, '*');
+        }
+        function setDynamicContent() {
+            if (!window.dynamicContent || !dynamicContent.creative_data || dynamicContent.creative_data.length === 0) {
+                return;
+            }
+
+            const ctaColor = dynamicContent.creative_data[0].cta_color;
+            const ctaHover = dynamicContent.creative_data[0].cta_hover;
+            const F1_img = document.getElementById('F1_img');
+            const f5_vehicle_name = document.getElementById('f5_vehicle_name');
+
+            const f1_veh_name = document.querySelector('#f1_txt_container .vehicle_name');
+
+            //ASSIGN IDs TO DYNAMIC.JS TXT VARIABLES.
+            const parent = dynamicContent.parent[0];
+            console.log('parent:', parent);
+
+            const creativeData = dynamicContent.creative_data[0];
+            console.log('creativeData:', creativeData);
+
+            const TIER = dynamicContent.parent[0].TIER;
+            if (TIER === 'T2') {
+                const omsData = dynamicContent.OMS[0];
+                const offerType = omsData.offerType.split('_')[1] || null;
+
+                console.log('omsData:', omsData);
+
+                let rdValues;
+                let customGroups;
+                rdValues = parseJsonSafely(omsData.rd_values, []);
+                customGroups = parseJsonSafely(omsData.customGroups, []);
+
+                legal_offers_oms.innerHTML = dynamicContent.OMS[0].legal;
+
+                if (offerType === 'cash') {
+                    const priceObserver = new ResizeObserver(() => {
+                        const priceLength = cash_oms_offer_text.textContent.length;
+                        if (priceLength > 6) {
+                            cash_oms_offer_text.style.fontSize = '2.5rem';
+                            cash_oms_offer_terms.style.fontSize = '0.5rem';
+                        } else if (priceLength > 5) {
+                            cash_oms_offer_text.style.fontSize = '2.75rem';
+                            cash_oms_offer_terms.style.fontSize = '0.6rem';
+                        } else {
+                            cash_oms_offer_text.style.fontSize = '3rem';
+                            cash_oms_offer_terms.style.fontSize = '1.2rem';
+                        }
+                    });
+                    priceObserver.observe(cash_oms_offer_text);
+
+                    cash_oms_txt1.innerHTML = omsData.displayName;
+                    cash_oms_offer_text_base.innerHTML = customGroups[0].preText;
+                    cash_oms_offer_price.innerHTML = `<b>${rdValues[0].values[0]}</b>`;
+                    cash_oms_offer_terms.innerHTML = customGroups[0].postText;
+                }
+                if (offerType === 'lease') {
+                    lease_oms_txt1.innerHTML = omsData.displayName;
+                    lease_oms_txt2.innerHTML = customGroups[0].preText;
+                    lease_oms_monthly_price.innerHTML = rdValues[0].values[0];
+                    lease_oms_pay_months.innerHTML = rdValues[0].values[1];
+                    lease_oms_down_payment_price.innerHTML = "<sup>$</sup>" + rdValues[0].values[2];
+
+                    const postTextValue = customGroups[0]?.postText;
+                    setContent(offer_lease_postText, (!postTextValue || String(postTextValue).trim() === '*') ? '' : postTextValue);
+                }
+                if (offerType === 'apr') {
+                    apr_oms_txt1.innerHTML = omsData.displayName;
+                    apr_oms_txt2.innerHTML = customGroups[0].preText;
+
+                    const postTextValue = customGroups[0].postText;
+
+                    apr_oms_post_text.innerHTML = (!postTextValue || String(postTextValue).trim() === '*') ? '' : postTextValue;
+
+                    apr_oms_percent.innerHTML = rdValues[0].values[0];
+                    apr_oms_pay_months.innerHTML = rdValues[0].values[1];
+                }
+
+                if (offerType === 'text') {
+                    const feedSource = rdValues[0].values[0];
+                    const { cleanText, marker } = extractDisclaimer(feedSource);
+
+                    text_oms_txt1.innerHTML = omsData.displayName;
+                    text_oms_txt2.innerHTML = customGroups[0].preText;
+                    offer_text_oms_main.innerHTML = marker
+                        ? `${cleanText}<sup>${marker}</sup>`
+                        : cleanText;
+                    offer_text_oms_postText.innerHTML = customGroups[0]?.postText;
+                }
+
+                if (offerType === 'compound') {
+                    setContent(compound_oms_txt1, omsData.displayName);
+
+                    const isThreeBlockLayout = rdValues.length >= 3;
+
+                    const parentContainer = findElement('compound_oms') || findElement('compound_oms_wrapper');
+                    if (parentContainer && isThreeBlockLayout) {
+                        applyStyles(parentContainer, {
+                            transform: 'translateY(-2px)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center'
+                        });
+                    }
+
+                    rdValues.forEach((item, index) => {
+                        const paddedIndex = String(index + 1).padStart(2, '0');
+                        const paddedPrevIndex = String(index).padStart(2, '0');
+
+                        const isFirstOffer = index === 0;
+                        const type = item.type.toUpperCase();
+                        const group = customGroups[index];
+
+                        const groupEl = findElement(`compound_oms-item-group${paddedIndex}`);
+                        const valueEl = findElement(`compound_oms_value${paddedIndex}`);
+                        const postEl = findElement(`compound_oms_post${paddedIndex}`);
+                        const connectorGroupEl = findElement(`compound_oms-connector-group${paddedPrevIndex}`);
+                        const connectorEl = findElement(`compound_oms-connector${paddedPrevIndex}`);
+                        const preEl = findElement(`compound_oms_pre${paddedPrevIndex}`);
+
+                        const omsPreTextEl = groupEl ? groupEl.querySelector('.oms_compound_preText') : null;
+
+                        const cleanPreText = cleanAsterisksOnly(group?.preText);
+                        const cleanPostText = cleanAsterisksOnly(normalizeSpacing(group?.postText));
+
+                        if (type === 'CASH') {
+                            if (isFirstOffer) {
+                                applyStyles(valueEl, {
+                                    fontSize: isThreeBlockLayout ? '14px' : '18px',
+                                    fontWeight: 'bold',
+                                    lineHeight: '0.95',
+                                    display: 'inline-block',
+                                    verticalAlign: 'baseline'
+                                });
+                                setContent(compound_oms_txt2, cleanPreText ? cleanPreText.toUpperCase() : '');
+
+                                applyStyles(compound_oms_txt2, {
+                                    display: cleanPreText ? 'inline-block' : 'none',
+                                    fontSize: isThreeBlockLayout ? '10px' : '11px',
+                                    marginRight: '4px',
+                                    verticalAlign: 'baseline'
+                                });
+
+                                setContent(valueEl, `<sup style="font-size: 60%; top: -0.35em;">$</sup>${item.values}`);
+
+                                setContent(postEl, cleanPostText);
+                                applyStyles(postEl, {
+                                    display: cleanPostText ? 'inline-block' : 'none',
+                                    fontSize: isThreeBlockLayout ? '10px' : '11px',
+                                    lineHeight: '0.95',
+                                    marginLeft: '4px',
+                                    verticalAlign: 'baseline'
+                                });
+                            } else {
+                                const connector = item.connector ?? group?.connector;
+                                setContent(connectorEl, connector ?? '');
+
+                                if (isThreeBlockLayout) {
+                                    if (connectorGroupEl) {
+                                        applyStyles(connectorGroupEl, {
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            marginRight: '4px',
+                                            whiteSpace: 'nowrap',
+                                            verticalAlign: 'middle'
+                                        });
+                                    }
+
+                                    if (connectorEl) {
+                                        applyStyles(connectorEl, {
+                                            display: 'inline',
+                                            fontSize: '10px',
+                                            fontWeight: 'bold',
+                                            lineHeight: '0.9'
+                                        });
+                                    }
+
+                                    if (preEl) {
+                                        setContent(preEl, cleanPreText);
+                                        applyStyles(preEl, {
+                                            fontSize: '10px',
+                                            lineHeight: '0.9',
+                                            display: cleanPreText ? 'inline' : 'none',
+                                            marginLeft: '3px'
+                                        });
+                                    }
+
+                                    if (groupEl) {
+                                        applyStyles(groupEl, {
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            whiteSpace: 'nowrap',
+                                            verticalAlign: 'middle'
+                                        });
+                                    }
+
+                                    setContent(valueEl, `$${item.values}`);
+                                    applyStyles(valueEl, {
+                                        fontSize: '13px',
+                                        fontWeight: 'bold',
+                                        lineHeight: '0.9',
+                                        display: 'inline'
+                                    });
+
+                                    setContent(postEl, cleanPostText);
+                                    applyStyles(postEl, {
+                                        display: cleanPostText ? 'inline' : 'none',
+                                        fontSize: '10px',
+                                        lineHeight: '0.9',
+                                        fontWeight: 'normal',
+                                        marginLeft: '4px'
+                                    });
+                                } else {
+                                    if (connectorGroupEl) applyStyles(connectorGroupEl, { display: 'inline' });
+                                    if (connectorEl) {
+                                        applyStyles(connectorEl, {
+                                            display: 'inline',
+                                            verticalAlign: 'baseline',
+                                            fontSize: '11px',
+                                            fontWeight: 'bold',
+                                            marginRight: '4px'
+                                        });
+                                    }
+
+                                    if (preEl) {
+                                        setContent(preEl, cleanPreText);
+                                        applyStyles(preEl, {
+                                            fontSize: '11px',
+                                            lineHeight: '1',
+                                            verticalAlign: 'baseline',
+                                            display: cleanPreText ? 'inline' : 'none',
+                                            marginRight: '4px'
+                                        });
+                                    }
+
+                                    if (groupEl) applyStyles(groupEl, { display: 'inline' });
+
+                                    setContent(valueEl, `$${item.values}`);
+                                    applyStyles(valueEl, {
+                                        fontSize: '15px',
+                                        fontWeight: 'bold',
+                                        lineHeight: '1',
+                                        display: 'inline',
+                                        marginRight: '4px'
+                                    });
+
+                                    setContent(postEl, cleanPostText);
+                                    applyStyles(postEl, {
+                                        display: cleanPostText ? 'inline' : 'none',
+                                        fontSize: '11px',
+                                        lineHeight: '1',
+                                        fontWeight: 'normal',
+                                        marginLeft: '4px'
+                                    });
+                                }
+                            }
+                        } else if (type === 'APR') {
+                            const rate = group?.param1 ?? item.values[0];
+                            const term = group?.param2 ?? item.values[1];
+
+                            setContent(
+                                valueEl,
+                                `<b>${rate}% APR</b>  <span style="font-size: ${isThreeBlockLayout ? '10px' : '11px'}; font-weight: normal; line-height: 1.5; margin-left: 5px;"> For <b>${term} Months${cleanPostText ? ' ' + cleanPostText : ''}</b></span>`
+                            );
+                            applyStyles(valueEl, {
+                                fontWeight: 'normal',
+                                fontSize: isThreeBlockLayout ? '12px' : '13px',
+                                lineHeight: '1',
+                                marginTop: '0px',
+                                display: 'inline-flex',
+                                alignItems: 'center'
+                            });
+
+                            setContent(postEl, '');
+                            applyStyles(postEl, { display: 'none' });
+
+                            if (isFirstOffer) {
+                                setContent(compound_oms_txt2, cleanPreText);
+                                applyStyles(groupEl, { display: isThreeBlockLayout ? 'inline-flex' : 'block' });
+                                applyStyles(compound_oms_txt2, {
+                                    textTransform: 'none',
+                                    fontWeight: '500',
+                                    marginTop: '0px',
+                                    display: cleanPreText ? (isThreeBlockLayout ? 'inline' : 'block') : 'none',
+                                    textAlign: 'start'
+                                });
+                            } else {
+                                const connector = item.connector ?? group?.connector;
+                                setContent(connectorEl, connector ?? '');
+
+                                if (connectorEl) {
+                                    applyStyles(connectorEl, {
+                                        display: 'inline',
+                                        fontSize: isThreeBlockLayout ? '10px' : '11px',
+                                        fontWeight: 'bold',
+                                        marginRight: '4px'
+                                    });
+                                }
+
+                                if (preEl) {
+                                    setContent(preEl, cleanPreText);
+                                    applyStyles(preEl, {
+                                        fontSize: isThreeBlockLayout ? '10px' : '11px',
+                                        lineHeight: '1.5',
+                                        display: cleanPreText ? 'inline' : 'none'
+                                    });
+                                }
+
+                                if (isThreeBlockLayout && groupEl) {
+                                    applyStyles(groupEl, { display: 'inline-flex', alignItems: 'center' });
+                                }
+                            }
+                        } else if (type === 'TEXT') {
+                            const textValue = Array.isArray(item.values) ? item.values[0] : (group?.param1 ?? item.values);
+                            const connectorSymbol = (!isFirstOffer) ? (item.connector ?? group?.connector ?? '+') : '';
+                            const preTextContent = cleanPreText.trim();
+
+                            const textFontSize = isThreeBlockLayout ? '11px' : '12px';
+
+                            if (isFirstOffer) {
+                                if (omsPreTextEl) {
+                                    if (preTextContent) {
+                                        setContent(omsPreTextEl, preTextContent);
+                                        applyStyles(omsPreTextEl, { display: 'inline' });
+                                    } else {
+                                        setContent(omsPreTextEl, '');
+                                        applyStyles(omsPreTextEl, { display: 'none' });
+                                    }
+                                }
+                                setContent(valueEl, textValue);
+                                applyStyles(valueEl, { fontSize: textFontSize, lineHeight: '0.95', display: 'inline' });
+                                applyStyles(compound_oms_txt2, { display: 'none' });
+                            } else {
+                                if (preTextContent) {
+                                    if (connectorEl) setContent(connectorEl, '');
+
+                                    if (omsPreTextEl) {
+                                        setContent(omsPreTextEl, preTextContent);
+                                        applyStyles(omsPreTextEl, { display: 'inline' });
+                                        if (preEl) setContent(preEl, '');
+                                    } else {
+                                        if (preEl) {
+                                            setContent(preEl, preTextContent);
+                                            applyStyles(preEl, { fontSize: isThreeBlockLayout ? '10px' : '11px', lineHeight: '0.9', display: 'inline' });
+                                        }
+                                    }
+
+                                    setContent(valueEl, `${connectorSymbol} ${textValue}`);
+                                } else {
+                                    if (connectorEl) {
+                                        setContent(connectorEl, connectorSymbol);
+                                        applyStyles(connectorEl, { display: 'inline' });
+                                    }
+
+                                    if (preEl) setContent(preEl, '');
+                                    if (omsPreTextEl) applyStyles(omsPreTextEl, { display: 'none' });
+
+                                    setContent(valueEl, textValue);
+                                }
+                                applyStyles(valueEl, { fontSize: textFontSize, lineHeight: '0.95', display: 'inline' });
+
+                                if (isThreeBlockLayout && groupEl) {
+                                    applyStyles(groupEl, { display: 'inline-flex', alignItems: 'center' });
+                                }
+                            }
+                        }
+                    });
+
+                    rdValues.forEach((item, index) => {
+                        const nextIndex = index + 1;
+                        const nextPaddedIndex = String(nextIndex + 1).padStart(2, '0');
+                        const nextValueEl = findElement(`compound_oms_value${nextPaddedIndex}`);
+                        const currentConnectorEl = findElement(`compound_oms-connector${String(nextIndex).padStart(2, '0')}`);
+
+                        if (currentConnectorEl && (!nextValueEl || !nextValueEl.innerHTML.trim())) {
+                            setContent(currentConnectorEl, '');
+                        }
+                    });
+                }
+
+                if (offerType === 'simple') {
+                    setContent(simple_oms_txt1, omsData.displayName);
+                    rdValues.forEach((item, index) => {
+                        const paddedIndex = String(index + 1).padStart(2, '0');
+                        const paddedPrevIndex = String(index).padStart(2, '0');
+
+                        const isFirstOffer = index === 0;
+                        const type = item.type.toUpperCase();
+                        const group = customGroups[index];
+
+                        const groupEl = findElement(`simple_oms-item-group${paddedIndex}`);
+                        const valueEl = findElement(`simple_oms_value${paddedIndex}`);
+                        const postEl = findElement(`simple_oms_post${paddedIndex}`);
+                        const connectorGroupEl = findElement(`simple_oms-connector-group${paddedPrevIndex}`);
+                        const connectorEl = findElement(`simple_oms-connector${paddedPrevIndex}`);
+                        const preEl = findElement(`simple_oms_pre${paddedPrevIndex}`);
+
+                        if (type === 'CASH') {
+                            setContent(postEl, normalizeSpacing(group?.postText));
+
+                            if (isFirstOffer) {
+                                setContent(simple_oms_txt2, (group?.preText ?? '')?.toUpperCase());
+                                setContent(valueEl, `<sup>$</sup>${item.values}`);
+                            } else {
+                                const connector = item.connector ?? group?.connector;
+                                setContent(connectorEl, connector ?? '');
+
+                                const preText = group?.preText ?? '';
+                                setContent(preEl, preText);
+                                setContent(valueEl, `$${item.values}`);
+
+                                if (!preText) {
+                                    applyStyles(
+                                        [connectorGroupEl, preEl, groupEl, postEl],
+                                        { display: 'inline' }
+                                    )
+                                    applyStyles(
+                                        [connectorEl, valueEl],
+                                        { display: 'inline', marginRight: '0px' }
+                                    )
+                                }
+                            }
+                        } else if (type === 'APR') {
+                            const rate = group?.param1 ?? item.values[0];
+                            const term = group?.param2 ?? item.values[1];
+                            const suffix = (group?.postText ?? []).join('');
+
+                            setContent(valueEl, `<b>${rate}% APR</b> For <b>${term} Months${suffix}</b>`);
+                            applyStyles(valueEl, { fontWeight: 'normal', fontSize: '17px' });
+                            setContent(postEl, '');
+                            applyStyles(postEl, { display: 'none' });
+
+                            if (isFirstOffer) {
+                                setContent(simple_oms_txt2, group?.preText ?? '');
+                                applyStyles(groupEl, { display: 'block' });
+                                applyStyles(simple_oms_txt2, { textTransform: 'none', fontWeight: '500', marginTop: '0px', display: 'block', textAlign: 'start' });
+                            } else {
+                                const connector = item.connector ?? group?.connector;
+                                setContent(connectorEl, connector ?? '');
+                                setContent(preEl, group?.preText ?? '');
+                            }
+                        } else if (type === 'TEXT') {
+                            setContent(valueEl, `${item.values}`);
+                            applyStyles(valueEl, { fontSize: '18px' });
+
+                            if (isFirstOffer) applyStyles(simple_oms_txt2, { display: 'none' });
+                        }
+                    });
+                }
+
+                if (offerType === 'msrp') {
+                    msrp_oms_txt1.innerHTML = omsData.displayName;
+                    msrp_oms_price.innerHTML = "<sup>$</sup>" + dynamicContent.OMS[0].cash1;
+                }
+
+                if (offerType === 'fallback') {
+                    setContent(fallback_oms_txt1, omsData.displayName);
+
+                    const totalChars = customGroups.reduce((acc, group) => {
+                        const pre = group?.preText || '';
+                        const rawPost = Array.isArray(group?.postText) ? group.postText.join(' ') : (group?.postText || '');
+                        return acc + pre.length + rawPost.length;
+                    }, 0);
+
+                    const isLongText = totalChars > 110;
+
+                    customGroups.forEach((group, index) => {
+                        const paddedIndex = String(index + 1).padStart(2, '0');
+                        const el = findElement(`fallback_oms_${index + 1}`) || findElement(`fallback_oms_${paddedIndex}`);
+                        if (!el) return;
+
+                        const type = group.type.toUpperCase();
+
+                        const rdItem = rdValues.find(rd => {
+                            const rdType = rd.type.toUpperCase();
+                            if (type === 'APR') return rdType === 'APR';
+                            if (type === 'TEXT') return rdType === 'TEXT';
+                            if (type === 'CASH' || type === 'CASH MATH') return rdType === 'CASH';
+                            return false;
+                        });
+
+                        let connector = '';
+                        if (index > 0) {
+                            const connValue = rdItem?.connector || group.connector || '';
+                            connector = connValue ? `<b style="font-weight: bold; margin-right: 3px;">${connValue}</b>` : '';
+                        }
+
+                        const rawPostText = Array.isArray(group.postText)
+                            ? group.postText.join(' ')
+                            : (group.postText ?? '');
+
+                        const cleanPreText = cleanAsterisksOnly(group.preText || '');
+                        const cleanPostText = cleanAsterisksOnly(normalizeSpacing(rawPostText));
+
+                        const mainFontSize = isLongText ? '11px' : '12px';
+                        const subFontSize = isLongText ? '9px' : '11px';
+                        const lineHeightVal = isLongText ? '0.95' : '1';
+
+                        if (type === 'APR') {
+                            const [rate, term] = rdItem?.values || [group.param1, group.param2];
+                            const aprFontSize = isLongText ? '11px' : '13px';
+
+                            setContent(
+                                el,
+                                `${connector}${cleanPreText ? cleanPreText + ' ' : ''}<b>${rate}% APR</b><span style="font-size: ${subFontSize}; font-weight: normal; line-height: ${lineHeightVal}; margin-left: 3px;">For <b>${term} Months</b>${cleanPostText ? ' ' + cleanPostText : ''}</span>`
+                            );
+
+                            applyStyles(el, {
+                                fontSize: aprFontSize,
+                                lineHeight: lineHeightVal,
+                                display: 'inline-block',
+                                verticalAlign: 'middle'
+                            });
+
+                        } else if (type === 'CASH' || type === 'CASH MATH') {
+                            const rawVal = rdItem?.values || group.param1;
+                            const valueHTML = rawVal ? `<b>$${rawVal}</b>` : '';
+                            const initialText = wrapLastWordWithValue(cleanPreText, valueHTML);
+
+                            if (group.isMathbox) {
+                                setContent(el, `${connector}${initialText} ${cleanPostText}`);
+                                applyStyles(el, {
+                                    fontSize: mainFontSize,
+                                    lineHeight: lineHeightVal,
+                                    display: 'inline-block',
+                                    verticalAlign: 'middle'
+                                });
+                            } else {
+                                setContent(el, `${connector}${initialText}<br><span style="font-size: ${subFontSize}; line-height: ${lineHeightVal}; margin-left: 3px;">${cleanPostText}</span>`);
+                                applyStyles(el, {
+                                    fontSize: mainFontSize,
+                                    lineHeight: lineHeightVal,
+                                    display: 'block'
+                                });
+                            }
+
+                        } else if (type === 'TEXT') {
+                            const textVal = group.param1 || (Array.isArray(rdItem?.values) ? rdItem.values[0] : rdItem?.values) || '';
+
+                            setContent(el, `${connector}<b>${textVal}</b> <span style="font-size: ${subFontSize}; line-height: ${lineHeightVal}; margin-left: 3px;">${cleanPostText}</span>`);
+                            applyStyles(el, {
+                                fontSize: mainFontSize,
+                                lineHeight: lineHeightVal,
+                                display: 'inline-block',
+                                verticalAlign: 'middle'
+                            });
+                        }
+                    });
+                }
+            }
+
+            f1_veh_name.innerHTML = dynamicContent.creative_data[0].f1_vehicle_name;
+            f1_txt1.innerHTML = dynamicContent.creative_data[0].f1_headline;
+            f2_txt1.innerHTML = dynamicContent.creative_data[0].f2_headline_RTB1;
+            f2_txt1_2.innerHTML = dynamicContent.creative_data[0].f2_headline_RTB2;
+
+            f4_vehicle_name.innerHTML = dynamicContent.creative_data[0].f4_vehicle_name;
+            f4_txt1.innerHTML = dynamicContent.creative_data[0].f4_headline;
+            f4_txt2.innerHTML = dynamicContent.creative_data[0].f4_sub_headline;
+            f5_vehicle_name.innerHTML = dynamicContent.creative_data[0].f5_vehicle_name;
+            f5_txt1.innerHTML = dynamicContent.creative_data[0].f5_headline;
+            f5_txt2.innerHTML = dynamicContent.creative_data[0].f5_sub_headline;
+            tagline_vehname.innerHTML = dynamicContent.creative_data[0].tagline;
+            legal_offers_feed.innerHTML = dynamicContent.creative_data[0].legal;
+            cta1.innerHTML = dynamicContent.creative_data[0].text_cta_1;
+            cta2.innerHTML = dynamicContent.creative_data[0].text_cta_2;
+
+            //ASSIGN IDs TO DYNAMIC.JS IMG VARIABLES.
+            F1_img.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.f1_image?.Url ?? ''}")`;
+            F2_img.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.f2_img_RTB1?.Url ?? ''}")`;
+            F2_img2.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.f2_img_RTB2?.Url ?? ''}")`;
+            F3_img.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.f3_image?.Url ?? ''}")`;
+            F4_img.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.f4_image?.Url ?? ''}")`;
+            F5_img.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.f5_image?.Url ?? ''}")`;
+            F7_img.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.f7_image?.Url ?? ''}")`;
+            brand_logo.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.logo?.Url ?? ''}")`;
+            jeep_logo2.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.logo2?.Url ?? ''}")`;
+            f3_jellybean.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.f3_jb_car_image?.Url ?? ''}")`;
+            brand_alt_logo.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.alt_logo?.Url ?? ''}")`;
+            jellybean_carImg.style.backgroundImage = `url("${dynamicContent.OMS[0]?.vehname?.Url ?? ''}")`;
+            jellybean_color1.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.colorize_img1?.Url ?? ''}")`;
+            jellybean_color2.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.colorize_img2?.Url ?? ''}")`;
+            jellybean_color3.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.colorize_img3?.Url ?? ''}")`;
+            jellybean_color4.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.colorize_img4?.Url ?? ''}")`;
+            jellybean_color5.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.colorize_img5?.Url ?? ''}")`;
+            jellybean_color6.style.backgroundImage = `url("${dynamicContent.creative_data[0]?.colorize_img6?.Url ?? ''}")`;
+
+            if (
+                brand_alt_logo.style.backgroundImage === 'url("")' ||
+                brand_alt_logo.style.backgroundImage === '' ||
+                brand_alt_logo.style.backgroundImage.includes("dead_pixel.png")
+            ) {
+                vertical_line.style.display = "none";
+                gsap.set(brand_logo, { scale: 1.5, x: "+=10" });
+            } else {
+                vertical_line.style.display = "block";
+            }
+
+            //ASSIGN HOVER COLOR CHANGE
+            if (ctaColor) {
+                document.documentElement.style.setProperty('--cta-bg-color', ctaColor);
+            }
+
+            if (ctaHover) {
+                document.documentElement.style.setProperty('--cta-bg-hover', ctaHover);
+            }
+
+            const ctaElements = [cta1, cta2];
+            ctaElements.forEach(cta => {
+                if (cta && cta.textContent.trim() === '') {
+                    cta.style.display = 'none';
+                } else if (cta) {
+                    cta.style.display = 'flex';
+                }
+            });
+        }
+
+        function setLocalOfferContent(customOfferName) {
+            if (!window.dynamicContent || !dynamicContent.creative_data || dynamicContent.creative_data.length === 0) {
+                return;
+            }
+
+            const data = dynamicContent.creative_data[0];
+            const f3_headline = data.f3_headline;
+            const f3_subheadline = data.f3_sub_headline;
+
+            const offerSelectors = {
+                'cash': { headline: '#cash_txt1', subheadline: '#cash_txt2' },
+                'apr': { headline: '#apr_txt1' },
+                'lease': { headline: '#lease_txt1', subheadline: '#lease_txt2' },
+                'text': { headline: '#text_txt1', subheadline: '#text_txt2' },
+                'match': { headline: '#match_txt1', subheadline: '#match_txt2' },
+                'conquest': { headline: '#conquest_txt1' },
+                'plus': { headline: '#plus_txt1' },
+                'employee': { headline: '#emp_txt1' },
+                'combo': { headline: '#combo_txt1' },
+                'loyalty': { headline: '#loyalty_txt1' },
+                'msrp': { headline: '#msrp_txt1' },
+                'exception': { headline: '#exception_txt1' },
+                'msrp2': { headline: '#msrp2_txt1' },
+                'nopay': { headline: '#nopayment_txt1' },
+                'nopay2': { headline: '#nopayment2_txt1' }
+            };
+
+            const selectors = offerSelectors[customOfferName];
+            if (selectors) {
+                const headlineElement = document.querySelector(selectors.headline);
+                if (headlineElement) {
+                    headlineElement.innerHTML = f3_headline;
+                }
+
+                if (selectors.subheadline) {
+                    const subheadlineElement = document.querySelector(selectors.subheadline);
+                    if (subheadlineElement) {
+                        subheadlineElement.innerHTML = f3_subheadline;
+                    }
+                }
+            }
+        }
+
+
+        function frame1() {
+            const currentWeather = dynamicContent.creative_data[0].weather;
+
+            const action = weatherActions[currentWeather];
+            if (action) { action(); }
+
+            var tl = gsap.timeline();
+            tl
+                .add(zoomImg1, "+=0")
+                .to(f1_txt_container, { duration: .5, autoAlpha: 1, ease: "sine.inOut" }, "+=1")
+                .to([cta_container, legalButton], { duration: .5, autoAlpha: 1, y: "-=35", ease: "sine.inOut" }, "<+=0")
+            return tl;
+        };
+
+        function frame2() {
+            var tl = gsap.timeline();
+            tl
+                .add(zoomImg2, "+=0")
+                .to(f1_txt_container, { duration: .3, autoAlpha: 0, ease: "circ.inOut" }, "+=0")
+                .to(F2_img, { duration: .5, autoAlpha: 1, ease: "circ.inOut" }, "<")
+                .to(f2_txt_container, { duration: .5, autoAlpha: 1, ease: "circ.inOut" }, "<")
+            return tl;
+        }
+
+        function frame2_2() {
+            var tl = gsap.timeline();
+            tl
+                .add(zoomImg2_2, "+=0")
+                .to(f2_txt_container, { duration: .3, autoAlpha: 0, ease: "circ.inOut" }, "+=0")
+                .to(F2_img2, { duration: .5, autoAlpha: 1, ease: "circ.inOut" }, "<")
+                .to(f2_txt_container2, { duration: .5, autoAlpha: 1, ease: "circ.inOut" }, "<")
+            return tl;
+        }
+
+        //==================== OFFERS FRAME ===================== //
+        function frame3() {
+            const offerType = dynamicContent.OMS[0].offerType.split('_')[1] || null;
+            const customOffer = dynamicContent.parent[0].custom_offer;
+            const TIER = dynamicContent.parent[0].TIER;
+
+            if (TIER === 'T2') {
+                offerTarget = offerMapOMS[offerType] || offer_cash;
+                f3_jellybean.style.backgroundImage = `url("${dynamicContent.OMS[0]?.vehname?.Url ?? ''}")`;
+            } else {
+                offerTarget = offerMapLocal[customOffer] || offer_cash;
+                setLocalOfferContent(customOffer);
+            }
+
+            var tl = gsap.timeline();
+            tl
+                .to([f1_txt_container, f2_txt_container, f2_txt_container2], { duration: .3, autoAlpha: 0, ease: "circ.inOut" }, "+=0")
+                .to(F3_img, { duration: .3, autoAlpha: 1, ease: "circ.inOut" }, "<+=.2")
+                .to(offerTarget, { duration: .3, autoAlpha: 1, scale: 1, ease: "circ.inOut" }, "<+=.2")
+                .to(f3_jellybean, { duration: .4, x: "-=70", autoAlpha: 1, ease: "back.out(1.4)" }, "-=0.2")
+            return tl;
+        }
+
+        function frame4() {
+            var tl = gsap.timeline();
+            tl
+                .to([f2_txt_container, offerTarget], { duration: .3, autoAlpha: 0, ease: "circ.inOut" }, "+=0")
+                .to([F4_img, f3_jellybean, brand_alt_logo], { duration: 0.3, autoAlpha: 1, ease: "none" }, "<")
+                .add(zoomImg4, "<")
+                .to(f4_txt_container, { duration: .3, autoAlpha: 1, ease: "circ.inOut" }, "-=0.2")
+            return tl;
+        }
+
+        function frame5() {
+            var tl = gsap.timeline();
+            tl
+                .to([f2_txt_container, offerTarget, f4_txt_container], { duration: .3, autoAlpha: 0, ease: "circ.inOut" }, "+=0")
+                .to(f5_endemic_container, { duration: 0.3, autoAlpha: 1, ease: "none" }, "<")
+                .to(jellybean_carImg, { duration: .4, x: "-=70", autoAlpha: 1, ease: "back.out(1.4)" }, "-=0.2")
+            return tl;
+        }
+
+        function frame6() {
+            var tl = gsap.timeline();
+            tl
+                .to([f2_txt_container, offerTarget, f4_txt_container], { duration: .3, autoAlpha: 0, ease: "circ.inOut" }, "+=0")
+                .to([f6_colorize_container, vertical_line, tagline_vehname], { duration: 0.3, autoAlpha: 1, ease: "circ.inOut" }, "<")
+                .to(jellybean_car_color_container, { duration: 0.4, x: "-=70", autoAlpha: 1, ease: "back.out(1.4)" }, "-=.2")
+            //.to(brand_logo, { duration: 0.3, filter: "invert(100%)" }, "<")
+            return tl;
+        }
+
+        function noOffer1() {
+            var tl = gsap.timeline();
+            tl
+                .to([f1_txt_container, f2_txt_container, f2_txt_container2, offerTarget, f4_txt_container, brand_logo, brand_alt_logo, vertical_line], { duration: .3, autoAlpha: 0, ease: "circ.inOut" }, "+=0")
+                .add(zoomImg7, "<")
+                .to([f7_no_offer, jeep_logo2], { duration: 0.3, autoAlpha: 1, ease: "circ.inOut" }, "<")
+            return tl;
+        }
+
+        function noOffer2() {
+            var tl = gsap.timeline();
+            tl
+                .to([f1_txt_container, f2_txt_container, f2_txt_container2, f3_jellybean], { duration: .3, autoAlpha: 0, ease: "circ.inOut" }, "+=0")
+                .to([F4_img, brand_alt_logo], { duration: 0.3, autoAlpha: 1, ease: "none" }, "<")
+                .add(zoomImg4, "<")
+                .to(f4_txt_container, { duration: .3, autoAlpha: 1, ease: "circ.inOut" }, "-=0.2")
+
+            return tl;
+        }
+
+        function defaultBackupImg() {
+            var tl = gsap.timeline();
+            tl
+                .to([f1_txt_container, f2_txt_container, f2_txt_container2, f3_jellybean, cta_container], { duration: .3, autoAlpha: 0, ease: "circ.inOut" }, "+=0")
+                .set(default_cta, { visibility: 'visible' })
+                .to(default_img, { duration: .3, autoAlpha: 1, ease: "circ.inOut" }, "+=.2")
+
+            return tl;
+        }
+
+        // ==> 020526 INIT <== //
+        function animation() {
+            const TIER_timeline = dynamicContent.parent[0].TIER || "";
+            const sequence = dynamicContent.parent[0]?.sequence || "";
+            const custom_msg = dynamicContent.parent[0]?.custom_msg || "";
+            const customOffer = dynamicContent.parent[0].custom_offer || "";
+            const label = dynamicContent.creative_data[0].label || "";
+            const offerType = dynamicContent.OMS[0].offerType || "";
+
+            console.log('TIER:', TIER_timeline);
+            console.log('sequence:', sequence);
+            console.log('custom_msg:', custom_msg);
+            console.log('customOffer:', customOffer);
+            console.log('offerType:', offerType);
+
+            tlMain
+                //.timeScale(20) //==> DEV ONLY - REMOVE FOR PROD!!!
+                .set(ad, { visibility: 'visible' });
+
+
+            function buildTimeline(sequence, finalFrameFunction, delay) {
+                tlMain.add(frame1());
+
+                if (sequence === "3F" || sequence === "4F") {
+                    tlMain.add(frame2(), "+=2");
+                }
+
+                if (sequence === "4F") {
+                    tlMain.add(frame2_2(), "+=2");
+                }
+
+                if (finalFrameFunction) {
+                    tlMain.add(finalFrameFunction(), delay);
+                }
+            }
+
+            switch (TIER_timeline) {
+                case "T1":
+                    //no_offer1 and no_offer2 timelines
+                    if (custom_msg === "no_offer1") {
+                        buildTimeline(sequence, noOffer1, "+=" + time1);
+                    } else if (custom_msg === "no_offer2") {
+                        buildTimeline(sequence, noOffer2, "+=" + time1);
+                    }
+
+                    // Sequences with No custom_msg
+                    else if (sequence === "2F" || sequence === "3F" || sequence === "4F") {
+                        const useDefault = label.startsWith("default") || !offerMapLocal[customOffer];
+                        // T1 and T2 Frame3 logic
+                        buildTimeline(sequence, useDefault ? defaultBackupImg : frame3, "+=" + time2);
+                    }
+
+                    break;
+
+                case "T2":
+                    // Check if offerType is one of the special values that should use frame3
+                    if ((sequence === "2F" || sequence === "3F" || sequence === "4F") &&
+                        (offerType === "custom_cash" || offerType === "custom_lease" || offerType === "custom_apr" || offerType === "custom_fallback" || offerType === "custom_compound" || offerType === "custom_simple" || offerType === "custom_text" || offerType === "np_msrp")) {
+                        buildTimeline(sequence, frame3, "+=" + time1);
+                    }
+                    // For all other offerType values, use noOffer2
+                    else if (sequence === "2F" || sequence === "3F" || sequence === "4F") {
+                        buildTimeline(sequence, defaultBackupImg, "+=" + time1);
+                    }
+                    break;
+
+                default:
+                    tlMain
+                        .add(frame1())
+                        .add(defaultBackupImg(), `+=${time1}`);
+                    console.log('default Anim!!!');
+                    break;
+            }
+            console.log("Total Time:", tlMain.duration());
+        };
+        // ==> 020526 END <== //
+
+        function zoomImg1() {
+            var tl = gsap.timeline();
+            tl
+                .to(F1_img, { duration: 1, scale: 1.2, ease: "sine.in" }, "zoom")
+                .to(F1_img, { duration: 0.3, scale: 1, ease: "sine.out" }, "zoom+=.7")
+        }
+
+        function zoomImg2() {
+            var tl = gsap.timeline();
+            tl
+                .to(F2_img, { duration: .4, scale: 1, ease: "power1.out" }, "+=0")
+        }
+
+        function zoomImg2_2() {
+            var tl = gsap.timeline();
+            tl
+                .to(F2_img2, { duration: .4, scale: 1, ease: "power1.out" }, "+=0")
+        }
+
+        function zoomImg4() {
+            var tl = gsap.timeline();
+            tl
+                .to(F4_img, { duration: .4, scale: 1, ease: "power1.out" }, "+=0")
+                .call(() => { animationComplete = true; });
+        }
+
+        function zoomImg7() {
+            var tl = gsap.timeline();
+            tl
+                .to(F7_img, { duration: .4, scale: 1, ease: "power1.out" }, "+=0")
+                .call(() => { animationComplete = true; });
+        }
+
+        function applyCtaHoverEffect(ctaElement) {
+            const computedStyle = getComputedStyle(document.documentElement);
+
+            if (ctaElement) {
+                ctaElement.addEventListener('mouseenter', () => {
+                    const hoverColor = computedStyle.getPropertyValue('--cta-bg-hover').trim();
+
+                    gsap.to(ctaElement, { duration: 0.3, backgroundColor: hoverColor, ease: "power1.out" });
+                    if (animationComplete) {
+                        gsap.to([F4_img, F7_img], { duration: 0.2, scale: 1.1, ease: "power1.out" });
+                    }
+                });
+
+                ctaElement.addEventListener('mouseleave', () => {
+                    const baseColor = computedStyle.getPropertyValue('--cta-bg-color').trim();
+
+                    gsap.to(ctaElement, { duration: 0.3, backgroundColor: baseColor, ease: "power1.out" });
+                    if (animationComplete) {
+                        gsap.to([F4_img, F7_img], { duration: 0.2, scale: 1, ease: "power1.out" });
+                    }
+                });
+            }
+        }
+
+        const ctaElements = [cta1, cta2];
+
+
+        const mainClickTag = document.getElementById('mainClickTag');
+
+
+        ctaElements.forEach(applyCtaHoverEffect);
+
+        if (cta1) {
+            cta1.addEventListener('click', (event) => {
+                Enabler.exitOverride('CTA1_Exit', dynamicContent.creative_data[0].exit_cta_1.Url);
+            });
+        }
+
+        if (cta2) {
+            cta2.addEventListener('click', (event) => {
+                Enabler.exitOverride('CTA2_Exit', dynamicContent.creative_data[0].exit_cta_2.Url);
+            });
+        }
+
+        if (mainClickTag) {
+            mainClickTag.addEventListener('click', () => {
+                Enabler.exitOverride('Main_Exit', dynamicContent.creative_data[0].main_exit.Url);
+            });
+        }
+
+        if (default_cta) {
+            default_cta.addEventListener('click', (event) => {
+                event.stopPropagation();
+                Enabler.exitOverride('CTA1_Exit', dynamicContent.creative_data[0].exit_cta_1.Url);
+            });
+        }
+
+        if (legalButton) {
+            legalButton.addEventListener('click', () => {
+                const tl = gsap.timeline();
+                tl
+                    .to(legalContainer, { duration: 0.3, y: "-=100", ease: "sine.in" })
+                    .to(legal_closeBtn, { duration: 0.4, autoAlpha: 1, y: '-=50', ease: "sine.out" }, "-=.2")
+            });
+
+            legal_closeBtn.addEventListener('click', () => {
+                const tl = gsap.timeline();
+                tl
+                    .to(legal_closeBtn, { duration: 0.4, autoAlpha: 0, y: '+=50', ease: "sine.out" }, "+=0")
+                    .to(legalContainer, { duration: 0.5, y: "+=100", ease: "sine.in" }, "-.2")
+            });
+        }
+
+        window.Banner = Banner;
+
+    }(window));
+});

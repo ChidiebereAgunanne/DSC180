@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using UglifyJS v3.4.0.
+ * Original file: /npm/tablesaw@3.0.3/dist/tablesaw-init.js
+ * 
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+!function(e){"use strict";var n;if("shoestring"in e)n=e.shoestring;else{if(!("jQuery"in e))throw new Error("tablesaw: DOM library not found.");n=e.jQuery}"addEventListener"in document&&document.addEventListener("DOMContentLoaded",function(){n(document).trigger("enhance.tablesaw")})}("undefined"!=typeof window?window:this);
+

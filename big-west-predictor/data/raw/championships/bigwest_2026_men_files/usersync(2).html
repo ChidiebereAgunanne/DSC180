@@ -1,0 +1,419 @@
+
+<!-- saved from url=(0212)https://cdn.undertone.com/js/usersync.html?gdpr=0&gdpr_consent=&us_privacy=1-N-&redirect=https%3A%2F%2Ffast.nexx360.io%2Fsetuid%3Fbidder%3Dundertone%26gdpr%3D0%26gdpr_consent%3D%26us_privacy%3D1-N-%26uid%3D%24UID -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><img src="./syncr" name="prebid" alt="" style="display:none" border="0" height="1" width="1"><img src="./occ" name="Yahoo" alt="" style="display:none" border="0" height="1" width="1"><img src="./55537adc33d1b40300987e8e" name="Vidazoo" alt="" style="display:none" border="0" height="1" width="1"><img src="./ImgSync(1)" name="Pubmatic" alt="" style="display:none" border="0" height="1" width="1"><img src="./sync(10).php" name="Rubicon2" alt="" style="display:none" border="0" height="1" width="1"><iframe src="./multi-sync(4).html" name="Rubicon" alt="" style="display:none" border="0" height="1" width="1"></iframe><img src="./generic" name="TTD" alt="" style="display:none" border="0" height="1" width="1"><img src="./cm(2)" name="OpenX" alt="" style="display:none" border="0" height="1" width="1">
+
+<script type="text/javascript">
+	function getParameterByName(name, url) {
+		var url = window.location.href;
+		var name = name.replace(/[\[\]]/g, '\\$&');
+		var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+			results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		return decodeURIComponent(results[2].replace(/\+/g, ' '));
+	}
+	function updateUrlParameter(uri, key, value) {
+	    var i = uri.indexOf('#');
+	    var hash = i === -1 ? ''  : uri.substr(i);
+	         uri = i === -1 ? uri : uri.substr(0, i);
+	
+	    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+	    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+	    if (uri.match(re)) {
+	        uri = uri.replace(re, '$1' + key + "=" + value + '$2');
+	    } else {
+	        uri = uri + separator + key + "=" + value;
+	    }
+	    return uri + hash;
+	}
+
+	var TCF_API_VERSION = 2;
+	var US_PRIVACY_API_VERSION = 1;
+
+	// Consent normally arrives as query parameters, but a caller may leave a macro unreplaced
+	// ({GDPR_CONSENT}, $US_PRIVACY, [GPP_STRING], %%CONSENT%% ...). Instead of guessing which macro
+	// syntax to reject, every value is accepted only when it matches the shape its own spec defines,
+	// so placeholders we have never seen are rejected as well.
+	var GDPR_FORMAT = /^[01]$/;                       // TCF gdprApplies as sent on the wire
+	var TC_STRING_FORMAT = /^[A-Za-z0-9\-_.]+$/;      // base64url, dot-separated segments
+	var US_PRIVACY_FORMAT = /^[0-9][yYnN-]{3}$/;      // version digit + 3 flags, e.g. 1YNN
+	var GPP_STRING_FORMAT = /^[A-Za-z0-9\-_.~]+$/;    // base64url sections joined by ~
+	var GPP_SIDS_FORMAT = /^[0-9]+(,[0-9]+)*$/;       // applicable section ids, e.g. 7,8
+
+	// null is checked explicitly: a regex would coerce it to the string "null", which some of the
+	// formats above would happily accept.
+	function isMissingConsent(value, validFormat) {
+		return value === null || !validFormat.test(value);
+	}
+
+	// Asks the page's IAB TCF v2 CMP for GDPR applicability and the TC string.
+	// The CMP belongs to the hosting page, so it may be absent or throw; either way we keep the
+	// query-string values and let the sync continue.
+	function fillMissingGdprConsentFromBrowser() {
+		if (typeof window.__tcfapi !== "function") {
+			return;
+		}
+		try {
+			window.__tcfapi("getTCData", TCF_API_VERSION, function (tcData, wasSuccessful) {
+				if (!wasSuccessful || !tcData) {
+					return;
+				}
+				if (isMissingConsent(gdpr, GDPR_FORMAT) && typeof tcData.gdprApplies === "boolean") {
+					gdpr = tcData.gdprApplies ? "1" : "0";
+				}
+				if (isMissingConsent(gdprStr, TC_STRING_FORMAT) && tcData.tcString) {
+					gdprStr = tcData.tcString;
+				}
+			});
+		} catch (cmpError) {
+			// A broken CMP must not stop the sync.
+		}
+	}
+
+	// Asks the page's US Privacy (CCPA) CMP for the us_privacy string.
+	function fillMissingUsPrivacyFromBrowser() {
+		if (typeof window.__uspapi !== "function") {
+			return;
+		}
+		try {
+			window.__uspapi("getUSPData", US_PRIVACY_API_VERSION, function (uspData, wasSuccessful) {
+				if (wasSuccessful && uspData && uspData.uspString) {
+					usPrivacy = uspData.uspString;
+				}
+			});
+		} catch (cmpError) {
+			// A broken CMP must not stop the sync.
+		}
+	}
+
+	// Asks the page's GPP CMP for the GPP string and the section ids it covers. "ping" returns both
+	// and is answered even while the CMP is still loading, which getGPPData is not.
+	function fillMissingGppConsentFromBrowser() {
+		if (typeof window.__gpp !== "function") {
+			return;
+		}
+		try {
+			window.__gpp("ping", function (gppData) {
+				if (!gppData) {
+					return;
+				}
+				if (isMissingConsent(gppStr, GPP_STRING_FORMAT) && gppData.gppString) {
+					gppStr = gppData.gppString;
+				}
+				// Older CMPs expose sectionList instead of applicableSections.
+				var gppSections = gppData.applicableSections || gppData.sectionList;
+				if (isMissingConsent(gppSids, GPP_SIDS_FORMAT) && gppSections && gppSections.length) {
+					gppSids = gppSections.join(",");
+				}
+			});
+		} catch (cmpError) {
+			// A broken CMP must not stop the sync.
+		}
+	}
+
+    var gdpr = getParameterByName("gdpr") || null;
+    var gdprStr = getParameterByName("gdprstr") || getParameterByName("gdpr_consent") || getParameterByName("consent") || "";
+    var usPrivacy = getParameterByName("us_privacy") || "";
+    var gppStr = getParameterByName("gpp") || "";
+    var gppSids = getParameterByName("gpp_sid") || "";
+
+    // A CMP running in our own frame answers before the call returns, so whatever it provides is in
+    // place before the pixel URLs are built below. A CMP that answers later changes nothing: the
+    // pixels have already been sent with the values that came in on the query string.
+    if (isMissingConsent(gdpr, GDPR_FORMAT) || isMissingConsent(gdprStr, TC_STRING_FORMAT)) {
+        fillMissingGdprConsentFromBrowser();
+    }
+
+    if (isMissingConsent(usPrivacy, US_PRIVACY_FORMAT)) {
+        fillMissingUsPrivacyFromBrowser();
+    }
+
+    if (isMissingConsent(gppStr, GPP_STRING_FORMAT) || isMissingConsent(gppSids, GPP_SIDS_FORMAT)) {
+        fillMissingGppConsentFromBrowser();
+    }
+
+    var redirectUrl = getParameterByName("redirect") || getParameterByName("redirectUri");
+    var partnerId = getParameterByName("partnerid") || getParameterByName("partnerId");
+    var userIdEncCookie = getCookie("UTID_ENC");
+    var userIdCookie = getCookie("UTID");
+    var partners = [];
+    var baseSyncUrl;
+
+    var ua = navigator.userAgent.toLowerCase();
+    var shouldSendCentroSyncRequest = (Math.floor(Math.random() * 4) >= 3);// for sending sync request to centro 25% of the time only
+	
+    if (gdpr === null || gdpr == 0) {
+	baseSyncUrl = "https://evt.undertone.com/userPixel/syncr?gdpr=" + (gdpr || "") + "&gdprstr=" + gdprStr;
+        partners.push(
+	    	{
+                name: "OpenX",
+                url: "https://us-u.openx.net/w/1.0/cm?id=fba3d144-1026-4d31-a758-943b9545e305&r=https%3A%2F%2Fevt.undertone.com%2FuserPixel%2Fsync%3FpartnerId%3D39%26uid%3D%7BOPENX_ID%7D"
+            },
+            {
+                name: "TTD",
+                url: "https://match.adsrvr.org/track/cmf/generic?ttd_pid=sirnsvg&ttd_tpi=1&gdpr=0&gdpr_consent="
+            },
+            {
+                name: "Rubicon",
+                url: "https://secure-assets.rubiconproject.com/utils/xapi/multi-sync.html?p=12776",
+                type: "iframe"
+            },
+            {
+                name: "Rubicon2",
+                url: "https://pixel.rubiconproject.com/exchange/sync.php?p=12776"
+            },
+            {
+                name: "Pubmatic",
+                url: "https://image8.pubmatic.com/AdServer/ImgSync?p=160318&gdpr=&gdpr_consent=&pu=https%3A%2F%2Fimage4.pubmatic.com%2FAdServer%2FSPug%3Fp%3D160318%26pmc%3DPM_PMC%26pr%3Dhttps%253A%252F%252Fevt.undertone.com%252FuserPixel%252Fsync%253FpartnerId%253D53%2526uid%253D%2523PMUID"
+            },
+	    	{
+                name: "Vidazoo",
+                url: "https://sync.cootlogix.com/api/user/image/55537adc33d1b40300987e8e?gdpr=&gdpr_consent=&redirect=https%3A%2F%2Fevt.undertone.com%2FuserPixel%2Fsync%3FpartnerId%3D59%26uid%3D%24%7BvdzUserSyncMacro%7D"
+            },
+            {
+                name: "Yahoo",
+                url: "https://ups.analytics.yahoo.com/ups/58545/occ"
+            }
+        );
+		if (shouldSendCentroSyncRequest) {
+			partners.push(
+		    	{
+	                name: "Centro",
+                	url: "https://pixel-sync.sitescout.com/dmp/pixelSync?nid=125&redir=https%3A%2F%2Fevt.undertone.com%2FuserPixel%2Fsync%3FpartnerId%3D54%26uid%3D%7BuserId%7D"
+	            }
+			);
+		}
+    } else {
+	baseSyncUrl = "https://evt.undertone.com/userPixel/syncr?gdpr=" + gdpr + "&gdprstr=" + gdprStr;
+        partners.push(
+            {
+                // this syncs with openx but with an extra redirect that checks the gdpr consent string first
+                name: "OpenX",
+                url: "https://us-u.openx.net/w/1.0/cm?id=fba3d144-1026-4d31-a758-943b9545e305&gdpr=" + gdpr + "&gdpr_consent=" + gdprStr + "&r=https%3A%2F%2Fevt.undertone.com%2FuserPixel%2Fsync%3FpartnerId%3D39%26uid%3D%7BOPENX_ID%7D"
+            },
+            {
+                name: "Yahoo",
+                url: "https://ups.analytics.yahoo.com/ups/58545/occ?gdpr=" + gdpr + "&gdpr_consent" + gdprStr
+            },
+            {
+                name: "TTD",
+                url: "https://match.adsrvr.org/track/cmf/generic?ttd_pid=sirnsvg&ttd_tpi=1&gdpr=" + gdpr + "&gdpr_consent=" + gdprStr
+            },
+            {
+                name: "Rubicon",
+                url: "https://secure-assets.rubiconproject.com/utils/xapi/multi-sync.html?p=12776&gdpr=" + gdpr + "&gdpr_consent=" + gdprStr,
+                type: "iframe"
+            },
+            {
+                name: "Rubicon2",
+                url: "https://pixel.rubiconproject.com/exchange/sync.php?p=12776&gdpr=" + gdpr + "&gdpr_consent=" + gdprStr
+            },
+            {
+                name: "Pubmatic",
+                url: "https://image8.pubmatic.com/AdServer/ImgSync?p=160318&gdpr=" + gdpr + " + &gdpr_consent=" + gdprStr + "&pu=https%3A%2F%2Fimage4.pubmatic.com%2FAdServer%2FSPug%3Fp%3D160318%26pmc%3DPM_PMC%26pr%3Dhttps%253A%252F%252Fevt.undertone.com%252FuserPixel%252Fsync%253FpartnerId%253D53%2526uid%253D%2523PMUID"
+            },
+	    	{
+                name: "Vidazoo",
+                url: "https://sync.cootlogix.com/api/user/image/55537adc33d1b40300987e8e?gdpr=" + gdpr + "&gdpr_consent=" + gdprStr + "&redirect=https%3A%2F%2Fevt.undertone.com%2FuserPixel%2Fsync%3FpartnerId%3D59%26uid%3D%24%7BvdzUserSyncMacro%7D"
+            }
+        );
+        if (shouldSendCentroSyncRequest) {
+            partners.push(
+                {
+                    name: "Centro",
+                    url: "https://pixel-sync.sitescout.com/dmp/pixelSync?nid=125&redir=https%3A%2F%2Fevt.undertone.com%2FuserPixel%2Fsync%3FpartnerId%3D54%26uid%3D%7BuserId%7D&gdpr=" + gdpr + "&gdpr_consent=" + gdprStr
+                }
+            );
+        }
+    }
+
+    baseSyncUrl = updateUrlParameter(baseSyncUrl, "us_privacy", usPrivacy);
+    baseSyncUrl = updateUrlParameter(baseSyncUrl, "gpp", gppStr);
+
+    var trackingConsentSuffix = "%26gdpr%3D" + encodeURIComponent(gdpr || "")
+        + "%26gdprstr%3D" + encodeURIComponent(gdprStr)
+        + "%26gpp%3D" + encodeURIComponent(gppStr)
+        + "%26us_privacy%3D" + encodeURIComponent(usPrivacy);
+
+    for (var perionPartnerIdx = 0; perionPartnerIdx < partners.length; perionPartnerIdx++) {
+        if (partners[perionPartnerIdx].url.indexOf("evt.undertone.com%252FuserPixel%252Fsync") !== -1) {
+            partners[perionPartnerIdx].url += encodeURIComponent(trackingConsentSuffix);
+        } else if (partners[perionPartnerIdx].url.indexOf("evt.undertone.com%2FuserPixel%2Fsync") !== -1) {
+            partners[perionPartnerIdx].url += trackingConsentSuffix;
+        }
+    }
+
+   if (!isMissingConsent(usPrivacy, US_PRIVACY_FORMAT)) {
+        for (var partnerIdx = 0; partnerIdx < partners.length; partnerIdx++) {
+		partners[partnerIdx].url = updateUrlParameter(partners[partnerIdx].url, "us_privacy", usPrivacy);
+        }
+    }	
+    if (!isMissingConsent(gppStr, GPP_STRING_FORMAT)) {
+        for (var partnerIdx = 0; partnerIdx < partners.length; partnerIdx++) {
+		partners[partnerIdx].url = updateUrlParameter(partners[partnerIdx].url, "gpp", gppStr);
+		if (!isMissingConsent(gppSids, GPP_SIDS_FORMAT)) {
+			partners[partnerIdx].url = updateUrlParameter(partners[partnerIdx].url, "gpp_sid", gppSids);
+		}
+        }
+    }
+	
+	if (redirectUrl) {
+		redirectUrl = decodeURIComponent(redirectUrl);
+		redirectUrl = redirectUrl.replace("$UID",'$UIDENC').replace("${UID}", '$UIDENC').replace("${DI_USER_ID}", '$UIDENC').replace("${UIDENC}", '$UIDENC');
+		var gdprVal = (!gdpr || (gdpr && ((gdpr.indexOf('{') === 0) || (gdpr.indexOf('$') === 0)))) ? '' : gdpr;
+		var gdprStrVal = (!gdprStr || (gdprStr && ((gdprStr.indexOf('{') === 0) || (gdprStr.indexOf('$') === 0)))) ? '' : gdprStr;
+		var usPrivacyVal = (!usPrivacy || (usPrivacy && ((usPrivacy.indexOf('{') === 0) || (usPrivacy.indexOf('$') === 0)))) ? '' : usPrivacy;
+		var gppStrVal = (!gppStr || (gppStr && ((gppStr.indexOf('{') === 0) || (gppStr.indexOf('$') === 0)))) ? '' : gppStr;
+		var gppSidVal = (!gppSids || (gppSids && ((gppSids.indexOf('{') === 0) || (gppSids.indexOf('$') === 0)))) ? '' : gppSids;
+		redirectUrl = redirectUrl.replace('${gdpr}', gdprVal).replace('{gdpr}', gdprVal).replace('${gdpr_consent}', gdprStrVal).replace('{gdpr_consent}', gdprStrVal);
+		baseSyncUrl = baseSyncUrl.replace('${gdpr}', gdprVal).replace('{gdpr}', gdprVal).replace('${gdpr_consent}', gdprStrVal).replace('{gdpr_consent}', gdprStrVal);
+		redirectUrl = redirectUrl.replace('${us_privacy}', usPrivacyVal).replace('{us_privacy}', usPrivacyVal); 
+		baseSyncUrl = baseSyncUrl.replace('${us_privacy}', usPrivacyVal).replace('{us_privacy}', usPrivacyVal);
+		redirectUrl = redirectUrl.replace('${gpp}', gppStrVal).replace('{gpp}', gppStrVal).replace('${gpp_sid}', gppSidVal).replace('{gpp_sid}', gppSidVal);
+		baseSyncUrl = baseSyncUrl.replace('${gpp}', gppStrVal).replace('{gpp}', gppStrVal).replace('${gpp_sid}', gppSidVal).replace('{gpp_sid}', gppSidVal);
+
+        if (userIdEncCookie) {
+            redirectUrl = redirectUrl.replace("$UIDENC", userIdEncCookie);
+        } else {
+            redirectUrl = baseSyncUrl + "&partnerId=" + partnerId + "&r=" + encodeURIComponent(redirectUrl);
+        }
+		
+		partners.push({name:"prebid",url:redirectUrl});
+	}
+	
+    // if (userIdCookie !== "" && userIdCookie != null && userIdCookie !== "0") {
+    //     removed (was crosswise)
+    // }
+
+	// ----- sync DMPs ----
+    if (userIdEncCookie !== "" && userIdEncCookie != null && userIdEncCookie !== "0") {
+        partners.push(
+            {
+                name: "Adobe",
+                url: "https://dpm.demdex.net/ibs:dpid=152416&dpuuid=" + userIdEncCookie,
+                partnerID: 32
+            },
+            {
+                name: "LiveRamp",
+                url: "https://idsync.rlcdn.com/403716.gif?partner_uid=" + userIdEncCookie,
+                partnerID: 31
+            },
+            {
+                name: "Tapad",
+                url: "https://pixel.tapad.com/idsync/ex/receive?partner_id=3484&partner_device_id=" + userIdEncCookie,
+                partnerID: 60
+            }
+        );
+		if (gdpr === null || gdpr === 0) {
+			partners.push(
+				{
+	                name: "Targeted Victory (via Lotame)",
+					url: "https://sync.crwdcntrl.net/qmap?c=2700&tp=UNDR&gdpr=&gdpr_consent=&tpid=" + userIdEncCookie,
+	                partnerID: 18
+	            }
+			);
+		}else {
+			partners.push(
+				{
+	                name: "Targeted Victory (via Lotame)",
+	                url: "https://sync.crwdcntrl.net/qmap?c=2700&tp=UNDR&gdpr=" + gdpr + "&gdpr_consent=" + gdprStr + "&tpid=" + userIdEncCookie,
+	                partnerID: 18
+	            }
+			);
+		}
+
+        var syncExcelate = (Math.floor(Math.random() * 10) > 8);
+        if (syncExcelate) {
+            partners.push(
+            {
+                name: "Exelate (Batch Integration)",
+                url: "https://loadm.exelator.com/load/?p=204&g=1145&j=0&utid=" + userIdEncCookie,
+                partnerID: 4
+            });
+        }
+
+        // update intentIQ pixel
+        var isChrome = /chrome/i.test(ua) && !/edge|edg|opr|opera/i.test(ua);
+        if (isChrome) {
+            partners.push(
+                {
+                    name: "IntentIQ",
+                    url: "https://sync.intentiq.com/profiles_engine/ProfilesEngineServlet?at=20&mi=10&dpi=1489343191&pcid=" + userIdEncCookie
+                }
+            );
+        }
+    }
+
+    var ut_dps=[];
+    function initUtdps() {
+        for(var i=0,ck=document.cookie.split(';');i<ck.length;i++) {
+            try {
+                var c=ck[i].split('=',2);
+                if(c[0].replace(/^\s+|\s+$/g,'')=='UTDP') {
+                    ut_dps=unescape(c[1]).split(',');
+                    break;
+                }
+            } catch(err) {}
+        }
+    }
+    initUtdps();
+
+    function getCookie(name) {
+        var re = new RegExp(name + "=([^;]+)");
+        var value = re.exec(document.cookie);
+        return (value != null) ? unescape(value[1]) : "";
+    }
+    function plantPixels() {
+        var imgs = getAllImgs();
+        for (var i = 0; i < imgs.length; i++) {
+            document.body.insertAdjacentElement('afterbegin', imgs[i]);
+        }
+    }
+    function getAllImgs() {
+        var imgs = [];
+        for (var i = 0; i < partners.length; i++) {
+            if(partners[i].partnerID == null || ut_dps.indexOf(partners[i].partnerID.toString()) == -1){
+                var img;
+                if (partners[i].type && partners[i].type === 'iframe') {
+                    img = document.createElement('iframe');
+                } else {
+                    img = document.createElement("img");
+                }
+                img.setAttribute("src", partners[i].url);
+                img.setAttribute("name", partners[i].name);
+                img.setAttribute("alt", "");
+                img.setAttribute("style", "display:none");
+                img.setAttribute("border", "0");
+                img.setAttribute("height", "1");
+                img.setAttribute("width", "1");
+                imgs.push(img);
+
+                if (partners[i].partnerID != null) {
+                    ut_dps.push(partners[i].partnerID);
+                }
+            }
+        }
+        return imgs;
+    }
+
+    var isSafari = ua.indexOf("safari") > -1 && ua.indexOf("chrome") == -1 && ua.indexOf("android") == -1;
+    var isFacebookApp = ua.indexOf("fban") > -1 || ua.indexOf("fbav") > -1;
+    var isIos = ua.indexOf("ipad") > -1 || ua.indexOf("iphone") > -1;
+
+    var isCookiable = !isSafari && !(isFacebookApp && isIos);
+
+    if (isCookiable) {
+        plantPixels();
+
+        var d=new Date();
+        d.setDate(d.getDate()+1);
+        if (gdpr === null || gdpr == 0) {
+            document.cookie='UTDP='+escape(ut_dps.join(','))+'; expires='+d.toUTCString();
+        }
+
+    }
+</script>
+
+
+
+</body></html>

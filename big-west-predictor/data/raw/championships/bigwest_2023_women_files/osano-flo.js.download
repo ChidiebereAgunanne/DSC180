@@ -1,0 +1,340 @@
+/* Customized FloSports Osano Consent Manager message to include most up-to-date TOS, Privacy Policy, & Cookie Consent language */
+!(function (o, e, t) {
+  ;(o[e] =
+    o[e] ||
+    function () {
+      o[e][t].push(arguments)
+    }),
+    (o[e][t] = o[e][t] || [])
+})(window, 'Osano', 'data'),
+  window.Osano('onInitialized', () => {
+    const setCookie = function (o, e, t) {
+      const a = `.${window.location.hostname.split('.').slice(-2).join('.')}`,
+        n = new Date()
+      n.setDate(n.getDate() + t)
+      const i = encodeURIComponent(e) + (null == t ? '' : ';expires=' + n.toUTCString())
+      document.cookie = `${o}=${i};domain=${a};path=/`
+    }
+
+    // COR-3: persist the "banner has been resolved" marker only when the user
+    // actually makes a consent choice. Without this guard, Osano's implicit /
+    // permissive consent mode auto-fires `osano-cm-consent-saved` on page init
+    // with the default (all-ACCEPT) state, which would write the gate cookie
+    // and suppress the banner on the next load before the user ever interacts.
+    //
+    // Any click on the drawer's native Save button signals a user-initiated
+    // choice — whether the user clicked Save directly in the preferences
+    // drawer, or the Accept All / Reject All buttons drove that click
+    // programmatically (see runConsent below). The capture-phase listener
+    // ensures we see the click even if Osano stops propagation.
+    let userInitiatedSave = false
+    document.addEventListener(
+      'click',
+      e => {
+        if (e.target && e.target.closest && e.target.closest('.osano-cm-save')) {
+          userInitiatedSave = true
+        }
+      },
+      true
+    )
+    Osano.cm.addEventListener('osano-cm-consent-saved', () => {
+      if (!userInitiatedSave) return
+      userInitiatedSave = false
+      setCookie('osano_flo_shown', 20221221, 90)
+    })
+
+    // Build (or re-show) the customized consent banner. Failing to run this is
+    // what produces the "occasionally the old Osano banner shows" bug, so it
+    // guards against two init/DOM races:
+    //  - it is attached as the `osano-cm-initialized` listener AND invoked
+    //    immediately below, because that event can fire before we attach the
+    //    listener (we are already inside onInitialized, where cm is
+    //    initialized) — in which case the listener alone would never run; and
+    //  - it polls for the dialog DOM instead of bailing on the first miss,
+    //    since Osano may not have painted the message element yet.
+    // It is idempotent via `bannerResolved`: once the banner is built (or
+    // skipped because the user already chose), repeat calls are no-ops.
+
+    // Paths and pattern where the banner should be hidden when suppression is on.
+    // Funnel paths are exact-prefix matches; event hub uses the /events parent route;
+    // how-to-watch replicates the regex from how-to-watch.utility.ts.
+    var HOW_TO_WATCH_PATTERN = /(?:^|[/-])how-to-watch(?![a-z])/
+    var SUPPRESSED_PREFIXES = ['/signup', '/create-account', '/register', '/login', '/plans', '/pay', '/events']
+
+    function isSuppressedRoute(pathname) {
+      // Re-read the bridge on every call so SPA navigation respects a kill-switch
+      // write (Angular writes '0') that arrives after the initial IIFE evaluation.
+      // Absent key defaults to TRUE: matched routes never flash the banner while
+      // Angular is still booting and writing the bridge for the first time.
+      var suppressed
+      try {
+        var val = localStorage.getItem('flo_osano_suppress')
+        suppressed = val === null ? true : val === '1'
+      } catch (_) { suppressed = true }
+      if (!suppressed) return false
+      if (!pathname) return false
+      for (var i = 0; i < SUPPRESSED_PREFIXES.length; i++) {
+        var prefix = SUPPRESSED_PREFIXES[i]
+        // Match the prefix exactly OR as a path prefix (next char must be '/').
+        // prefix + '/' ensures /signup does NOT match /signup-flow.
+        if (pathname === prefix || pathname.indexOf(prefix + '/') === 0) {
+          return true
+        }
+      }
+      return HOW_TO_WATCH_PATTERN.test(pathname)
+    }
+
+    let bannerResolved = false
+    let bannerPollScheduled = false
+    let bannerPollRetries = 0
+    const MAX_BANNER_POLL_RETRIES = 100 // 100 × 30ms = 3s deadline
+    // Whether bannerResolved was set by suppression (vs. real consent/cookie). Used
+    // by checkRouteAndReveal to know whether SPA navigation should un-gate the banner.
+    var bannerResolvedDueToSuppression = false
+    var cancelHidePoll = null
+
+    // True once the user has made an explicit consent choice (COR-3 cookie). When
+    // set there is no banner to show or hide, so route changes are no-ops.
+    function hasConsentCookie() {
+      return /(?:^|;\s*)osano_flo_shown=/.test(document.cookie)
+    }
+
+    // Keep Osano's auto-shown default dialog hidden on suppressed routes. Osano may
+    // paint its dialog asynchronously when consent is absent (we never call
+    // showDialog there), so poll hideDialog() on the same cadence as the show-retry
+    // logic. Re-entrant: cancels any prior poll before starting a fresh one.
+    function startHidePoll() {
+      if (cancelHidePoll) cancelHidePoll()
+      var hideCancelled = false
+      cancelHidePoll = function() { hideCancelled = true }
+      var hideAttempts = 0
+      ;(function pollHide() {
+        if (hideCancelled) return
+        Osano.cm.hideDialog()
+        if (hideAttempts++ < MAX_BANNER_POLL_RETRIES) window.setTimeout(pollHide, 30)
+      })()
+    }
+
+    const renderConsentBanner = () => {
+      if (bannerResolved) return
+      if (isSuppressedRoute(window.location.pathname)) {
+        bannerResolved = true
+        bannerResolvedDueToSuppression = true
+        startHidePoll()
+        return
+      }
+      if (
+        !(function (o) {
+          const e = document.cookie.match(o + '=([^;]*)')
+          return e ? e[1] : void 0
+        })('osano_flo_shown')
+      ) {
+        const messageEl = document.querySelector('.osano-cm-content__message.osano-cm-message')
+        if (messageEl) {
+          bannerResolved = true
+          // Build the custom content (message HTML, <style>, action buttons) only
+          // once. The SPA-reveal path (leaving a suppressed route) resets
+          // bannerResolved and re-enters here while the content is still in the
+          // DOM; re-running the build would append a duplicate `.flo-osano-actions`
+          // row and a duplicate <style>. If it's already built, just re-open the
+          // existing dialog.
+          if (messageEl.parentElement.querySelector('.flo-osano-actions')) {
+            Osano.cm.showDialog()
+            return
+          }
+          messageEl.innerHTML =
+            'By clicking "Accept All", you agree to our use of third-party technology to collect, store, and use data about your use of our site, and our <a target="_blank" href="https://www.flosports.tv/privacy-policy/">Privacy Policy</a> and <a target="_blank" href="https://www.flosports.tv/terms-of-service/">Terms of Service</a>. Manage your cookie preferences <a href="#" class="flo-osano-manage-preferences">here</a>.'
+          const styleEl = document.createElement('style')
+          ;(styleEl.type = 'text/css'),
+            (styleEl.textContent =
+              '.osano-cm-dialog__content.osano-cm-content{font-size:0.8rem}.osano-cm-content a{color:#FFFFFF;text-decoration:underline}.osano-cm-storage-policy{display:none}.osano-cm-dialog__close{width:15px;height:15px;min-height:15px;min-width:15px}.osano-cm-dialog__close svg{width:15px;height:15px;min-height:15px;min-width:15px}'),
+            document.head.appendChild(styleEl)
+
+          // Osano v3 does not expose savePreferences/acceptAll/denyAll on the
+          // public Osano.cm API — the only way to register a consent choice is
+          // to drive Osano's own "Save" button in the preferences drawer. We
+          // open the drawer (which renders the checkboxes + save button),
+          // toggle each non-essential checkbox to match the user's choice,
+          // click the drawer's save button, then hide everything. The drawer
+          // is force-hidden with a marker class until the next frame settles
+          // so the user never sees it flash. Osano fires
+          // `osano-cm-consent-saved` when its save runs, which triggers the
+          // COR-3 cookie write above.
+          //
+          // OPT_OUT ("Do Not Sell or Share My Personal Information") is an
+          // inverted toggle: checked means the user *is* opting out. Accept All
+          // must leave it unchecked (not opting out); Reject All must check it.
+          const disableActions = () => {
+            actions.querySelectorAll('button').forEach(b => {
+              b.disabled = true
+            })
+          }
+
+          const runConsent = decision => {
+            disableActions()
+            document.documentElement.classList.add('flo-osano-consent-in-flight')
+            Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')
+            // Bail out if Osano doesn't render the drawer within the deadline
+            // so the suppression class doesn't permanently hide the drawer.
+            let retries = 0
+            const MAX_POLL_RETRIES = 100 // 100 × 30ms = 3s deadline
+            const poll = () => {
+              const inputs = document.querySelectorAll('.osano-cm-info .osano-cm-input')
+              const saveBtn = document.querySelector('.osano-cm-save')
+              if (!inputs.length || !saveBtn) {
+                if (retries++ >= MAX_POLL_RETRIES) {
+                  Osano.cm.hideDrawer()
+                  Osano.cm.hideDialog()
+                  document.documentElement.classList.remove('flo-osano-consent-in-flight')
+                  return
+                }
+                window.setTimeout(poll, 30)
+                return
+              }
+              const isOptOut = input => /category_OPT_OUT/i.test(input.id || '')
+              const targetFor = input => (isOptOut(input) ? decision === 'DENY' : decision === 'ACCEPT')
+              const all = Array.from(inputs)
+              const optOuts = all.filter(isOptOut)
+              const categories = all.filter(input => !isOptOut(input))
+              // Osano disables the categories while OPT_OUT is checked - clear it first to grant, last to deny.
+              const ordered = decision === 'ACCEPT' ? optOuts.concat(categories) : categories.concat(optOuts)
+              const drive = () =>
+                ordered.forEach(input => {
+                  // Clearing OPT_OUT re-enables the categories mid-drive, so never snapshot disabled.
+                  if (input.disabled || input.checked === targetFor(input)) return
+                  input.click()
+                })
+
+              drive()
+              // Osano's refusal is synchronous, so a second pass catches a toggle that did not take.
+              drive()
+              // A still-disabled toggle could not be driven at all; ESSENTIAL is always one of those.
+              const refused = ordered.filter(input => !input.disabled && input.checked !== targetFor(input))
+              // A toggle Osano still refuses is saved anyway; report it so the gate widening is not silent.
+              if (refused.length && window.analytics && window.analytics.track) {
+                window.analytics.track('Consent Toggle Refused', {
+                  decision,
+                  categories: refused.map(input => input.id).join(',')
+                })
+              }
+              saveBtn.click()
+              Osano.cm.hideDrawer()
+              Osano.cm.hideDialog()
+              // Keep the suppression class on until Osano's show/hide drawer
+              // animation fully completes, so the drawer never renders
+              // visible to the user.
+              window.setTimeout(() => {
+                document.documentElement.classList.remove('flo-osano-consent-in-flight')
+              }, 400)
+            }
+            poll()
+          }
+
+          const makeActionButton = (label, className, onClick) => {
+            const btn = document.createElement('button')
+            btn.type = 'button'
+            btn.className = className
+            btn.textContent = label
+            btn.addEventListener('click', onClick)
+            return btn
+          }
+
+          const actions = document.createElement('div')
+          actions.className = 'flo-osano-actions'
+          actions.appendChild(
+            makeActionButton('Accept All', 'flo-osano-actions__btn flo-osano-actions__btn--accept', () => {
+              runConsent('ACCEPT')
+            })
+          )
+          actions.appendChild(
+            makeActionButton('Reject Non-Essential', 'flo-osano-actions__btn flo-osano-actions__btn--reject', () => {
+              runConsent('DENY')
+            })
+          )
+          actions.appendChild(
+            makeActionButton('Manage Preferences', 'flo-osano-actions__btn flo-osano-actions__btn--manage', () => {
+              disableActions()
+              Osano.cm.hideDialog()
+              Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')
+              setCookie('osano_flo_drawer', 1, 90)
+            })
+          )
+          messageEl.parentElement.appendChild(actions)
+
+          const hereLink = messageEl.querySelector('.flo-osano-manage-preferences')
+          if (hereLink) {
+            hereLink.addEventListener('click', e => {
+              e.preventDefault()
+              disableActions()
+              Osano.cm.hideDialog()
+              Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')
+              setCookie('osano_flo_drawer', 1, 90)
+            })
+          }
+
+          Osano.cm.showDialog()
+        } else {
+          // Osano has not painted the dialog DOM yet. Retry on a short
+          // interval with a deadline rather than giving up — bailing on the
+          // first miss is what left the default banner on screen.
+          if (bannerPollScheduled) return
+          if (bannerPollRetries++ >= MAX_BANNER_POLL_RETRIES) {
+            console.error('Osano Consent Manager message not found')
+            return
+          }
+          bannerPollScheduled = true
+          window.setTimeout(() => {
+            bannerPollScheduled = false
+            renderConsentBanner()
+          }, 30)
+        }
+      } else {
+        // User already chose on a prior load; nothing to show.
+        bannerResolved = true
+      }
+    }
+
+    Osano.cm.addEventListener('osano-cm-initialized', renderConsentBanner)
+    // The event above may have already fired before this listener attached, so
+    // render now too — renderConsentBanner is idempotent.
+    renderConsentBanner()
+
+    // Re-evaluate suppression on SPA navigation so the banner tracks the route in
+    // both directions: hidden when entering a suppressed route, shown when leaving
+    // one. A user who starts on the homepage (banner showing) then opens an event
+    // hub gets the banner dismissed; a user who starts in the funnel then navigates
+    // to a regular page gets it shown. Angular uses history.pushState for
+    // client-side routing; popstate covers browser back/forward.
+    function checkRouteOnNavigation() {
+      // Once the user has chosen, there is no banner to manage.
+      if (hasConsentCookie()) return
+      if (isSuppressedRoute(window.location.pathname)) {
+        // Entered a suppressed route — hide the banner if it isn't already suppressed.
+        if (!bannerResolvedDueToSuppression) {
+          bannerResolved = true
+          bannerResolvedDueToSuppression = true
+          startHidePoll()
+        }
+      } else if (bannerResolvedDueToSuppression) {
+        // Left a suppressed route — reveal the banner for this page.
+        if (cancelHidePoll) { cancelHidePoll(); cancelHidePoll = null }
+        bannerResolved = false
+        bannerResolvedDueToSuppression = false
+        bannerPollRetries = 0
+        bannerPollScheduled = false
+        renderConsentBanner()
+      }
+    }
+
+    var _origPushState = history.pushState
+    history.pushState = function() {
+      _origPushState.apply(this, arguments)
+      checkRouteOnNavigation()
+    }
+    var _origReplaceState = history.replaceState
+    history.replaceState = function() {
+      _origReplaceState.apply(this, arguments)
+      checkRouteOnNavigation()
+    }
+    window.addEventListener('popstate', checkRouteOnNavigation)
+  })

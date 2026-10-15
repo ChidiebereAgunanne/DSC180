@@ -1,0 +1,54 @@
+const omnitor = {
+  _isInitialized: false,
+  _cbs: [],
+  isInitialized: () => {
+    return omnitor._isInitialized;
+  },
+  whenReady: (cb) => {
+    if (omnitor._isInitialized) {
+      cb();
+    } else {
+      omnitor._cbs.push(cb);
+    }
+  },
+  showFrame: () => {
+    // eslint-disable-next-line no-console
+    console.warning("showFrame not implemented");
+  },
+  init: (devDynamicContent) => {
+    const search = new URLSearchParams(window.location.search);
+    if (search.has("_omnitor") && window.parent !== window) {
+      window.addEventListener("message", (event) => {
+        if (typeof event.data !== "object") {
+          return;
+        }
+        if (event.data.type === "dynamicContent") {
+          for (const key in event.data.dd) {
+            devDynamicContent[key] = event.data.dd[key];
+          }
+          Enabler.setDevDynamicContent(devDynamicContent);
+          window.dynamicContent = devDynamicContent;
+          omnitor._isInitialized = true;
+          omnitor._cbs.forEach((cb) => cb());
+        }
+        if (event.data.type === "showFrame") {
+          omnitor.showFrame(event.data.frame);
+        }
+      });
+      window.parent.postMessage(
+        "request-data_" +
+          search.get("_omnitor") +
+          "_" +
+          (window.VERSION ?? "not-set"),
+        "*",
+      );
+    } else {
+      console.log("here");
+      Enabler.setDevDynamicContent(devDynamicContent);
+      omnitor._isInitialized = true;
+      omnitor._cbs.forEach((cb) => cb());
+    }
+  },
+};
+
+window.Omnitor = omnitor;

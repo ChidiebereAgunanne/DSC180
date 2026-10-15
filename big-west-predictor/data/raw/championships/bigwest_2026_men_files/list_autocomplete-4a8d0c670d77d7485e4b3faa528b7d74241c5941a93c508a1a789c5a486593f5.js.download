@@ -1,0 +1,86 @@
+// Generates a list of autocomplete options
+// from the values in each table.
+// Accepts `titleMatcher` which is used to
+// find the matching column for which to pull
+// values from (either athlete or team).
+function generateList(titleMatcher, normalize) {
+  var backpack = {};
+  var list = [];
+
+  $('table').each(function() {
+    // Find the matching column by testing its
+    // title against the matcher
+    var colIndex = $(this).find('th').filter(function() {
+      return titleMatcher.test($(this).text().trim());
+    }).index();
+
+    if (colIndex === -1) {
+      // No column found for this table
+      return;
+    }
+
+    // Form selector for the right table cell in each row by index.
+    var query = 'td:nth-child(' + (colIndex + 1) + ')';
+    $(this).find(query).each(function() {
+      var name = $(this).text().trim();
+      if (normalize) {
+        name = normalize(name);
+      }
+      if (!name || backpack[name]) {
+        return;
+      }
+      backpack[name] = true;
+      list.push(name);
+    });
+  });
+
+  // Sort list alphabetically
+  return list.sort(function (a, b) {
+    if (a < b) return -1;
+    else if (a > b) return 1;
+    return 0;
+  });
+}
+
+$(document).ready(function() {
+  // Generate list for athletes (column title could be "Athlete" or "Athletes")
+  var list_athletes = generateList(/^athletes?$/i);
+  // Generate list from columns titled "Team"
+  var list_teams = generateList(/^team$/i, function(team) {
+    // Relay teams might have multiple squads, so we remove
+    // the "(B)" suffix from team names
+    return team.replace(/\([A-Z]\)$/, '').trim();
+  });
+
+  var athletes, teams;
+  if (typeof Bloodhound === 'undefined') {
+    athletes = substringMatcher(list_athletes);
+    teams = substringMatcher(list_teams);
+  } else {
+    // Initialize autocomplete matcher using Typeahead's
+    // Bloodhound engine
+    athletes = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.whitespace,
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      local: list_athletes
+    });
+    teams = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.whitespace,
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      local: list_teams
+    });
+  }
+
+  // Setup autocomplete for teams
+  $('#list_teams_filter,#compare_teams1,#compare_teams2,#compare_teams3,#compare_teams4').typeahead(null, {
+    limit: 50,
+    name: 'teams',
+    source: teams
+  });
+  // Setup athletes autocomplete
+  $('#list_athletes_filter').typeahead(null, {
+    limit: 50,
+    name: 'athletes',
+    source: athletes
+  });
+});

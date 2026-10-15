@@ -1,0 +1,39 @@
+@font-face
+{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: normal;
+
+    src: url(/Roboto-300.eot);
+    src: url(/Roboto-300.eot?#iefix) format('embedded-opentype'), local('Roboto Light'), local('Roboto-300'), url(/assets/Roboto-300-e80a6ef72524e7d315a7c5b65251449651ef071a0f74924b0e59bc252df52a68.woff2) format('woff2'), url(/Roboto-300.woff) format('woff'), url(/Roboto-300.ttf) format('truetype'), url(/Roboto-300.svg#Roboto) format('svg');
+}
+
+@font-face
+{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+
+    src: url(/Roboto-regular.eot);
+    src: url(/Roboto-regular.eot?#iefix) format('embedded-opentype'), local('Roboto'), local('Roboto-regular'), url(/assets/Roboto-regular-eaeb91c0e3d32f34e83fdf61c3552ce0ce2a9f541ce49c16774f9f9ddd8c347e.woff2) format('woff2'), url(/Roboto-regular.woff) format('woff'), url(/Roboto-regular.ttf) format('truetype'), url(/Roboto-regular.svg#Roboto) format('svg');
+}
+
+@font-face
+{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+
+    src: url(/Roboto-500.eot);
+    src: url(/Roboto-500.eot?#iefix) format('embedded-opentype'), local('Roboto Medium'), local('Roboto-500'), url(/assets/Roboto-500-4785a479bf914735251dd95df964e6cbd4f5155dd0dd34e1e6709c24ba0844f9.woff2) format('woff2'), url(/Roboto-500.woff) format('woff'), url(/Roboto-500.ttf) format('truetype'), url(/Roboto-500.svg#Roboto) format('svg');
+}
+
+@font-face
+{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: italic;
+
+    src: url(/Roboto-300italic.eot);
+    src: url(/Roboto-300italic.eot?#iefix) format('embedded-opentype'), local('Roboto Light Italic'), local('Roboto-300italic'), url(/assets/Roboto-300italic-1ef25c49224f9f157751d9df08a796fe86c1041cefc83612c7c0e3affd33b552.woff2) format('woff2'), url(/Roboto-300italic.woff) format('woff'), url(/assets/Roboto-300italic-0d152f591561cfcd0ce2a571a19db29c0be58dd68e7a8dda9a401ed3c9fc7e66.ttf) format('truetype'), url(/Roboto-300italic.svg#Roboto) format('svg');
+}

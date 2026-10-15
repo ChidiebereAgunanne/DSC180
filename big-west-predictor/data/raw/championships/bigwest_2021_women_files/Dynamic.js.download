@@ -1,0 +1,272 @@
+Enabler.setProfileId(10950867);
+var devDynamicContent = {};
+
+devDynamicContent.parent = [{}];
+devDynamicContent.parent[0]._id = 0;
+devDynamicContent.parent[0].id = "0";
+devDynamicContent.parent[0].nameplate = "default";
+devDynamicContent.parent[0].creative_type = "default";
+
+devDynamicContent.parent[0].template = "non-endemic";
+
+devDynamicContent.parent[0].TIER = "T2"; //==> T1, T2
+
+devDynamicContent.parent[0].custom_offer = "lease"; //==> apr, lease, text, match, conquest, cash, plus, employee, combo, loyalty, msrp, exception, msrp2, nopay, nopay2, 
+
+devDynamicContent.parent[0].sequence = "2F"; //==> 2F, 3F, 4F
+
+devDynamicContent.parent[0].custom_msg = "no_offer2"; //==> ,'', no_offer1, no_offer2  ==>"T1 ONLY"<==
+
+devDynamicContent.parent[0].rd_year = "default";
+
+devDynamicContent.parent[0].year = "default";
+
+devDynamicContent.parent[0].rd_model = "default";
+
+devDynamicContent.parent[0].rd_short_model_code = "default";
+
+devDynamicContent.parent[0].rd_location = "default";
+
+devDynamicContent.parent[0].rd_template = "default";
+
+devDynamicContent.parent[0].business_center = "default";
+
+devDynamicContent.OMS = [{}];
+devDynamicContent.OMS[0]._id = 0;
+devDynamicContent.OMS[0].id = "59311_OMS_CUJ202517JLXS74A_2TV_CUSTOM_APR_11032025";
+
+devDynamicContent.OMS[0].offerType = "custom_compound"; //==> custom_apr, custom_lease, custom_cash, custom_text, np_msrp, custom_compound, custom_simple, custom_fallback, OMS_default
+
+devDynamicContent.OMS[0].offerTemplateName = "custom_compound"; //==> custom_apr, custom_lease, custom_cash, custom_fallback, OMS_default
+
+devDynamicContent.OMS[0].vehname = {};
+devDynamicContent.OMS[0].vehname.Type = "file";
+devDynamicContent.OMS[0].vehname.Url = "https://s0.2mdn.net/creatives/assets/5530354/UJ202519WLXP74A_2TF.png";
+
+devDynamicContent.OMS[0].family = ["UJ202415"];
+devDynamicContent.OMS[0].displayName = "2024 WAGONEER SERIES III&nbsp;4X4";
+devDynamicContent.OMS[0].percent = "";
+devDynamicContent.OMS[0].months = "";
+devDynamicContent.OMS[0].cash1 = "49,985";
+devDynamicContent.OMS[0].cash2 = "";
+devDynamicContent.OMS[0].cash3 = "";
+devDynamicContent.OMS[0].cash4 = "";
+devDynamicContent.OMS[0].cash5 = "";
+devDynamicContent.OMS[0].cash6 = "";
+devDynamicContent.OMS[0].totalCash = "";
+devDynamicContent.OMS[0].securityDeposit = "";
+devDynamicContent.OMS[0].bonusCashDesc = "";
+devDynamicContent.OMS[0].desc1 = "";
+devDynamicContent.OMS[0].desc2 = "";
+devDynamicContent.OMS[0].desc3 = "";
+devDynamicContent.OMS[0].desc4 = "";
+devDynamicContent.OMS[0].desc5 = "";
+devDynamicContent.OMS[0].desc6 = "";
+devDynamicContent.OMS[0].legal = "* Offer applies to owners or lessees of FCA US LLC vehicles. No trade-in/turn-in required. Current vehicle must be registered to consumer at least 30 days prior to purchase to qualify. Contact dealer for details. Must take delivery by 11/03/2025. Contact dealer for details. Must take delivery by 11/03/2025. ** New York residency required. For more information, visit https://www.nyserda.ny.gov/All-Programs/Programs/Drive-Clean-Rebate or Contact the program administrator at 866-595-7917. This rebate is offered by the dealer at time of sale and is subject to change without notice. Please confirm this information to ensure its accuracy and availability.";
+devDynamicContent.OMS[0].marketingMessage = "";
+
+// CUSTOM GROUPS ORIGINAL 
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"Get\", \"postText\": [\"Offer for FCA US LLC employees that currently own or lease an FCA US LLC vehicle. On select vehicles in dealer inventory.*\"], \"isMathbox\": true, \"programKeys\": [\"26CTA\"], \"param1\": \"1,000\"}]";
+
+// CUSTOM GROUPS APR
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"\", \"type\": \"APR\", \"preText\": \"Finance for\", \"postText\": [\"When financed through Stellantis Financial Services.***\"], \"programKeys\": [\"51AT8F\"], \"value\": 0, \"param1\": \"5.9\", \"param2\": \"84\"}]";
+
+// CUSTOM GROUPS TEXT 
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"\", \"type\": \"Cash\", \"preText\": \"America's Best Full-Size Truck Powertrain Limited Warranty\", \"postText\": [\"Total Bonus Cash Allowance *\"], \"isMathbox\": true, \"programKeys\": [\"39CRP\", \"24CRA1\"], \"param1\": \"7,750\"}]";
+
+// CUSTOM GROUPS LEASE
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"\", \"type\": \"LEASE\", \"preText\": \"Get an ultra-low mileage lease for\", \"postText\": [\"Offer for curren Jeep Grand Cherokee 4xe or Jeep Wrangler 4xe lessees.+\"], \"programKeys\": [\"NELTJ\", \"26CTA\", \"XLTJF\", \"NELTK\", \"XLT3F\"], \"value\": 0, \"param1\": \"299\", \"param2\": \"36\", \"param3\": \"4,069\", \"param4\": \"0\"}]";
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"\", \"type\": \"LEASE\", \"preText\": \"Current Jeep Grand Cherokee 4xe or Jeep Wrangler 4xe lessees can get an ultra-low mileage lease for\", \"postText\": [\"*\"], \"programKeys\": [\"NELTJ\", \"26CTA\", \"XLTJF\", \"NELTK\", \"XLT3F\"], \"value\": 0, \"param1\": \"299\", \"param2\": \"36\", \"param3\": \"4,069\", \"param4\": \"0\"}]";
+
+// CUSTOM GROUPS COMPOUND 
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"\", \"preText\": \"GET \", \"postText\": [\"BONUS CASH ALLOWANCE*\"], \"isMathbox\": true}, {\"id\": 2, \"connector\": \"AND\", \"preText\": \"Texas residents get\", \"postText\": [\"Bonus Cash Allowance**\"], \"isMathbox\": true}, {\"id\": 3, \"connector\": \"AND\", \"preText\": \"\", \"postText\": [\"Bonus Cash Allowance***\"], \"isMathbox\": true}]";
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"+\", \"type\": \"Cash\", \"preText\": \"Get\", \"postText\": [\"Bonus Cash Allowance *\"], \"isMathbox\": true, \"programKeys\": [\"25CSA\"], \"param1\": \"2,000\"}, {\"id\": 2, \"connector\": \"+\", \"type\": \"Cash\", \"preText\": \"Returning FCA US LLC owners and lessees get\", \"postText\": [\"Bonus Cash Allowance**\"], \"isMathbox\": true, \"programKeys\": [\"38CS4\"], \"param1\": \"1,000\"}]";
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"Get\", \"postText\": [\"Bonus Cash Allowance *\"], \"isMathbox\": true, \"programKeys\": [\"26CTA1\"], \"param1\": \"1,000\"}, {\"id\": 2, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"Returning FCA US LLC owners and lessees get\", \"postText\": [\"Bonus Cash Allowance**\"], \"isMathbox\": true, \"programKeys\": [\"38CT4\"], \"param1\": \"1,000\"}]";
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"+\", \"type\": \"TEXT\", \"preText\": \"\", \"postText\": [], \"programKeys\": [\"H38CT7\"], \"value\": 0, \"param1\": \"Get 15% Below MSRP*\"}, {\"id\": 2, \"connector\": \"+\", \"type\": \"TEXT\", \"preText\": \"America's Best Full-Size Truck Powertrain Limited Warranty\", \"postText\": [], \"programKeys\": [\"PLWT10\"], \"value\": 0, \"param1\": \"10 Years/100,000 Miles**\"}]";
+devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"+\", \"type\": \"TEXT\", \"preText\": \"\", \"postText\": [], \"programKeys\": [\"J39CTF\"], \"value\": 0, \"param1\": \"Get 10% Below MSRP*\"}, {\"id\": 2, \"connector\": \"+\", \"type\": \"Cash\", \"preText\": \"\", \"postText\": [\"Total Bonus Cash Allowance on select vehicles in dealer inventory **\"], \"isMathbox\": true, \"programKeys\": [\"41CTY4\"], \"param1\": \"1,500\"}]";
+
+// CUSTOM FALLBACK
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"+\", \"type\": \"Cash\", \"preText\": \"Get\", \"postText\": [\"Total Bonus Cash Allowance *\"], \"isMathbox\": true, \"programKeys\": [\"MWCTA\", \"26CTA1\"], \"param1\": \"2,000\"}, {\"id\": 2, \"connector\": \"+\", \"type\": \"Cash\", \"preText\": \"Returning FCA US LLC owners and lessees get\", \"postText\": [\"Bonus Cash Allowance**\"], \"isMathbox\": true, \"programKeys\": [\"38CT4\"], \"param1\": \"1,000\"}, {\"id\": 3, \"connector\": \"+\", \"type\": \"Cash\", \"preText\": \"\", \"postText\": [\"Bonus Cash Allowance when financed through Stellantis Financial Services when financed through Stellantis Financial Services ***\"], \"isMathbox\": true, \"programKeys\": [\"MWCT2\"], \"param1\": \"2,000\"}]";
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"+\", \"type\": \"APR\", \"preText\": \"Finance for\", \"postText\": [\"*\"], \"programKeys\": [\"71AS7F\"], \"value\": 0, \"param1\": \"0\", \"param2\": \"60\"}, {\"id\": 2, \"connector\": \"+\", \"type\": \"TEXT\", \"preText\": \"\", \"postText\": [\"when financed through Stellantis Financial Services**\"], \"programKeys\": [\"71ASEF\"], \"value\": 0, \"param1\": \"Get No Monthly Payments for 90 Days\"}]";
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"AND\", \"type\": \"APR\", \"preText\": \"Finance for\", \"postText\": [\"*\"], \"programKeys\": [\"63AT7F\"], \"value\": 0, \"param1\": \"1.9\", \"param2\": \"72\"}, {\"id\": 2, \"connector\": \"AND\", \"type\": \"TEXT\", \"preText\": \"\", \"postText\": [\"when financed through Stellantis Financial Services**\"], \"programKeys\": [\"63ATEF\"], \"value\": 0, \"param1\": \"Get No Monthly Payments for 90 Days\"}]";
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"+\", \"type\": \"TEXT\", \"preText\": \"\", \"postText\": [\"when equipped with a Diesel Engine *\"], \"programKeys\": [\"J39CTF\"], \"value\": 0, \"param1\": \"Get 10% Below MSRP\"}, {\"id\": 2, \"connector\": \"+\", \"type\": \"TEXT\", \"preText\": \"America's Best Full-Size Truck Powertrain Limited Warranty\", \"postText\": [], \"programKeys\": [\"PLWT10\"], \"value\": 0, \"param1\": \"10 Years/100,000 Miles**\"}]";
+
+// Cash + Cash
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"Get\", \"postText\": [\"Bonus Cash Allowance *\"], \"isMathbox\": true, \"programKeys\": [\"26CTA1\"], \"param1\": \"1,000\"}, {\"id\": 2, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"Returning FCA US LLC owners and lessees get\", \"postText\": [\"Bonus Cash Allowance**\"], \"isMathbox\": true, \"programKeys\": [\"38CT4\"], \"param1\": \"1,000\"}]";
+// APR + Cash + Cash
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"AND\", \"type\": \"APR\", \"preText\": \"Finance for\", \"postText\": [\"*\"], \"programKeys\": [\"63AT3F\"], \"value\": 0, \"param1\": \"2.9\", \"param2\": \"72\"}, {\"id\": 2, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"\", \"postText\": [\"Bonus Cash Allowance **\"], \"isMathbox\": true, \"programKeys\": [\"26CTA1\"], \"param1\": \"3,500\"}, {\"id\": 3, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"Texas residents get\", \"postText\": [\"Bonus Cash Allowance***\"], \"isMathbox\": true, \"programKeys\": [\"SWCTR\", \"SWCTA1\"], \"param1\": \"1,750\"}]";
+// Cash + Cash + Cash
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"Get\", \"postText\": [\"Bonus Cash Allowance *\"], \"isMathbox\": true, \"programKeys\": [\"26CTA\"], \"param1\": \"1,000\"}, {\"id\": 2, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"Texas residents get\", \"postText\": [\"Bonus Cash Allowance**\"], \"isMathbox\": true, \"programKeys\": [\"SWCTA1\"], \"param1\": \"1,000\"}, {\"id\": 3, \"connector\": \"AND\", \"type\": \"Cash\", \"preText\": \"\", \"postText\": [\"Bonus Cash Allowance***\"], \"isMathbox\": true, \"programKeys\": [\"SWCTR\"], \"param1\": \"2,000\"}]";
+// Text + Cash
+// devDynamicContent.OMS[0].customGroups = "[\n  {\n    \"id\": 1,\n    \"connector\": \"+\",\n    \"type\": \"TEXT\",\n    \"preText\": \"\",\n    \"postText\": [],\n    \"programKeys\": [\"TNETXT\"],\n    \"value\": 0,\n    \"param1\": \"Get 10% Below MSRP*\"\n  },\n  {\n    \"id\": 2,\n    \"connector\": \"+\",\n    \"type\": \"Cash\",\n    \"preText\": \"Eligible current business owners get up to\",\n    \"postText\": [\"On the Job allowance towards commercial upgrades**\"],\n    \"isMathbox\": true,\n    \"programKeys\": [\"43CTAA\"],\n    \"param1\": \"1,000\"\n  }\n]\n";
+
+// CUSTOM SIMPLE
+// devDynamicContent.OMS[0].customGroups = "[{\"id\": 1, \"connector\": \"for\", \"type\": \"TEXT\", \"preText\": \"\", \"postText\": [], \"programKeys\": [\"H38CT7\"], \"value\": 0, \"param1\": \"Get 15% Below MSRP*\"}, {\"id\": 2, \"connector\": \"for\", \"type\": \"Cash\", \"preText\": \"an average of\", \"postText\": [\" below MSRP**\"], \"isMathbox\": true, \"programKeys\": [\"WEFPT1\"], \"param1\": \"13,300\"}]";
+
+// RD VALUES ORIGINAL
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"apr\", \"values\": [\"389\",\"42\",\"3,721\",\"0\"]}]"; 
+
+// RD VALUES TEXT
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"text\", \"values\": [\"10 Years/100,000 Miles*\"]}]";
+
+// RD APR
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"apr\", \"values\": [\"5.9\", \"84\"]}]";
+
+// RD LEASE
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"lease\", \"values\": [\"299\", \"36\", \"4,069\", \"0\"]}]";
+
+// RD VALUES COMPOUND
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"cash\", \"values\": [\"1,000\"]}, {\"type\": \"cash\", \"values\": [\"1,000\"]}, {\"type\": \"cash\", \"values\": [\"2,000\"]}]";
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"cash\", \"values\": [\"1,000\"]}, {\"type\": \"cash\", \"values\": [\"1,000\"], \"connector\": \"+\"}]";
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"cash\", \"values\": [\"1,000\"]}, {\"type\": \"cash\", \"values\": [\"1,000\"], \"connector\": \"AND\"}]";
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"text\", \"values\": [\"Get 15% Below MSRP*\"]}, {\"type\": \"text\", \"values\": [\"10 Years/100,000 Miles**\"], \"connector\": \"+\"}]";
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"apr\", \"values\": [\"0\", \"72\"]}, {\"type\": \"cash\", \"values\": [\"9,698\"], \"connector\": \"for\"}]";
+
+// Cash + Cash
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"cash\", \"values\": [\"1,000\"]}, {\"type\": \"cash\", \"values\": [\"1,000\"], \"connector\": \"AND\"}]";
+// APR + Cash + Cash
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"apr\", \"values\": [\"2.9\", \"72\"]}, {\"type\": \"cash\", \"values\": [\"3,500\"], \"connector\": \"AND\"}, {\"type\": \"cash\", \"values\": [\"1,750\"], \"connector\": \"AND\"}]";
+// Cash + Cash + Cash
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"cash\", \"values\": [\"1,000\"]}, {\"type\": \"cash\", \"values\": [\"1,000\"], \"connector\": \"AND\"}, {\"type\": \"cash\", \"values\": [\"2,000\"], \"connector\": \"AND\"}]";
+// Text + Cash
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"text\", \"values\": [\"Get 10% Below MSRP*\"]}, {\"type\": \"cash\", \"values\": [\"1,000\"], \"connector\": \"+\"}]";
+
+// RD VALUES FALLBACK
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"cash\", \"values\": [\"2,000\"]}, {\"type\": \"cash\", \"values\": [\"1,000\"], \"connector\": \"+\"}, {\"type\": \"cash\", \"values\": [\"2,000\"], \"connector\": \"+\"}]";
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"apr\", \"values\": [\"0\", \"60\"]}, {\"type\": \"text\", \"values\": [\"Get No Monthly Payments for 90 Days\"], \"connector\": \"+\"}]";
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"apr\", \"values\": [\"1.9\", \"72\"]}, {\"type\": \"text\", \"values\": [\"Get No Monthly Payments for 90 Days\"], \"connector\": \"AND\"}]";
+devDynamicContent.OMS[0].rd_values = "[{\"type\": \"text\", \"values\": [\"Get 10% Below MSRP*\"]}, {\"type\": \"cash\", \"values\": [\"1,500\"], \"connector\": \"+\"}]";
+
+// CUSTOM SIMPLE
+// devDynamicContent.OMS[0].rd_values = "[{\"type\": \"text\", \"values\": [\"Get 15% Below MSRP*\"]}, {\"type\": \"cash\", \"values\": [\"13,300\"], \"connector\": \"for\"}]";
+
+devDynamicContent.OMS[0].label = "OMS_CASH_CUSTOM_CASH_543_NORTHEAST";
+devDynamicContent.OMS[0].rd_DMA = "543";
+devDynamicContent.OMS[0].omsUrl = "https:\/\/www.jeep.com\/hostd\/api\/incentives\/offers\/targetMedium\/Preferred-Offers\/zip\/01001\/vehicle\/J";
+
+devDynamicContent.creative_data = [{}];
+devDynamicContent.creative_data[0]._id = 0;
+devDynamicContent.creative_data[0].id = "0";
+devDynamicContent.creative_data[0].ad_size = [];
+devDynamicContent.creative_data[0].ad_size[0] = {"Width": 728, "Height": 90};
+devDynamicContent.creative_data[0].rd_msg_code = "default";
+devDynamicContent.creative_data[0].rd_msg_version = "default";
+devDynamicContent.creative_data[0].rd_geo_background = "non-applicable";
+
+devDynamicContent.creative_data[0].logo = {};
+devDynamicContent.creative_data[0].logo.Type = "file";
+devDynamicContent.creative_data[0].logo.Url = "https://s0.2mdn.net/creatives/assets/5530354/brand_logo_728x90.png";
+
+devDynamicContent.creative_data[0].logo2 = {};
+devDynamicContent.creative_data[0].logo2.Type = "file";
+devDynamicContent.creative_data[0].logo2.Url = "https://s0.2mdn.net/creatives/assets/5530354/25_jeep_logo2_300x250.png";
+
+devDynamicContent.creative_data[0].alt_logo = {};
+devDynamicContent.creative_data[0].alt_logo.Type = "file";
+devDynamicContent.creative_data[0].alt_logo.Url = "https://s0.2mdn.net/creatives/assets/5530354/sales_event_V1_728x90_W.svg";
+devDynamicContent.creative_data[0].tagline = "2025<br>grand cherokee";
+
+devDynamicContent.creative_data[0].f1_image = {};
+devDynamicContent.creative_data[0].f1_image.Type = "file";
+devDynamicContent.creative_data[0].f1_image.Url = "https://s0.2mdn.net/creatives/assets/5530354/jeep_728x90_lighter_f1.jpg";
+
+devDynamicContent.creative_data[0].f1_vehicle_name = "H3-year vehicle name";
+devDynamicContent.creative_data[0].f1_headline = "dominate every road<br>with rugged prestige.<sup>11</sup>";
+
+devDynamicContent.creative_data[0].f2_img_RTB1 = {};
+devDynamicContent.creative_data[0].f2_img_RTB1.Type = "file";
+devDynamicContent.creative_data[0].f2_img_RTB1.Url = "https://s0.2mdn.net/creatives/assets/5530354/jeep_728x90_lighter_RBT1.jpg";
+devDynamicContent.creative_data[0].f2_headline_RTB1 = "engineered for sport<br>styled with class.<sup>11</sup>";
+
+devDynamicContent.creative_data[0].f2_img_RTB2 = {};
+devDynamicContent.creative_data[0].f2_img_RTB2.Type = "file";
+devDynamicContent.creative_data[0].f2_img_RTB2.Url = "https://s0.2mdn.net/creatives/assets/5530354/jeep_728x90_lighter_RBT2.jpg";
+devDynamicContent.creative_data[0].f2_headline_RTB2 = "premium materials<br>meet epic power.<sup>11</sup>";
+
+devDynamicContent.creative_data[0].f3_image = {};
+devDynamicContent.creative_data[0].f3_image.Type = "file";
+devDynamicContent.creative_data[0].f3_image.Url = "https://s0.2mdn.net/creatives/assets/5530354/26_jeep_bg_f3_endemic_728x90.jpg";
+
+devDynamicContent.creative_data[0].f3_headline = "202X Brand name and<br>vehicle name goes here";
+devDynamicContent.creative_data[0].f3_sub_headline = "Get an ultra-low mileage lease for";
+
+devDynamicContent.creative_data[0].f3_jb_car_image = {};
+devDynamicContent.creative_data[0].f3_jb_car_image.Type = "file";
+devDynamicContent.creative_data[0].f3_jb_car_image.Url = "https://s0.2mdn.net/creatives/assets/5530354/f3_jb_car_image.png";
+
+
+devDynamicContent.creative_data[0].f4_image = {};
+devDynamicContent.creative_data[0].f4_image.Type = "file";
+devDynamicContent.creative_data[0].f4_image.Url = "https://s0.2mdn.net/creatives/assets/5530354/26_jeep_bg_f4_endemic_728x90.jpg";
+
+devDynamicContent.creative_data[0].f4_jb_car_image = {};
+devDynamicContent.creative_data[0].f4_jb_car_image.Type = "file";
+devDynamicContent.creative_data[0].f4_jb_car_image.Url = "https://s0.2mdn.net/creatives/assets/5530354/26_jeep_jb_white_f4_728x90.png";
+
+devDynamicContent.creative_data[0].f4_vehicle_name = "2025 grand cherokee";
+devDynamicContent.creative_data[0].f4_headline = "H1-Headline20 bold/21C<sup>11</sup>";
+devDynamicContent.creative_data[0].f4_sub_headline = "body S -Lorem ipsum dolor_12 Regular/34C";
+
+devDynamicContent.creative_data[0].f5_image = {};
+devDynamicContent.creative_data[0].f5_image.Type = "file";
+devDynamicContent.creative_data[0].f5_image.Url = "https://s0.2mdn.net/creatives/assets/5530354/26_jeep_bg_f5_endemic_728x90.jpg";
+
+devDynamicContent.creative_data[0].f5_vehicle_name = "2025 grand cherokee";
+devDynamicContent.creative_data[0].f5_headline = "H1-Headline18 bold/21C";
+devDynamicContent.creative_data[0].f5_sub_headline = "body S -Lorem ipsum dolor_12 Regular/34C";
+
+devDynamicContent.creative_data[0].colorize_img1 = {};
+devDynamicContent.creative_data[0].colorize_img1.Type = "file";
+devDynamicContent.creative_data[0].colorize_img1.Url = "https://s0.2mdn.net/creatives/assets/5530354/Jeep_jellybean_color1.png";
+
+devDynamicContent.creative_data[0].colorize_img2 = {};
+devDynamicContent.creative_data[0].colorize_img2.Type = "file";
+devDynamicContent.creative_data[0].colorize_img2.Url = "https://s0.2mdn.net/creatives/assets/5530354/Jeep_jellybean_color2.png";
+
+devDynamicContent.creative_data[0].colorize_img3 = {};
+devDynamicContent.creative_data[0].colorize_img3.Type = "file";
+devDynamicContent.creative_data[0].colorize_img3.Url = "https://s0.2mdn.net/creatives/assets/5530354/Jeep_jellybean_color3.png";
+
+devDynamicContent.creative_data[0].colorize_img4 = {};
+devDynamicContent.creative_data[0].colorize_img4.Type = "file";
+devDynamicContent.creative_data[0].colorize_img4.Url = "https://s0.2mdn.net/creatives/assets/5530354/Jeep_jellybean_color4.png";
+
+devDynamicContent.creative_data[0].colorize_img5 = {};
+devDynamicContent.creative_data[0].colorize_img5.Type = "file";
+devDynamicContent.creative_data[0].colorize_img5.Url = "https://s0.2mdn.net/creatives/assets/5530354/Jeep_jellybean_color5.png";
+
+devDynamicContent.creative_data[0].colorize_img6 = {};
+devDynamicContent.creative_data[0].colorize_img6.Type = "file";
+devDynamicContent.creative_data[0].colorize_img6.Url = "https://s0.2mdn.net/creatives/assets/5530354/Jeep_jellybean_color6.png";
+
+devDynamicContent.creative_data[0].f7_image = {};
+devDynamicContent.creative_data[0].f7_image.Type = "file";
+devDynamicContent.creative_data[0].f7_image.Url = "https://s0.2mdn.net/creatives/assets/5530354/default_bg_EF_opt1_728x90.jpg";
+
+devDynamicContent.creative_data[0].legal = "<sup>1</sup>A Lorem ipsum Jeep<sub>11</sub> dolor sit amet consectetur adipiscing elit sollicitudin enim, dis odio viverra at dui sed egestas in, arcu tempor eros non elementum per et suscipit.<br>Lorem ipsum dolor sit amet consectetur adipiscing elit sollicitudin enim, dis odio viverra at dui sed egestas in, arcu tempor eros non elementum per et suscipit.<br>Lorem ipsum dolor sit amet consectetur adipiscing elit sollicitudin enim, dis odio viverra at dui sed egestas in, arcu tempor eros non elementum per et suscipit.";
+devDynamicContent.creative_data[0].rd_cta_version = "V1";
+
+devDynamicContent.creative_data[0].text_cta_1 = "CTA here - 11pt/15C";
+devDynamicContent.creative_data[0].exit_cta_1 = {};
+devDynamicContent.creative_data[0].exit_cta_1.Url = "https://www.jeep.com";
+
+devDynamicContent.creative_data[0].text_cta_2 = "CTA here - 11pt/15C";
+devDynamicContent.creative_data[0].exit_cta_2 = {};
+devDynamicContent.creative_data[0].exit_cta_2.Url = "https://www.jeep.com";
+
+devDynamicContent.creative_data[0].cta_color = "#487F70";
+devDynamicContent.creative_data[0].cta_hover = "#1c5040";
+
+devDynamicContent.creative_data[0].main_exit = {};
+devDynamicContent.creative_data[0].main_exit.Url = "https://www.jeep.com";
+
+devDynamicContent.creative_data[0].business_center = "default";
+devDynamicContent.creative_data[0].rd_location = "default";
+// devDynamicContent.creative_data[0].dma = "default";
+// devDynamicContent.creative_data[0].zip_1 = "default";
+// devDynamicContent.creative_data[0].zip_2 = "default";
+
+devDynamicContent.creative_data[0].weather = ""; //==> snow, lighthing, rain
+devDynamicContent.creative_data[0].active = true;
+
+window.Omnitor.init(devDynamicContent);
