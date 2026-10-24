@@ -19549,6 +19549,23 @@ athlete_id,athlete_name,team,meet_name,meet_date,year,event,mark,mark_unit,place
 8253503,Evan Hild,UC SAN DIEGO,44th Aztec Invitational,"Mar 23-25, 2023",2023,1500,4:02.69,time,21,True,,track,UC SAN DIEGO,2023-03-23
 8253503,Evan Hild,UC SAN DIEGO,Ben Brown Invite/AstroAI Distance Classic,"Mar 10-11, 2023",2023,5000,15:30.70,time,42,True,,track,UC SAN DIEGO,2023-03-10
 8253503,Evan Hild,UC SAN DIEGO,Beach Opener 2023,"Mar 3- 4, 2023",2023,3000,8:56.89,time,25,True,,track,UC SAN DIEGO,2023-03-03
+8996730,Jeffrey Keeney,UC SAN DIEGO,Steve Scott Invitational,"May 1- 2, 2026",2026,5000,14:45.55,time,6,True,,track,UC SAN DIEGO,2026-05-01
+8996730,Jeffrey Keeney,UC SAN DIEGO,2026 Bryan Clay Invitational,"Apr 16-18, 2026",2026,1500,3:59.39,time,154,True,,track,UC SAN DIEGO,2026-04-16
+8996730,Jeffrey Keeney,UC SAN DIEGO,2026 Bryan Clay Invitational,"Apr 16-18, 2026",2026,5000,14:55.69,time,68,True,,track,UC SAN DIEGO,2026-04-16
+8996730,Jeffrey Keeney,UC SAN DIEGO,2026 UCSD Triton Invitational,"Apr 3- 4, 2026",2026,5000,15:18.81,time,25,True,,track,UC SAN DIEGO,2026-04-03
+8996730,Jeffrey Keeney,UC SAN DIEGO,Bob Larson & Jim Bush Legends,"Mar 27-28, 2026",2026,1500,3:58.54,time,46,True,,track,UC SAN DIEGO,2026-03-27
+8996730,Jeffrey Keeney,UC SAN DIEGO,Aztec Coastal Classic Team,"Mar 13, 2026",2026,5000,14:40.22,time,29,True,,track,UC SAN DIEGO,2026-03-13
+8996730,Jeffrey Keeney,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar 6, 2026",2026,3000,8:35.91,time,7,True,,track,UC SAN DIEGO,2026-03-06
+8996730,Jeffrey Keeney,UC SAN DIEGO,2026 RCC invitational,"Mar 6, 2026",2026,3000,8:35.91,time,7,True,,track,UC SAN DIEGO,2026-03-06
+8996730,Jeffrey Keeney,UC SAN DIEGO,Steve Scott Invite,"May 2, 2025",2025,5000,14:55.34,time,7,True,,track,UC SAN DIEGO,2025-05-02
+8996730,Jeffrey Keeney,UC SAN DIEGO,2025 Bryan Clay Invitational,"Apr 16-18, 2025",2025,1500,3:59.04,time,34,True,,track,UC SAN DIEGO,2025-04-16
+8996730,Jeffrey Keeney,UC SAN DIEGO,Triton Invite,"Apr 4- 5, 2025",2025,1500,3:55.83,time,11,True,,track,UC SAN DIEGO,2025-04-04
+8996730,Jeffrey Keeney,UC SAN DIEGO,Mangrum Invitational,"Mar 28, 2025",2025,800,1:58.52,time,11,True,,track,UC SAN DIEGO,2025-03-28
+8996730,Jeffrey Keeney,UC SAN DIEGO,Mangrum Invitational,"Mar 28, 2025",2025,4x400,3:39.15,time,9,True,,track,UC SAN DIEGO,2025-03-28
+8996730,Jeffrey Keeney,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",2025,5000,15:04.56,time,9,True,,track,UC SAN DIEGO,2025-03-22
+8996730,Jeffrey Keeney,UC SAN DIEGO,Ben Brown Invitational/AstroAI Distance Classic,"Mar 7- 8, 2025",2025,1500,3:59.54,time,9,True,,track,UC SAN DIEGO,2025-03-07
+8996730,Jeffrey Keeney,UC SAN DIEGO,2025 RCC Invitational,"Feb 28, 2025",2025,800,1:59.82,time,19,True,,track,UC SAN DIEGO,2025-02-28
+8996730,Jeffrey Keeney,UC SAN DIEGO,2025 RCC Invitational,"Feb 28, 2025",2025,4x400,3:31.14,time,,True,,track,UC SAN DIEGO,2025-02-28
 7908096,Jordan Haney,UC SAN DIEGO,Steve Scott Invite,"May 2, 2025",2025,5000,15:20.90,time,15,True,,track,UC SAN DIEGO,2025-05-02
 7908096,Jordan Haney,UC SAN DIEGO,2025 Bryan Clay Invitational,"Apr 16-18, 2025",2025,1500,4:06.17,time,71,True,,track,UC SAN DIEGO,2025-04-16
 7908096,Jordan Haney,UC SAN DIEGO,2025 Bryan Clay Invitational,"Apr 16-18, 2025",2025,5000,14:34.22,time,45,True,,track,UC SAN DIEGO,2025-04-16
@@ -20893,6 +20910,27 @@ athlete_id,athlete_name,team,meet_name,meet_date,year,event,mark,mark_unit,place
 8906565,Ibzan Felix,CAL POLY,Stanford Invitational,"Apr 4- 5, 2025",2025,800,DNF,time,,True,,track,CAL POLY,2025-04-04
 8906565,Ibzan Felix,CAL POLY,Stanford Invitational,"Apr 4- 5, 2025",2025,1500,3:52.59,time,8,True,,track,CAL POLY,2025-04-04
 8906565,Ibzan Felix,CAL POLY,Mark Conover Classic,"Mar 22, 2025",2025,1500,3:49.17,time,5,True,,track,CAL POLY,2025-03-22
+8996728,Joseph Vargas,UC SAN DIEGO,Steve Scott Invitational,"May 1- 2, 2026",2026,800,1:53.19,time,1,True,,track,UC SAN DIEGO,2026-05-01
+8996728,Joseph Vargas,UC SAN DIEGO,Steve Scott Invitational,"May 1- 2, 2026",2026,1500,3:46.74,time,3,True,,track,UC SAN DIEGO,2026-05-01
+8996728,Joseph Vargas,UC SAN DIEGO,2026 Bryan Clay Invitational,"Apr 16-18, 2026",2026,1500,3:49.34,time,78,True,,track,UC SAN DIEGO,2026-04-16
+8996728,Joseph Vargas,UC SAN DIEGO,2026 UCSD Triton Invitational,"Apr 3- 4, 2026",2026,1500,4:03.42,time,35,True,,track,UC SAN DIEGO,2026-04-03
+8996728,Joseph Vargas,UC SAN DIEGO,2026 UCSD Triton Invitational,"Apr 3- 4, 2026",2026,5000,14:48.62,time,9,True,,track,UC SAN DIEGO,2026-04-03
+8996728,Joseph Vargas,UC SAN DIEGO,Bob Larson & Jim Bush Legends,"Mar 27-28, 2026",2026,1500,3:48.27,time,12,True,,track,UC SAN DIEGO,2026-03-27
+8996728,Joseph Vargas,UC SAN DIEGO,Aztec Coastal Classic Team,"Mar 13, 2026",2026,1500,3:57.02,time,9,True,,track,UC SAN DIEGO,2026-03-13
+8996728,Joseph Vargas,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar 6, 2026",2026,800,1:52.58,time,5,True,,track,UC SAN DIEGO,2026-03-06
+8996728,Joseph Vargas,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar 6, 2026",2026,4x400,3:26.29,time,4,True,,track,UC SAN DIEGO,2026-03-06
+8996728,Joseph Vargas,UC SAN DIEGO,2026 RCC invitational,"Mar 6, 2026",2026,800,1:52.58,time,5,True,,track,UC SAN DIEGO,2026-03-06
+8996728,Joseph Vargas,UC SAN DIEGO,2026 RCC invitational,"Mar 6, 2026",2026,4x400,3:26.29,time,4,True,,track,UC SAN DIEGO,2026-03-06
+8996728,Joseph Vargas,UC SAN DIEGO,Steve Scott Invite,"May 2, 2025",2025,800,1:56.40,time,16,True,,track,UC SAN DIEGO,2025-05-02
+8996728,Joseph Vargas,UC SAN DIEGO,2025 Bryan Clay Invitational,"Apr 16-18, 2025",2025,1500,3:50.37,time,42,True,,track,UC SAN DIEGO,2025-04-16
+8996728,Joseph Vargas,UC SAN DIEGO,Triton Invite,"Apr 4- 5, 2025",2025,1500,3:52.30,time,5,True,,track,UC SAN DIEGO,2025-04-04
+8996728,Joseph Vargas,UC SAN DIEGO,Mangrum Invitational,"Mar 28, 2025",2025,800,2:03.27,time,33,True,,track,UC SAN DIEGO,2025-03-28
+8996728,Joseph Vargas,UC SAN DIEGO,Mangrum Invitational,"Mar 28, 2025",2025,4x400,3:29.59,time,8,True,,track,UC SAN DIEGO,2025-03-28
+8996728,Joseph Vargas,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",2025,800,1:55.82,time,11,True,,track,UC SAN DIEGO,2025-03-22
+8996728,Joseph Vargas,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",2025,1500,3:56.38,time,11,True,,track,UC SAN DIEGO,2025-03-22
+8996728,Joseph Vargas,UC SAN DIEGO,Ben Brown Invitational/AstroAI Distance Classic,"Mar 7- 8, 2025",2025,1500,3:57.64,time,5,True,,track,UC SAN DIEGO,2025-03-07
+8996728,Joseph Vargas,UC SAN DIEGO,2025 RCC Invitational,"Feb 28, 2025",2025,800,1:55.06,time,8,True,,track,UC SAN DIEGO,2025-02-28
+8996728,Joseph Vargas,UC SAN DIEGO,2025 RCC Invitational,"Feb 28, 2025",2025,4x400,3:27.71,time,,True,,track,UC SAN DIEGO,2025-02-28
 8930769,Makiah Parker,CSU BAKERSFIELD,2026 Fresno State Invite,"May 1- 2, 2026",2026,100,11.45,time,1,True,0.7,track,CSU BAKERSFIELD,2026-05-01
 8930769,Makiah Parker,CSU BAKERSFIELD,2026 Fresno State Invite,"May 1- 2, 2026",2026,4x100,44.69,time,1,True,,track,CSU BAKERSFIELD,2026-05-01
 8930769,Makiah Parker,CSU BAKERSFIELD,UCSB Invite (Roster),"Apr 24-25, 2026",2026,100,11.61,time,1,True,1.6,track,CSU BAKERSFIELD,2026-04-24
@@ -23603,6 +23641,25 @@ athlete_id,athlete_name,team,meet_name,meet_date,year,event,mark,mark_unit,place
 8892138,Rain Gomez,CSU BAKERSFIELD,Ron Mann Classic,"Jan 31, 2025",2025,Mile,5:51.24,time,24,True,,track,CSU BAKERSFIELD,2025-01-31
 8892138,Rain Gomez,CSU BAKERSFIELD,2025 Spokane Indoor Challenge,"Jan 17-18, 2025",2025,Mile,5:24.52,time,10,True,,track,CSU BAKERSFIELD,2025-01-17
 8892138,Rain Gomez,CSU BAKERSFIELD,Friday Night Axe 'Em Open,"Jan 10, 2025",2025,600,1:48.13,time,12,True,,unknown,CSU BAKERSFIELD,2025-01-10
+8996743,Dasha LeFaivre,UC SAN DIEGO,Steve Scott Invitational,"May 1- 2, 2026",2026,1500,4:31.46,time,10,True,,track,UC SAN DIEGO,2026-05-01
+8996743,Dasha LeFaivre,UC SAN DIEGO,2026 Bryan Clay Invitational,"Apr 16-18, 2026",2026,800,2:13.27,time,26,True,,track,UC SAN DIEGO,2026-04-16
+8996743,Dasha LeFaivre,UC SAN DIEGO,2026 Bryan Clay Invitational,"Apr 16-18, 2026",2026,1500,4:29.87,time,63,True,,track,UC SAN DIEGO,2026-04-16
+8996743,Dasha LeFaivre,UC SAN DIEGO,2026 UCSD Triton Invitational,"Apr 3- 4, 2026",2026,1500,4:28.24,time,6,True,,track,UC SAN DIEGO,2026-04-03
+8996743,Dasha LeFaivre,UC SAN DIEGO,Bob Larson & Jim Bush Legends,"Mar 27-28, 2026",2026,5000,17:19.00,time,3,True,,track,UC SAN DIEGO,2026-03-27
+8996743,Dasha LeFaivre,UC SAN DIEGO,Aztec Coastal Classic Team,"Mar 13, 2026",2026,1500,4:28.89,time,6,True,,track,UC SAN DIEGO,2026-03-13
+8996743,Dasha LeFaivre,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar 6, 2026",2026,800,2:14.98,time,1,True,,track,UC SAN DIEGO,2026-03-06
+8996743,Dasha LeFaivre,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar 6, 2026",2026,4x400,4:09.11,time,5,True,,track,UC SAN DIEGO,2026-03-06
+8996743,Dasha LeFaivre,UC SAN DIEGO,2026 RCC invitational,"Mar 6, 2026",2026,800,2:14.98,time,1,True,,track,UC SAN DIEGO,2026-03-06
+8996743,Dasha LeFaivre,UC SAN DIEGO,2026 RCC invitational,"Mar 6, 2026",2026,4x400,4:09.11,time,5,True,,track,UC SAN DIEGO,2026-03-06
+8996743,Dasha LeFaivre,UC SAN DIEGO,Steve Scott Invite,"May 2, 2025",2025,800,2:15.95,time,10,True,,track,UC SAN DIEGO,2025-05-02
+8996743,Dasha LeFaivre,UC SAN DIEGO,2025 Bryan Clay Invitational,"Apr 16-18, 2025",2025,1500,4:36.41,time,42,True,,track,UC SAN DIEGO,2025-04-16
+8996743,Dasha LeFaivre,UC SAN DIEGO,Triton Invite,"Apr 4- 5, 2025",2025,1500,4:39.57,time,6,True,,track,UC SAN DIEGO,2025-04-04
+8996743,Dasha LeFaivre,UC SAN DIEGO,Mangrum Invitational,"Mar 28, 2025",2025,800,2:19.59,time,11,True,,track,UC SAN DIEGO,2025-03-28
+8996743,Dasha LeFaivre,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",2025,400,1:04.13,time,29,True,,track,UC SAN DIEGO,2025-03-22
+8996743,Dasha LeFaivre,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",2025,1500,4:41.60,time,17,True,,track,UC SAN DIEGO,2025-03-22
+8996743,Dasha LeFaivre,UC SAN DIEGO,Ben Brown Invitational/AstroAI Distance Classic,"Mar 7- 8, 2025",2025,800,2:19.87,time,27,True,,track,UC SAN DIEGO,2025-03-07
+8996743,Dasha LeFaivre,UC SAN DIEGO,2025 RCC Invitational,"Feb 28, 2025",2025,1500,4:47.47,time,9,True,,track,UC SAN DIEGO,2025-02-28
+8996743,Dasha LeFaivre,UC SAN DIEGO,2025 RCC Invitational,"Feb 28, 2025",2025,4x400,4:17.52,time,,True,,track,UC SAN DIEGO,2025-02-28
 8895111,Gemma Warman,HAWAII,Steve Scott Invite,"May 2, 2025",2025,Mile,5:13.43,time,20,True,,track,HAWAII,2025-05-02
 8895111,Gemma Warman,HAWAII,Steve Scott Invite,"May 2, 2025",2025,4x400,3:57.57,time,5,True,,track,HAWAII,2025-05-02
 8895111,Gemma Warman,HAWAII,2025 Bryan Clay Invitational,"Apr 16-18, 2025",2025,800,2:16.06,time,104,True,,track,HAWAII,2025-04-16
@@ -25437,6 +25494,14 @@ athlete_id,athlete_name,team,meet_name,meet_date,year,event,mark,mark_unit,place
 8240580,Alyssa Tapanes,LONG BEACH ST.,Ben Brown Invite/AstroAI Distance Classic,"Mar 10-11, 2023",2023,1500,4:55.81,time,23,True,,track,LONG BEACH ST.,2023-03-10
 8240580,Alyssa Tapanes,LONG BEACH ST.,Beach Opener 2023,"Mar 3- 4, 2023",2023,800,2:25.35,time,15,True,,track,LONG BEACH ST.,2023-03-03
 8240580,Alyssa Tapanes,LONG BEACH ST.,Beach Opener 2023,"Mar 3- 4, 2023",2023,1500,4:56.01,time,23,True,,track,LONG BEACH ST.,2023-03-03
+8996742,Stefania Sesock,UC SAN DIEGO,Steve Scott Invitational,"May 1- 2, 2026",2026,5000,17:20.81,time,7,True,,track,UC SAN DIEGO,2026-05-01
+8996742,Stefania Sesock,UC SAN DIEGO,2026 Bryan Clay Invitational,"Apr 16-18, 2026",2026,1500,4:50.40,time,79,True,,track,UC SAN DIEGO,2026-04-16
+8996742,Stefania Sesock,UC SAN DIEGO,2026 Bryan Clay Invitational,"Apr 16-18, 2026",2026,5000,17:25.32,time,49,True,,track,UC SAN DIEGO,2026-04-16
+8996742,Stefania Sesock,UC SAN DIEGO,2026 UCSD Triton Invitational,"Apr 3- 4, 2026",2026,5000,17:35.54,time,8,True,,track,UC SAN DIEGO,2026-04-03
+8996742,Stefania Sesock,UC SAN DIEGO,Bob Larson & Jim Bush Legends,"Mar 27-28, 2026",2026,1500,4:49.92,time,3,True,,track,UC SAN DIEGO,2026-03-27
+8996742,Stefania Sesock,UC SAN DIEGO,Aztec Coastal Classic Team,"Mar 13, 2026",2026,5000,18:00.87,time,25,True,,track,UC SAN DIEGO,2026-03-13
+8996742,Stefania Sesock,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar 6, 2026",2026,3000,10:21.04,time,9,True,,track,UC SAN DIEGO,2026-03-06
+8996742,Stefania Sesock,UC SAN DIEGO,2026 RCC invitational,"Mar 6, 2026",2026,3000,10:21.04,time,9,True,,track,UC SAN DIEGO,2026-03-06
 8258949,Lexi Darley,UC SANTA BARBARA,Steve Scott Invitational,"May 1- 2, 2026",2026,5000,17:29.21,time,9,True,,track,UC SANTA BARBARA,2026-05-01
 8258949,Lexi Darley,UC SANTA BARBARA,UCSB Invite (Roster),"Apr 24-25, 2026",2026,800,2:21.63,time,13,True,,track,UC SANTA BARBARA,2026-04-24
 8258949,Lexi Darley,UC SANTA BARBARA,UCSB Invite (Roster),"Apr 24-25, 2026",2026,1500,4:40.67,time,8,True,,track,UC SANTA BARBARA,2026-04-24
