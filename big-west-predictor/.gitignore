@@ -1,2 +1,4 @@
 notebooks/athete_profiles.ipynb
 notebooks/team_roster.ipynb
+data/processed/bigwest_mark_column_audit.csv
+data/processed/completed_roster_urls.csv  
