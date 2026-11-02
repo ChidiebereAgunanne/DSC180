@@ -1,0 +1,119 @@
+meet_year,meet_name,gender,team,rank,score
+2026,Big West Championships,men,Cal Poly,1,201.5
+2026,Big West Championships,men,Cal St. Fullerton,2,152.0
+2026,Big West Championships,men,Long Beach St.,3,114.0
+2026,Big West Championships,men,UC Irvine,4,84.5
+2026,Big West Championships,men,UC San Diego,5,77.5
+2026,Big West Championships,men,UC Santa Barbara,6,66.5
+2026,Big West Championships,men,CSUN,7,46.0
+2026,Big West Championships,men,UC Riverside,8,44.0
+2026,Big West Championships,men,UC Davis,9,17.0
+2026,Big West Championships,men,CSU Bakersfield,10,15.0
+2026,Big West Championships,women,UC Irvine,1,187.5
+2026,Big West Championships,women,Cal St. Fullerton,2,126.0
+2026,Big West Championships,women,Cal Poly,3,105.0
+2026,Big West Championships,women,UC San Diego,4,84.0
+2026,Big West Championships,women,Long Beach St.,5,69.0
+2026,Big West Championships,women,CSUN,6,49.5
+2026,Big West Championships,women,UC Santa Barbara,6,49.5
+2026,Big West Championships,women,Hawaii,8,47.0
+2026,Big West Championships,women,UC Riverside,9,39.0
+2026,Big West Championships,women,CSU Bakersfield,10,37.0
+2026,Big West Championships,women,UC Davis,11,25.5
+2025,Big West Outdoor Track & Field Championships,men,Cal Poly,1,186.0
+2025,Big West Outdoor Track & Field Championships,men,Cal St. Fullerton,2,167.0
+2025,Big West Outdoor Track & Field Championships,men,Long Beach St.,3,127.0
+2025,Big West Outdoor Track & Field Championships,men,UC Santa Barbara,4,104.0
+2025,Big West Outdoor Track & Field Championships,men,UC Irvine,5,69.0
+2025,Big West Outdoor Track & Field Championships,men,CSUN,6,62.0
+2025,Big West Outdoor Track & Field Championships,men,UC San Diego,7,36.0
+2025,Big West Outdoor Track & Field Championships,men,UC Riverside,8,32.0
+2025,Big West Outdoor Track & Field Championships,men,UC Davis,9,26.0
+2025,Big West Outdoor Track & Field Championships,men,CSU Bakersfield,10,9.0
+2025,Big West Outdoor Track & Field Championships,women,UC Irvine,1,150.5
+2025,Big West Outdoor Track & Field Championships,women,Cal Poly,2,149.0
+2025,Big West Outdoor Track & Field Championships,women,Long Beach St.,3,109.5
+2025,Big West Outdoor Track & Field Championships,women,Hawaii,4,76.5
+2025,Big West Outdoor Track & Field Championships,women,UC San Diego,5,75.5
+2025,Big West Outdoor Track & Field Championships,women,Cal St. Fullerton,6,58.0
+2025,Big West Outdoor Track & Field Championships,women,UC Davis,7,52.0
+2025,Big West Outdoor Track & Field Championships,women,UC Riverside,8,47.0
+2025,Big West Outdoor Track & Field Championships,women,CSUN,9,44.0
+2025,Big West Outdoor Track & Field Championships,women,UC Santa Barbara,10,38.0
+2025,Big West Outdoor Track & Field Championships,women,CSU Bakersfield,11,18.0
+2024,Big West Track & Field Championships,men,Cal Poly,1,185.0
+2024,Big West Track & Field Championships,men,Cal St. Fullerton,2,168.0
+2024,Big West Track & Field Championships,men,Long Beach St.,3,152.0
+2024,Big West Track & Field Championships,men,CSUN,4,99.0
+2024,Big West Track & Field Championships,men,UC Irvine,5,89.0
+2024,Big West Track & Field Championships,men,UC Santa Barbara,6,53.0
+2024,Big West Track & Field Championships,men,UC Davis,7,34.0
+2024,Big West Track & Field Championships,men,UC Riverside,8,27.0
+2024,Big West Track & Field Championships,men,CSU Bakersfield,9,10.0
+2024,Big West Track & Field Championships,women,Cal Poly,1,130.75
+2024,Big West Track & Field Championships,women,UC Irvine,2,119.0
+2024,Big West Track & Field Championships,women,Hawaii,3,102.5
+2024,Big West Track & Field Championships,women,Long Beach St.,4,93.75
+2024,Big West Track & Field Championships,women,UC Riverside,5,93.0
+2024,Big West Track & Field Championships,women,Cal St. Fullerton,6,85.5
+2024,Big West Track & Field Championships,women,UC Davis,7,76.0
+2024,Big West Track & Field Championships,women,UC Santa Barbara,8,55.0
+2024,Big West Track & Field Championships,women,CSUN,9,52.0
+2024,Big West Track & Field Championships,women,CSU Bakersfield,10,11.5
+2023,Big West Track & Field Champio,men,Cal St. Fullerton,1,184.5
+2023,Big West Track & Field Champio,men,Long Beach St.,2,182.5
+2023,Big West Track & Field Champio,men,Cal Poly,3,152.0
+2023,Big West Track & Field Champio,men,UC Santa Barbara,4,90.0
+2023,Big West Track & Field Champio,men,CSUN,5,68.0
+2023,Big West Track & Field Champio,men,UC Irvine,6,55.0
+2023,Big West Track & Field Champio,men,UC Riverside,7,49.0
+2023,Big West Track & Field Champio,men,CSU Bakersfield,8,19.0
+2023,Big West Track & Field Champio,men,UC Davis,9,18.0
+2023,Big West Track & Field Champio,women,Long Beach St.,1,149.0
+2023,Big West Track & Field Champio,women,Cal Poly,2,117.33
+2023,Big West Track & Field Champio,women,Hawaii,3,102.0
+2023,Big West Track & Field Champio,women,UC Irvine,4,98.0
+2023,Big West Track & Field Champio,women,UC Santa Barbara,5,85.0
+2023,Big West Track & Field Champio,women,UC Riverside,6,83.0
+2023,Big West Track & Field Champio,women,UC Davis,7,71.83
+2023,Big West Track & Field Champio,women,Cal St. Fullerton,8,49.5
+2023,Big West Track & Field Champio,women,CSUN,9,32.33
+2023,Big West Track & Field Champio,women,CSU Bakersfield,10,31.0
+2022,Big West Track Field Championships,men,Cal St. Fullerton,1,200.0
+2022,Big West Track Field Championships,men,Long Beach St.,2,173.0
+2022,Big West Track Field Championships,men,UC Santa Barbara,3,140.5
+2022,Big West Track Field Championships,men,Cal Poly,4,118.5
+2022,Big West Track Field Championships,men,UC Irvine,5,67.0
+2022,Big West Track Field Championships,men,UC Davis,6,50.0
+2022,Big West Track Field Championships,men,CSU Bakersfield,7,23.0
+2022,Big West Track Field Championships,men,UC Riverside,7,23.0
+2022,Big West Track Field Championships,men,CSUN,9,22.0
+2022,Big West Track Field Championships,women,Long Beach St.,1,134.0
+2022,Big West Track Field Championships,women,Hawaii,2,108.0
+2022,Big West Track Field Championships,women,UC Irvine,3,101.0
+2022,Big West Track Field Championships,women,UC Davis,4,100.5
+2022,Big West Track Field Championships,women,Cal Poly,5,91.0
+2022,Big West Track Field Championships,women,UC Santa Barbara,6,71.5
+2022,Big West Track Field Championships,women,Cal St. Fullerton,7,68.0
+2022,Big West Track Field Championships,women,UC Riverside,8,63.0
+2022,Big West Track Field Championships,women,CSUN,9,55.0
+2022,Big West Track Field Championships,women,CSU Bakersfield,10,25.0
+2021,2021 Big West Outdoor Track & Field Championships,men,Cal St. Fullerton,1,163.0
+2021,2021 Big West Outdoor Track & Field Championships,men,Cal Poly,2,157.0
+2021,2021 Big West Outdoor Track & Field Championships,men,Long Beach St.,3,152.0
+2021,2021 Big West Outdoor Track & Field Championships,men,UC Santa Barbara,4,137.0
+2021,2021 Big West Outdoor Track & Field Championships,men,UC Davis,5,92.0
+2021,2021 Big West Outdoor Track & Field Championships,men,UC Irvine,6,66.0
+2021,2021 Big West Outdoor Track & Field Championships,men,CSUN,7,22.0
+2021,2021 Big West Outdoor Track & Field Championships,men,UC Riverside,7,22.0
+2021,2021 Big West Outdoor Track & Field Championships,men,CSU Bakersfield,9,3.0
+2021,2021 Big West Outdoor Track & Field Championships,women,Cal Poly,1,181.5
+2021,2021 Big West Outdoor Track & Field Championships,women,Cal St. Fullerton,2,149.5
+2021,2021 Big West Outdoor Track & Field Championships,women,UC Santa Barbara,3,130.5
+2021,2021 Big West Outdoor Track & Field Championships,women,UC Irvine,4,123.0
+2021,2021 Big West Outdoor Track & Field Championships,women,UC Davis,5,73.0
+2021,2021 Big West Outdoor Track & Field Championships,women,Hawaii,6,51.0
+2021,2021 Big West Outdoor Track & Field Championships,women,Long Beach St.,6,51.0
+2021,2021 Big West Outdoor Track & Field Championships,women,CSUN,8,26.0
+2021,2021 Big West Outdoor Track & Field Championships,women,UC Riverside,9,18.0
+2021,2021 Big West Outdoor Track & Field Championships,women,CSU Bakersfield,10,11.5
