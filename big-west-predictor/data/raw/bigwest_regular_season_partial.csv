@@ -72582,14 +72582,14 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
 8996705,Christian Magana,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",400,50.20,50.2,"11th
           (F)",False,True
 8996705,Christian Magana,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",4x100,42.23,42.23,,False,True
-8996705,Christian Magana,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",4x400,3:17.67,197.67000000000002,"2nd
+8996705,Christian Magana,UC SAN DIEGO,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",4x400,3:17.67,197.67,"2nd
           (F)",False,True
 8996705,Christian Magana,UC SAN DIEGO,2026 RCC invitational,"Mar  6, 2026",200,22.60(0.6),22.6,"14th
           (F)",False,True
 8996705,Christian Magana,UC SAN DIEGO,2026 RCC invitational,"Mar  6, 2026",400,50.20,50.2,"11th
           (F)",False,True
 8996705,Christian Magana,UC SAN DIEGO,2026 RCC invitational,"Mar  6, 2026",4x100,42.23,42.23,,False,True
-8996705,Christian Magana,UC SAN DIEGO,2026 RCC invitational,"Mar  6, 2026",4x400,3:17.67,197.67000000000002,"2nd
+8996705,Christian Magana,UC SAN DIEGO,2026 RCC invitational,"Mar  6, 2026",4x400,3:17.67,197.67,"2nd
           (F)",False,True
 8996705,Christian Magana,UC SAN DIEGO,Steve Scott Invite,"May  2, 2025",200,22.34(0.7),22.34,"27th
           (F)",False,True
@@ -72607,7 +72607,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8996705,Christian Magana,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",400,49.23,49.23,"5th
           (F)",False,True
-8996705,Christian Magana,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",4x400,3:16.17,196.17000000000002,"2nd
+8996705,Christian Magana,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",4x400,3:16.17,196.17,"2nd
           (F)",False,True
 8996705,Christian Magana,UC SAN DIEGO,Ben Brown Invitational/AstroAI Distance Classic,"Mar  7- 8, 2025",200,22.67(0.8),22.67,"34th
           (F)",False,True
@@ -72693,7 +72693,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9042391,Denny Dong,UC SANTA BARBARA,2025 97th Clyde Littlefield Texas Relays,"Mar 26-29, 2025",4x400,3:10.58,190.58,"15th
           (P)",False,True
-9042391,Denny Dong,UC SANTA BARBARA,Challenge Cup,"Mar 14, 2025",800,1:56.71,116.71000000000001,"9th
+9042391,Denny Dong,UC SANTA BARBARA,Challenge Cup,"Mar 14, 2025",800,1:56.71,116.71,"9th
           (F)",False,True
 9042391,Denny Dong,UC SANTA BARBARA,Challenge Cup,"Mar 14, 2025",4x400,3:34.32,214.32,"7th
           (F)",False,True
@@ -72850,7 +72850,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8914266,Darrick Jacob,CSUN,2026 Bryan Clay Invitational,"Apr 16-18, 2026",1500,4:01.49,241.49,"110th
           (F)",False,True
-8914266,Darrick Jacob,CSUN,2026 UCSD Triton Invitational,"Apr  3- 4, 2026",800,1:55.23,115.22999999999999,"19th
+8914266,Darrick Jacob,CSUN,2026 UCSD Triton Invitational,"Apr  3- 4, 2026",800,1:55.23,115.23,"19th
           (F)",False,True
 8914266,Darrick Jacob,CSUN,2026 UCSD Triton Invitational,"Apr  3- 4, 2026",1500,DNF,,,False,True
 8914266,Darrick Jacob,CSUN,2026 UCSD Triton Invitational,"Apr  3- 4, 2026",4x400,3:27.69,207.69,"15th
@@ -72906,11 +72906,11 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9194252,Raul Verges,CSUN,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",DMR,10:06.74,606.74,"4th
           (F)",False,True
-9194252,Raul Verges,CSUN,Don Kirby Elite Invitational 2026,"Feb 13-14, 2026",800,1:54.71,114.71000000000001,"16th
+9194252,Raul Verges,CSUN,Don Kirby Elite Invitational 2026,"Feb 13-14, 2026",800,1:54.71,114.71,"16th
           (F)",False,True
 9194252,Raul Verges,CSUN,44th Annual UCR XC Invite,"Sep 27, 2025",8k,27:28.6,1648.6,172nd,True,False
 9194252,Raul Verges,CSUN,Waves Invitational,"Aug 29, 2025",6k,20:35.8,1235.8,40th,True,False
-8789154,Christian Taylor,UC DAVIS,Big West Championships,"May  8-16, 2026",800,1:56.76,116.75999999999999,"17th
+8789154,Christian Taylor,UC DAVIS,Big West Championships,"May  8-16, 2026",800,1:56.76,116.76,"17th
           (P)",False,True
 8789154,Christian Taylor,UC DAVIS,Causeway Classic 2026,"Apr 24, 2026",800,1:53.44,113.44,"1st
           (F)",False,True
@@ -72922,7 +72922,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8789154,Christian Taylor,UC DAVIS,Mike Fanelli Track Classic,"Apr  3- 4, 2026",800,1:52.32,112.32,"23rd
           (F)",False,True
-8789154,Christian Taylor,UC DAVIS,Mike Fanelli Track Classic,"Apr  3- 4, 2026",1500,3:56.08,236.07999999999998,"56th
+8789154,Christian Taylor,UC DAVIS,Mike Fanelli Track Classic,"Apr  3- 4, 2026",1500,3:56.08,236.08,"56th
           (F)",False,True
 8789154,Christian Taylor,UC DAVIS,2026 West Coast Relays,"Mar 27-28, 2026",800,1:52.88,112.88,"9th
           (F)",False,True
@@ -72951,7 +72951,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8789154,Christian Taylor,UC DAVIS,Mike Fanelli Track Classic,"Mar 29-30, 2024",1500,4:12.38,252.38,"141st
           (F)",False,True
-8789154,Christian Taylor,UC DAVIS,2024 Hornet Invite,"Mar 15-16, 2024",800,1:57.02,117.02000000000001,"18th
+8789154,Christian Taylor,UC DAVIS,2024 Hornet Invite,"Mar 15-16, 2024",800,1:57.02,117.02,"18th
           (F)",False,True
 8789154,Christian Taylor,UC DAVIS,2024 Hornet Invite,"Mar 15-16, 2024",1500,4:20.91,260.91,"81st
           (F)",False,True
@@ -72959,19 +72959,19 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9267198,Noah Gordon,UC SANTA BARBARA,Big West Championships,"May  8-16, 2026",800,1:54.15,114.15,"12th
           (P)",False,True
-9267198,Noah Gordon,UC SANTA BARBARA,Payton Jordan Invitational,"May  1, 2026",800,1:54.04,114.03999999999999,"5th
+9267198,Noah Gordon,UC SANTA BARBARA,Payton Jordan Invitational,"May  1, 2026",800,1:54.04,114.04,"5th
           (F)",False,True
 9267198,Noah Gordon,UC SANTA BARBARA,UCSB Invite (Roster),"Apr 24-25, 2026",400,51.43,51.43,"11th
           (F)",False,True
-9267198,Noah Gordon,UC SANTA BARBARA,2026 Bryan Clay Invitational,"Apr 16-18, 2026",800,1:51.26,111.25999999999999,"44th
+9267198,Noah Gordon,UC SANTA BARBARA,2026 Bryan Clay Invitational,"Apr 16-18, 2026",800,1:51.26,111.26,"44th
           (F)",False,True
-9267198,Noah Gordon,UC SANTA BARBARA,Challenge Cup,"Apr 10, 2026",800,1:54.01,114.00999999999999,"2nd
+9267198,Noah Gordon,UC SANTA BARBARA,Challenge Cup,"Apr 10, 2026",800,1:54.01,114.01,"2nd
           (F)",False,True
 9267198,Noah Gordon,UC SANTA BARBARA,Stanford Invitational,"Apr  3- 4, 2026",400,50.08,50.08,"34th
           (F)",False,True
-9267198,Noah Gordon,UC SANTA BARBARA,Mike Fanelli Track Classic,"Apr  3- 4, 2026",800,1:52.29,112.28999999999999,"22nd
+9267198,Noah Gordon,UC SANTA BARBARA,Mike Fanelli Track Classic,"Apr  3- 4, 2026",800,1:52.29,112.29,"22nd
           (F)",False,True
-9267198,Noah Gordon,UC SANTA BARBARA,Bob Larson & Jim Bush Legends,"Mar 27-28, 2026",800,1:53.73,113.72999999999999,"14th
+9267198,Noah Gordon,UC SANTA BARBARA,Bob Larson & Jim Bush Legends,"Mar 27-28, 2026",800,1:53.73,113.73,"14th
           (F)",False,True
 9267198,Noah Gordon,UC SANTA BARBARA,UCSB @ Westmont,"Mar 13, 2026",200,DNS,,,False,True
 9267198,Noah Gordon,UC SANTA BARBARA,UCSB @ Westmont,"Mar 13, 2026",600,1:18.90,78.9,"2nd
@@ -72988,7 +72988,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8900291,Niall Monteleone,UC SANTA BARBARA,Mike Fanelli Track Classic,"Apr  3- 4, 2026",800,1:53.88,113.88,"55th
           (F)",False,True
-8900291,Niall Monteleone,UC SANTA BARBARA,Mike Fanelli Track Classic,"Apr  3- 4, 2026",1500,3:54.67,234.67000000000002,"46th
+8900291,Niall Monteleone,UC SANTA BARBARA,Mike Fanelli Track Classic,"Apr  3- 4, 2026",1500,3:54.67,234.67,"46th
           (F)",False,True
 8900291,Niall Monteleone,UC SANTA BARBARA,UCSB @ Westmont,"Mar 13, 2026",2000,DNS,,,False,True
 8900291,Niall Monteleone,UC SANTA BARBARA,Gaucho Relays (Roster),"Mar  6- 7, 2026",Mile,4:32.95,272.95,"17th
@@ -73033,7 +73033,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9165765,Will Mulliken,UC SANTA BARBARA,2026 Bryan Clay Invitational,"Apr 16-18, 2026",1500,3:56.73,236.73,"46th
           (F)",False,True
-9165765,Will Mulliken,UC SANTA BARBARA,Mike Fanelli Track Classic,"Apr  3- 4, 2026",800,1:56.04,116.03999999999999,"99th
+9165765,Will Mulliken,UC SANTA BARBARA,Mike Fanelli Track Classic,"Apr  3- 4, 2026",800,1:56.04,116.04,"99th
           (F)",False,True
 9165765,Will Mulliken,UC SANTA BARBARA,Mike Fanelli Track Classic,"Apr  3- 4, 2026",1500,3:57.76,237.76,"74th
           (F)",False,True
@@ -73274,7 +73274,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9238274,Kenna Bradley,UC SANTA BARBARA,UCSB @ Westmont,"Mar 13, 2026",400,55.51,55.51,"1st
           (F)",False,True
-9238274,Kenna Bradley,UC SANTA BARBARA,Gaucho Relays (Roster),"Mar  6- 7, 2026",4x400,3:44.58,224.57999999999998,"1st
+9238274,Kenna Bradley,UC SANTA BARBARA,Gaucho Relays (Roster),"Mar  6- 7, 2026",4x400,3:44.58,224.58,"1st
           (F)",False,True
 9238274,Kenna Bradley,UC SANTA BARBARA,Gaucho Relays (Roster),"Mar  6- 7, 2026",SMR,4:01.96,241.96,"1st
           (F)",False,True
@@ -73672,7 +73672,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8689225,Mercy Ehiemere,UC RIVERSIDE,2024 Ken Shannon Last Chance,"Feb 23-24, 2024",4x400,3:43.96,223.96,"6th
           (F)",False,True
-8689225,Mercy Ehiemere,UC RIVERSIDE,Maverick Premier #2,"Feb 10, 2024",4x400,3:40.92,220.92000000000002,"1st
+8689225,Mercy Ehiemere,UC RIVERSIDE,Maverick Premier #2,"Feb 10, 2024",4x400,3:40.92,220.92,"1st
           (F)",False,True
 8689225,Mercy Ehiemere,UC RIVERSIDE,Maverick Premier #1,"Feb  9, 2024",400,55.81,55.81,"3rd
           (F)",False,True
@@ -73904,7 +73904,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9193948,Fiona Holloway,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",800,2:12.34,132.34,"4th
           (F)",False,True
-9193948,Fiona Holloway,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",1500,4:36.41,276.40999999999997,"2nd
+9193948,Fiona Holloway,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",1500,4:36.41,276.41,"2nd
           (F)",False,True
 9193948,Fiona Holloway,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",800,2:17.62,137.62,"20th
           (F)",False,True
@@ -74285,7 +74285,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9271764,Robyn Larkan,HAWAII,UCR Spring Break Classic,"Mar 21, 2026",4x100,46.29,46.29,"2nd
           (F)",False,True
-9271764,Robyn Larkan,HAWAII,UCR Spring Break Classic,"Mar 21, 2026",4x200,1:38.24,98.24000000000001,"2nd
+9271764,Robyn Larkan,HAWAII,UCR Spring Break Classic,"Mar 21, 2026",4x200,1:38.24,98.24,"2nd
           (F)",False,True
 9271764,Robyn Larkan,HAWAII,PLNU Sea Lion Invite 2026,"Mar 13-14, 2026",4x100,46.74,46.74,"1st
           (F)",False,True
@@ -74896,7 +74896,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9245945,Nadia Munoz,CSUN,Ben Brown/Astro AI,"Mar 12-13, 2026",5000,18:04.28,1084.28,"14th
           (F)",False,True
-9245945,Nadia Munoz,CSUN,Beach Opener 2026,"Mar  6- 7, 2026",1500,4:59.16,299.15999999999997,"7th
+9245945,Nadia Munoz,CSUN,Beach Opener 2026,"Mar  6- 7, 2026",1500,4:59.16,299.16,"7th
           (F)",False,True
 9245945,Nadia Munoz,CSUN,Beach Opener 2026,"Mar  6- 7, 2026",3000,10:52.11,652.11,"7th
           (F)",False,True
@@ -75149,7 +75149,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9166955,Shea Elmore,UC SAN DIEGO,Steve Scott Invitational,"May  1- 2, 2026",3000S,11:14.90,674.9,"10th
           (F)",False,True
-9166955,Shea Elmore,UC SAN DIEGO,2026 Bryan Clay Invitational,"Apr 16-18, 2026",1500,4:39.66,279.65999999999997,"97th
+9166955,Shea Elmore,UC SAN DIEGO,2026 Bryan Clay Invitational,"Apr 16-18, 2026",1500,4:39.66,279.66,"97th
           (F)",False,True
 9166955,Shea Elmore,UC SAN DIEGO,Aztec Coastal Classic Team,"Mar 13, 2026",3000S,11:29.40,689.4,"8th
           (F)",False,True
@@ -75192,7 +75192,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8900338,Keira Sorenson,UC SANTA BARBARA,UCSB Invite,"Apr 26, 2025",1500,4:53.94,293.94,"11th
           (F)",False,True
-8900338,Keira Sorenson,UC SANTA BARBARA,UCSB Open,"Apr 12, 2025",1500,4:59.66,299.65999999999997,"4th
+8900338,Keira Sorenson,UC SANTA BARBARA,UCSB Open,"Apr 12, 2025",1500,4:59.66,299.66,"4th
           (F)",False,True
 8900338,Keira Sorenson,UC SANTA BARBARA,Mike Fanelli Track Classic,"Apr  3- 5, 2025",800,2:25.51,145.51,"141st
           (F)",False,True
@@ -75261,7 +75261,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
 8669246,Diyana Hackley,UC RIVERSIDE,Ron Mann Classic,"Jan 30, 2026",4x400,3:49.53,229.53,"1st
           (F)",False,True
 8669246,Diyana Hackley,UC RIVERSIDE,UC Riverside Spring Track Classic,"Mar 22, 2025",200,DNS(-0.1),,,False,True
-8669246,Diyana Hackley,UC RIVERSIDE,UC Riverside Spring Track Classic,"Mar 22, 2025",4x400,3:57.33,237.32999999999998,"1st
+8669246,Diyana Hackley,UC RIVERSIDE,UC Riverside Spring Track Classic,"Mar 22, 2025",4x400,3:57.33,237.33,"1st
           (F)",False,True
 8669246,Diyana Hackley,UC RIVERSIDE,2025 RCC Invitational,"Feb 28, 2025",200,26.03(0.9),26.03,"20th
           (F)",False,True
@@ -75300,7 +75300,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8669246,Diyana Hackley,UC RIVERSIDE,Lumberjack Team Challenge,"Jan 19, 2024",200,26.02,26.02,"16th
           (F)",False,True
-8669246,Diyana Hackley,UC RIVERSIDE,Lumberjack Team Challenge,"Jan 19, 2024",4x400,3:51.42,231.42000000000002,"3rd
+8669246,Diyana Hackley,UC RIVERSIDE,Lumberjack Team Challenge,"Jan 19, 2024",4x400,3:51.42,231.42,"3rd
           (F)",False,True
 8980609,Jaiden Hill,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",200,23.82(1.4),23.82,"13th
           (P)",False,True
@@ -75375,7 +75375,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9254466,Anicia Garvin,UC DAVIS,2026 98th Clyde Littlefield Texas Relays (Univ/College),"Apr  1- 4, 2026",4x100,46.16,46.16,"17th
           (P)",False,True
-9254466,Anicia Garvin,UC DAVIS,2026 98th Clyde Littlefield Texas Relays (Univ/College),"Apr  1- 4, 2026",4x200,1:39.73,99.72999999999999,,False,True
+9254466,Anicia Garvin,UC DAVIS,2026 98th Clyde Littlefield Texas Relays (Univ/College),"Apr  1- 4, 2026",4x200,1:39.73,99.73,,False,True
 9254466,Anicia Garvin,UC DAVIS,2026 98th Clyde Littlefield Texas Relays (Univ/College),"Apr  1- 4, 2026",4x400,3:51.36,231.36,"22nd
           (P)",False,True
 9254466,Anicia Garvin,UC DAVIS,2026 West Coast Relays,"Mar 27-28, 2026",200,24.55(1.8),24.55,"7th
@@ -75591,7 +75591,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8998450,Milani Bell,LONG BEACH ST.,2025 MPSF Indoor TF Champs,"Feb 21-22, 2025",400,56.95,56.95,"13th
           (F)",False,True
-8998450,Milani Bell,LONG BEACH ST.,2025 MPSF Indoor TF Champs,"Feb 21-22, 2025",4x400,3:43.58,223.57999999999998,"3rd
+8998450,Milani Bell,LONG BEACH ST.,2025 MPSF Indoor TF Champs,"Feb 21-22, 2025",4x400,3:43.58,223.58,"3rd
           (F)",False,True
 8998450,Milani Bell,LONG BEACH ST.,New Mexico Collegiate Classic 2025 (16 Team Invite),"Feb  7- 8, 2025",200,26.24,26.24,"54th
           (F)",False,True
@@ -75690,7 +75690,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9276179,Joy Anderson,UC IRVINE,Ben Brown/Astro AI,"Mar 12-13, 2026",100H,14.19(+0.0),14.19,"7th
           (F)",False,True
-9276179,Joy Anderson,UC IRVINE,Ben Brown/Astro AI,"Mar 12-13, 2026",4x400,3:40.83,220.82999999999998,"1st
+9276179,Joy Anderson,UC IRVINE,Ben Brown/Astro AI,"Mar 12-13, 2026",4x400,3:40.83,220.83,"1st
           (F)",False,True
 9276179,Joy Anderson,UC IRVINE,Beach Opener 2026,"Mar  6- 7, 2026",SP,"11.08m36' 4.25""",,"20th
           (F)",False,True
@@ -75749,7 +75749,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9008469,Kaira Burrage,CAL POLY,2026 West Coast Relays,"Mar 27-28, 2026",400H,1:02.09,62.09,"5th
           (F)",False,True
-9008469,Kaira Burrage,CAL POLY,2026 West Coast Relays,"Mar 27-28, 2026",4x400,3:55.08,235.07999999999998,"3rd
+9008469,Kaira Burrage,CAL POLY,2026 West Coast Relays,"Mar 27-28, 2026",4x400,3:55.08,235.08,"3rd
           (F)",False,True
 9008469,Kaira Burrage,CAL POLY,2026 Conover Classic,"Mar 21, 2026",100H,15.60(-0.7),15.6,"8th
           (F)",False,True
@@ -76005,7 +76005,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (P)",False,True
 9273987,Citina Nardi,CAL POLY,2026 West Coast Relays,"Mar 27-28, 2026",100H,14.69(0.6),14.69,"6th
           (F)",False,True
-9273987,Citina Nardi,CAL POLY,2026 West Coast Relays,"Mar 27-28, 2026",4x400,3:55.08,235.07999999999998,"3rd
+9273987,Citina Nardi,CAL POLY,2026 West Coast Relays,"Mar 27-28, 2026",4x400,3:55.08,235.08,"3rd
           (F)",False,True
 9273987,Citina Nardi,CAL POLY,2026 Conover Classic,"Mar 21, 2026",100H,14.72(-0.7),14.72,"3rd
           (F)",False,True
@@ -76365,7 +76365,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9299346,Catalina Teran,UC IRVINE,Ben Brown/Astro AI,"Mar 12-13, 2026",100,11.64(0.3),11.64,"3rd
           (F)",False,True
-9299346,Catalina Teran,UC IRVINE,Ben Brown/Astro AI,"Mar 12-13, 2026",4x400,3:40.83,220.82999999999998,"1st
+9299346,Catalina Teran,UC IRVINE,Ben Brown/Astro AI,"Mar 12-13, 2026",4x400,3:40.83,220.83,"1st
           (F)",False,True
 9299346,Catalina Teran,UC IRVINE,Beach Opener 2026,"Mar  6- 7, 2026",200,23.61(1.4),23.61,"2nd
           (F)",False,True
@@ -76518,7 +76518,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9254472,Rujeko Munetsi,UC DAVIS,2026 98th Clyde Littlefield Texas Relays (Univ/College),"Apr  1- 4, 2026",4x100,46.16,46.16,"17th
           (P)",False,True
-9254472,Rujeko Munetsi,UC DAVIS,2026 98th Clyde Littlefield Texas Relays (Univ/College),"Apr  1- 4, 2026",4x200,1:39.73,99.72999999999999,,False,True
+9254472,Rujeko Munetsi,UC DAVIS,2026 98th Clyde Littlefield Texas Relays (Univ/College),"Apr  1- 4, 2026",4x200,1:39.73,99.73,,False,True
 9254472,Rujeko Munetsi,UC DAVIS,2026 West Coast Relays,"Mar 27-28, 2026",100,12.02(0.4),12.02,"12th
           (F)",False,True
 9254472,Rujeko Munetsi,UC DAVIS,Aggie Open 2026,"Mar 20-21, 2026",4x100,47.03,47.03,"1st
@@ -76860,7 +76860,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9277316,Keani Neuhs,UC SAN DIEGO,Battle Born Invitational,"Feb 13-14, 2026",800,2:16.28,136.28,"11th
           (F)",False,True
-9277316,Keani Neuhs,UC SAN DIEGO,Riverfront Invitational & Multis,"Feb  5- 7, 2026",600,1:35.01,95.00999999999999,"3rd
+9277316,Keani Neuhs,UC SAN DIEGO,Riverfront Invitational & Multis,"Feb  5- 7, 2026",600,1:35.01,95.01,"3rd
           (F)",False,True
 9277316,Keani Neuhs,UC SAN DIEGO,Riverfront Invitational & Multis,"Feb  5- 7, 2026",800,2:16.69,136.69,"6th
           (F)",False,True
@@ -77008,7 +77008,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9245943,Kahlai Cruser,CSUN,Beach Opener 2026,"Mar  6- 7, 2026",4x400,4:22.66,262.66,"6th
           (F)",False,True
-9245943,Kahlai Cruser,CSUN,Nevada Invitational,"Jan 16-17, 2026",600,1:44.96,104.96000000000001,"17th
+9245943,Kahlai Cruser,CSUN,Nevada Invitational,"Jan 16-17, 2026",600,1:44.96,104.96,"17th
           (F)",False,True
 9281038,Jayla Addison,UC SAN DIEGO,Big West Championships,"May  8-16, 2026",800,2:12.72,132.72,"12th
           (P)",False,True
@@ -77059,7 +77059,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8591011,Hinako Yamamoto,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",400,1:00.88,60.88,"25th
           (F)",False,True
-8591011,Hinako Yamamoto,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",1500,4:44.66,284.65999999999997,"19th
+8591011,Hinako Yamamoto,UC SAN DIEGO,46th Aztec Track & Field Invitational,"Mar 22, 2025",1500,4:44.66,284.66,"19th
           (F)",False,True
 8591011,Hinako Yamamoto,UC SAN DIEGO,Ben Brown Invitational/AstroAI Distance Classic,"Mar  7- 8, 2025",800,2:15.85,135.85,"11th
           (F)",False,True
@@ -77222,7 +77222,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
 9166953,Sabrina Zanetto,UC SAN DIEGO,Highlander Invitational,"Oct 18, 2025",6k,22:54.2,1374.2,144th,True,False
 9166953,Sabrina Zanetto,UC SAN DIEGO,Cowboy Jamboree,"Sep 26, 2025",6k,23:08.5,1388.5,106th,True,False
 9166953,Sabrina Zanetto,UC SAN DIEGO,Texas A&M Invitational,"Sep 13, 2025",5k,18:47.0,1127.0,47th,True,False
-9245951,Ailani Valiente,CSUN,Big West Championships,"May  8-16, 2026",1500,4:57.91,297.90999999999997,"21st
+9245951,Ailani Valiente,CSUN,Big West Championships,"May  8-16, 2026",1500,4:57.91,297.91,"21st
           (P)",False,True
 9245951,Ailani Valiente,CSUN,Steve Scott Invitational,"May  1- 2, 2026",1500,4:52.83,292.83,"4th
           (F)",False,True
@@ -77249,7 +77249,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (P)",False,True
 9163151,Ava Leisenfelder,CSU BAKERSFIELD,2026 Fresno State Invite,"May  1- 2, 2026",800,2:23.74,143.74,"23rd
           (F)",False,True
-9163151,Ava Leisenfelder,CSU BAKERSFIELD,2026 Fresno State Invite,"May  1- 2, 2026",1500,4:55.91,295.90999999999997,"19th
+9163151,Ava Leisenfelder,CSU BAKERSFIELD,2026 Fresno State Invite,"May  1- 2, 2026",1500,4:55.91,295.91,"19th
           (F)",False,True
 9163151,Ava Leisenfelder,CSU BAKERSFIELD,UCSB Invite (Roster),"Apr 24-25, 2026",800,2:27.22,147.22,"19th
           (F)",False,True
@@ -77393,7 +77393,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9254476,Avah Reichow,UC DAVIS,Battle Born Invitational,"Feb 13-14, 2026",400,58.95,58.95,"26th
           (F)",False,True
-9254476,Avah Reichow,UC DAVIS,Battle Born Invitational,"Feb 13-14, 2026",4x400,3:51.17,231.17000000000002,"8th
+9254476,Avah Reichow,UC DAVIS,Battle Born Invitational,"Feb 13-14, 2026",4x400,3:51.17,231.17,"8th
           (F)",False,True
 9254476,Avah Reichow,UC DAVIS,Nevada Invitational,"Jan 16-17, 2026",400,58.52,58.52,"21st
           (F)",False,True
@@ -77419,7 +77419,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9271766,Franziska Mahr,HAWAII,Aztec Coastal Classic Team,"Mar 13, 2026",400H,1:05.19,65.19,"2nd
           (F)",False,True
-9271766,Franziska Mahr,HAWAII,Aztec Coastal Classic Team,"Mar 13, 2026",4x400,3:51.92,231.92000000000002,"1st
+9271766,Franziska Mahr,HAWAII,Aztec Coastal Classic Team,"Mar 13, 2026",4x400,3:51.92,231.92,"1st
           (F)",False,True
 6163861,Jason Smith,LONG BEACH ST.,NCAA Division I Outdoor Track & Field Championships,"Jun  8-11, 2022",LJ,"7.52m(0.1)24' 8.25""",,"13th
           (F)",False,True
@@ -79078,7 +79078,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 7107003,Graham Michiels,UC SANTA BARBARA,2020 San Diego Collegiate Challenge,"Mar  7, 2020",HJ,"2.06m6' 9""",,"1st
           (F)",False,True
-7107003,Graham Michiels,UC SANTA BARBARA,2020 Gaucho Round-Up,"Feb 22, 2020",4x400,3:38.17,218.17000000000002,"6th
+7107003,Graham Michiels,UC SANTA BARBARA,2020 Gaucho Round-Up,"Feb 22, 2020",4x400,3:38.17,218.17,"6th
           (F)",False,True
 7107003,Graham Michiels,UC SANTA BARBARA,2020 Gaucho Round-Up,"Feb 22, 2020",HJ,"1.95m6' 4.75""",,"1st
           (F)",False,True
@@ -81385,7 +81385,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (P)",False,True
 7781413,Aaron Booth,LONG BEACH ST.,2020 Jim Green Invitational,"Jan 10-11, 2020",60H,8.52,8.52,"13th
           (P)",False,True
-7781413,Aaron Booth,LONG BEACH ST.,2020 Jim Green Invitational,"Jan 10-11, 2020",4x400,3:24.58,204.57999999999998,"14th
+7781413,Aaron Booth,LONG BEACH ST.,2020 Jim Green Invitational,"Jan 10-11, 2020",4x400,3:24.58,204.58,"14th
           (F)",False,True
 7781413,Aaron Booth,LONG BEACH ST.,2020 Jim Green Invitational,"Jan 10-11, 2020",LJ,"7.12m23' 4.5""",,"4th
           (F)",False,True
@@ -82862,7 +82862,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
 7588487,Ethan George,UC SANTA BARBARA,2020 San Diego Collegiate Challenge,"Mar  7, 2020",TJ,"13.02m(1.3)42' 8.75""",,"6th
           (F)",False,True
 7588487,Ethan George,UC SANTA BARBARA,2020 Gaucho Round-Up,"Feb 22, 2020",400H,DQ,,,False,True
-7588487,Ethan George,UC SANTA BARBARA,2020 Gaucho Round-Up,"Feb 22, 2020",4x400,3:38.17,218.17000000000002,"6th
+7588487,Ethan George,UC SANTA BARBARA,2020 Gaucho Round-Up,"Feb 22, 2020",4x400,3:38.17,218.17,"6th
           (F)",False,True
 7588487,Ethan George,UC SANTA BARBARA,2020 Gaucho Round-Up,"Feb 22, 2020",TJ,"13.55m(-0.8)44' 5.5""",,"3rd
           (F)",False,True
@@ -85289,7 +85289,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 6444453,Sonsoles Barba,CSUN,New Mexico Team Open,"Feb  1, 2020",LJ,"5.24m17' 2.25""",,"15th
           (F)",False,True
-6444453,Sonsoles Barba,CSUN,Lumberjack Team Challenge,"Jan 17, 2020",600,1:46.27,106.27000000000001,"8th
+6444453,Sonsoles Barba,CSUN,Lumberjack Team Challenge,"Jan 17, 2020",600,1:46.27,106.27,"8th
           (F)",False,True
 6444453,Sonsoles Barba,CSUN,Big West Outdoor Track & Field Championships,"May 10-11, 2019",800,2:22.12,142.12,"17th
           (P)",False,True
@@ -85351,7 +85351,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 6444453,Sonsoles Barba,CSUN,Northridge Invitational,"Mar 24, 2018",4x400,3:52.86,232.86,"1st
           (F)",False,True
-6444453,Sonsoles Barba,CSUN,CSUN All Comers,"Mar 10, 2018",600,1:37.73,97.72999999999999,"6th
+6444453,Sonsoles Barba,CSUN,CSUN All Comers,"Mar 10, 2018",600,1:37.73,97.73,"6th
           (F)",False,True
 6444453,Sonsoles Barba,CSUN,MPSF Indoor Track & Field Championships,"Feb 23-24, 2018",800,2:17.90,137.9,"37th
           (F)",False,True
@@ -91410,7 +91410,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 6584081,Shalee Reynolds,LONG BEACH ST.,BIG West Challenge,"Apr  6, 2018",400,55.21,55.21,"2nd
           (F)",False,True
-6584081,Shalee Reynolds,LONG BEACH ST.,BIG West Challenge,"Apr  6, 2018",4x400,3:43.08,223.07999999999998,"1st
+6584081,Shalee Reynolds,LONG BEACH ST.,BIG West Challenge,"Apr  6, 2018",4x400,3:43.08,223.08,"1st
           (F)",False,True
 6584081,Shalee Reynolds,LONG BEACH ST.,Sacramento State MONDO Team Challenge,"Mar 31, 2018",400H,59.63,59.63,"1st
           (F)",False,True
@@ -91461,7 +91461,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 6584082,Shyann Reynolds,LONG BEACH ST.,BIG West Challenge,"Apr  6, 2018",400H,1:02.11,62.11,"3rd
           (F)",False,True
-6584082,Shyann Reynolds,LONG BEACH ST.,BIG West Challenge,"Apr  6, 2018",4x400,3:43.08,223.07999999999998,"1st
+6584082,Shyann Reynolds,LONG BEACH ST.,BIG West Challenge,"Apr  6, 2018",4x400,3:43.08,223.08,"1st
           (F)",False,True
 6584082,Shyann Reynolds,LONG BEACH ST.,Sacramento State MONDO Team Challenge,"Mar 31, 2018",400,54.88,54.88,"1st
           (F)",False,True
@@ -100626,7 +100626,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
 8361653,Milo Orona,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",DT,"31.52m103' 5""",,7th,False,True
 8361653,Milo Orona,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",PV,"3.91m12' 10""",,5th,False,True
 8361653,Milo Orona,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",JT,"48.14m157' 11""",,4th,False,True
-8361653,Milo Orona,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",1500,4:54.41,294.40999999999997,5th,False,True
+8361653,Milo Orona,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",1500,4:54.41,294.41,5th,False,True
 8361653,Milo Orona,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",Dec,6376,,5th,False,True
 8361653,Milo Orona,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",100,11.53(1.4),11.53,6th,False,True
 8361653,Milo Orona,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",LJ,"6.42m(0.7)21' 0.75""",,6th,False,True
@@ -100637,7 +100637,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
 8361653,Milo Orona,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",DT,"31.52m103' 5""",,7th,False,True
 8361653,Milo Orona,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",PV,"3.91m12' 10""",,5th,False,True
 8361653,Milo Orona,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",JT,"48.14m157' 11""",,4th,False,True
-8361653,Milo Orona,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",1500,4:54.41,294.40999999999997,5th,False,True
+8361653,Milo Orona,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",1500,4:54.41,294.41,5th,False,True
 8361653,Milo Orona,LONG BEACH ST.,Steve Scott Invitational,"Apr 28-29, 2023",PV,NHNH,,,False,True
 8361653,Milo Orona,LONG BEACH ST.,Steve Scott Invitational,"Apr 28-29, 2023",SP,"10.99m36' 0.75""",,"27th
           (F)",False,True
@@ -100810,7 +100810,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 7069157,Chelsea Daye,UC DAVIS,Don Kirby Elite Invitational,"Feb 13-14, 2020",200,24.99,24.99,"42nd
           (F)",False,True
-7069157,Chelsea Daye,UC DAVIS,Don Kirby Elite Invitational,"Feb 13-14, 2020",4x400,3:53.17,233.17000000000002,"14th
+7069157,Chelsea Daye,UC DAVIS,Don Kirby Elite Invitational,"Feb 13-14, 2020",4x400,3:53.17,233.17,"14th
           (F)",False,True
 7069157,Chelsea Daye,UC DAVIS,2020 UW Invitational,"Jan 31-Feb  1, 2020",200,26.12,26.12,"32nd
           (F)",False,True
@@ -107477,7 +107477,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 7515299,Jenelle Hurley,LONG BEACH ST.,2023 GNAC Outdoor Track and Field Championships,"May 12-13, 2023",400H,1:06.11,66.11,"7th
           (P)",False,True
-7515299,Jenelle Hurley,LONG BEACH ST.,2023 GNAC Outdoor Track and Field Championships,"May 12-13, 2023",4x400,3:57.42,237.42000000000002,"4th
+7515299,Jenelle Hurley,LONG BEACH ST.,2023 GNAC Outdoor Track and Field Championships,"May 12-13, 2023",4x400,3:57.42,237.42,"4th
           (F)",False,True
 7515299,Jenelle Hurley,LONG BEACH ST.,2023 GNAC Outdoor Track and Field Championships,"May 12-13, 2023",HJ,"1.66m5' 5.25""",,"2nd
           (F)",False,True
@@ -110729,7 +110729,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
 9042399,Hudson Shaver,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",DT,"44.83m147' 1""",,1st,False,True
 9042399,Hudson Shaver,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",PV,"3.50m11' 5.75""",,13th,False,True
 9042399,Hudson Shaver,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",JT,"51.85m170' 1""",,3rd,False,True
-9042399,Hudson Shaver,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",1500,4:47.41,287.40999999999997,3rd,False,True
+9042399,Hudson Shaver,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",1500,4:47.41,287.41,3rd,False,True
 9042399,Hudson Shaver,UC SANTA BARBARA,Challenge Cup,"Mar 14, 2025",JT,"48.95m160' 7""",,"6th
           (F)",False,True
 9042399,Hudson Shaver,UC SANTA BARBARA,Sam Adams Combined Events,"Mar  5- 6, 2025",Dec,6615,,1st,False,True
@@ -113587,7 +113587,7 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 9008472,Tayhlore Hoagland,CAL POLY,66th Annual Mt. SAC Relays,"Apr 15-18, 2026",4x100,45.52,45.52,"5th
           (F)",False,True
-9008472,Tayhlore Hoagland,CAL POLY,66th Annual Mt. SAC Relays,"Apr 15-18, 2026",4x400,3:45.42,225.42000000000002,"9th
+9008472,Tayhlore Hoagland,CAL POLY,66th Annual Mt. SAC Relays,"Apr 15-18, 2026",4x400,3:45.42,225.42,"9th
           (F)",False,True
 9008472,Tayhlore Hoagland,CAL POLY,66th Annual Mt. SAC Relays,"Apr 15-18, 2026",LJ,"5.49m(1.4)18' 0.25""",,"34th
           (F)",False,True
@@ -118079,3 +118079,1103 @@ athlete_id,athlete_name,team,meet_name,meet_date,event,mark,mark_seconds,place,i
           (F)",False,True
 8789196,Natalie Porter,CAL POLY,UCSB Invite,"Mar  8, 2024",JT,"34.72m113' 11""",,"6th
           (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",Dec,6622,,5th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",1500,4:48.72,288.72,4th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",JT,"44.71m146' 8""",,7th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",PV,"4.11m13' 5.75""",,5th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",DT,"36.36m119' 3""",,7th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",110H,15.64(1.5),15.64,5th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",400,52.17,52.17,4th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",HJ,"1.79m5' 10.5""",,6th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",SP,"11.85m38' 10.5""",,6th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",LJ,"6.64m(2.4)21' 9.5""",,5th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Championships,"May  8-16, 2026",100,11.23(0.3),11.23,3rd,False,True
+9082492,Justin Reichenberg,UC DAVIS,Causeway Classic 2026,"Apr 24, 2026",110H,15.71(0.1),15.71,"3rd
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Causeway Classic 2026,"Apr 24, 2026",HJ,"1.71m5' 7.25""",,"3rd
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Causeway Classic 2026,"Apr 24, 2026",JT,"48.76m160' 0""",,"2nd
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",Dec,6071,,11th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",1500,4:47.75,287.75,10th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",JT,"44.18m144' 11""",,11th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",PV,NHNH,,,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",DT,"37.11m121' 9""",,3rd,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",110H,15.72(1.6),15.72,4th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",400,50.74,50.74,7th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",HJ,"1.77m5' 9.75""",,5th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",SP,"12.26m40' 2.75""",,3rd,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",LJ,"6.57m(0.4)21' 6.75""",,7th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2026,"Apr  2- 3, 2026",100,11.06(1.3),11.06,6th,False,True
+9082492,Justin Reichenberg,UC DAVIS,2026 West Coast Relays,"Mar 27-28, 2026",110H,15.59(-0.2),15.59,"10th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,2026 West Coast Relays,"Mar 27-28, 2026",LJ,"6.32m(+0.0)20' 9""",,"21st
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,2026 West Coast Relays,"Mar 27-28, 2026",DT,"35.86m117' 8""",,"22nd
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Aggie Open 2026,"Mar 20-21, 2026",110H,15.62(0.2),15.62,"1st
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Aggie Open 2026,"Mar 20-21, 2026",HJ,"1.86m6' 1.25""",,"5th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Aggie Open 2026,"Mar 20-21, 2026",SP,"12.58m41' 3.25""",,"6th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",Dec,6422,,6th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",100,11.22(2.0),11.22,7th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",LJ,"6.50m(3.1)21' 4""",,8th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",SP,"11.88m38' 11.75""",,9th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",HJ,"1.78m5' 10""",,7th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",400,50.90,50.9,4th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",110H,15.79(2.0),15.79,4th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",DT,"35.75m117' 3""",,9th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",PV,"4.41m14' 5.5""",,2nd,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",JT,"32.21m105' 8""",,8th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Big West Outdoor Track & Field Championships,"May 16-17, 2025",1500,5:05.15,305.15,7th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Causeway Classic 2025,"Apr 25, 2025",110H,15.60(2.5),15.6,"3rd
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Causeway Classic 2025,"Apr 25, 2025",PV,NHNH,,,False,True
+9082492,Justin Reichenberg,UC DAVIS,Causeway Classic 2025,"Apr 25, 2025",DT,"34.89m114' 6""",,"9th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",Dec,6373,,6th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",100,11.34(-0.4),11.34,5th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",LJ,"6.35m20' 10""",,12th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",SP,"11.59m38' 0.25""",,6th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",HJ,"1.72m5' 7.75""",,9th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",400,51.80,51.8,9th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",110H,16.22(-0.8),16.22,9th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",DT,"38.95m127' 9""",,1st,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",PV,"4.25m13' 11.25""",,5th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",JT,"45.16m148' 2""",,5th,False,True
+9082492,Justin Reichenberg,UC DAVIS,Brutus Hamilton Multi 2025,"Apr  3- 4, 2025",1500,5:12.36,312.36,11th,False,True
+9082492,Justin Reichenberg,UC DAVIS,West Coast Relays,"Mar 28-29, 2025",110H,15.79(-1.1),15.79,"8th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,West Coast Relays,"Mar 28-29, 2025",4x400,3:27.50,207.5,"11th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,West Coast Relays,"Mar 28-29, 2025",PV,"4.26m13' 11.75""",,"9th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,West Coast Relays,"Mar 28-29, 2025",DT,"36.56m119' 11""",,"24th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Sacramento State Hornet Invite,"Mar 21-22, 2025",110H,15.98(0.1),15.98,"24th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Sacramento State Hornet Invite,"Mar 21-22, 2025",LJ,"6.30m(0.7)20' 8""",,"21st
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Sacramento State Hornet Invite,"Mar 21-22, 2025",JT,"48.59m159' 5""",,"8th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Aggie Open 2025,"Mar 14-15, 2025",110H,15.70(1.1),15.7,"3rd
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Aggie Open 2025,"Mar 14-15, 2025",PV,"4.13m13' 6.5""",,"7th
+          (F)",False,True
+9082492,Justin Reichenberg,UC DAVIS,Aggie Open 2025,"Mar 14-15, 2025",DT,"38.67m126' 10""",,"8th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",Dec,6400,,6th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",1500,4:42.17,282.17,2nd,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",JT,"53.28m174' 10""",,5th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",PV,"4.01m13' 1.75""",,6th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",DT,"41.64m136' 7""",,3rd,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",110H,17.08(1.3),17.08,7th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",400,53.44,53.44,6th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",HJ,"1.79m5' 10.5""",,6th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",SP,"12.23m40' 1.5""",,5th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",LJ,"6.16m(1.0)20' 2.5""",,7th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",100,12.06(2.4),12.06,9th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",Dec,6327,,5th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",1500,4:41.45,281.45,2nd,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",JT,"48.88m160' 4""",,3rd,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",PV,"4.00m13' 1.5""",,3rd,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",DT,"44.41m145' 8""",,1st,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",110H,17.02(0.5),17.02,11th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",400,53.43,53.43,11th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",HJ,"1.74m5' 8.5""",,9th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",SP,"11.89m39' 0.25""",,4th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",LJ,"6.20m(0.8)20' 4.25""",,10th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",100,12.16(-1.0),12.16,12th,False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Bob Larson & Jim Bush Legends,"Mar 27-28, 2026",4x400,3:17.27,197.27,"9th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Bob Larson & Jim Bush Legends,"Mar 27-28, 2026",JT,"52.54m172' 4""",,"7th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",800,2:08.72,128.72,"51st
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",PV,"3.70m12' 1.5""",,"8th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",DT,"38.54m126' 5""",,"29th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",JT,"46.71m153' 3""",,"13th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",400,53.52,53.52,"17th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",4x400,3:26.60,206.6,"6th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",PV,"3.80m12' 5.5""",,"7th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",JT,"50.00m164' 0""",,"3rd
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 RCC invitational,"Mar  6, 2026",400,53.52,53.52,"17th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 RCC invitational,"Mar  6, 2026",4x400,3:26.60,206.6,"6th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 RCC invitational,"Mar  6, 2026",PV,"3.80m12' 5.5""",,"7th
+          (F)",False,True
+9201623,Dominic Tubbs,CAL ST. FULLERTON,2026 RCC invitational,"Mar  6, 2026",JT,"50.00m164' 0""",,"3rd
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",Dec,5870,,8th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",1500,6:03.25,363.25,9th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",JT,"31.75m104' 2""",,9th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",PV,"3.91m12' 10""",,7th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",DT,"31.17m102' 3""",,8th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",110H,15.19(1.5),15.19,3rd,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",400,52.01,52.01,3rd,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",HJ,"1.85m6' 0.75""",,5th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",SP,"11.55m37' 10.75""",,7th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",LJ,"6.29m(0.3)20' 7.75""",,6th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Big West Championships,"May  8-16, 2026",100,11.44(2.4),11.44,5th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Steve Scott Invitational,"May  1- 2, 2026",110H,15.51(1.4),15.51,"14th
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Steve Scott Invitational,"May  1- 2, 2026",PV,NHNH,,,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Steve Scott Invitational,"May  1- 2, 2026",JT,"33.05m108' 5""",,"10th
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",Dec,4999,,11th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",1500,5:59.64,359.64,10th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",JT,"32.37m106' 2""",,11th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",PV,NHNH,,,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",DT,"31.10m102' 0""",,6th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",110H,15.71(0.4),15.71,6th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",400,51.41,51.41,6th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",HJ,"1.77m5' 9.75""",,7th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",SP,"11.06m36' 3.5""",,6th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",LJ,"5.53m(2.1)18' 1.75""",,12th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",100,11.47(-1.0),11.47,9th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",110H,15.36(-0.1),15.36,"15th
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",PV,"4.15m13' 7.25""",,"3rd
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",DT,"28.34m93' 0""",,"33rd
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,Ben Brown/Astro AI,"Mar 12-13, 2026",JT,"37.98m124' 7""",,"18th
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",110H,FS(0.6),,,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",PV,"3.50m11' 5.75""",,"11th
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 RCC Invitational (Unattached/Open Athletes),"Mar  6, 2026",JT,"37.63m123' 5""",,"9th
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 RCC invitational,"Mar  6, 2026",110H,FS(0.6),,,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 RCC invitational,"Mar  6, 2026",PV,"3.50m11' 5.75""",,"11th
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 RCC invitational,"Mar  6, 2026",JT,"37.63m123' 5""",,"9th
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",60H,9.05,9.05,"8th
+          (F)",False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",PV,NHNH,,,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",Hep,3770,,5th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",1000,3:12.19,192.19,4th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",60H,8.80,8.8,4th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",HJ,"1.79m5' 10.5""",,5th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",SP,"10.81m35' 5.75""",,5th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",LJ,"5.69m18' 8""",,5th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",60,7.37,7.37,5th,False,True
+9293857,Solomon Gator,CAL ST. FULLERTON,2026 UW Invite/Mile City,"Jan 30-31, 2026",60H,9.24,9.24,"15th
+          (P)",False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",Dec,5129,,9th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",1500,5:25.32,325.32,8th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",JT,"38.92m127' 8""",,8th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",PV,"3.51m11' 6.25""",,9th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",DT,"28.70m94' 2""",,9th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",110H,18.68(1.3),18.68,9th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",400,54.33,54.33,8th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",HJ,"1.55m5' 1""",,9th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",SP,"10.47m34' 4.25""",,9th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",LJ,"6.01m(0.3)19' 8.75""",,9th,False,True
+9254422,Charlie Bowers,UC DAVIS,Big West Championships,"May  8-16, 2026",100,11.56(0.3),11.56,7th,False,True
+9254422,Charlie Bowers,UC DAVIS,Causeway Classic 2026,"Apr 24, 2026",110H,18.88(0.1),18.88,"5th
+          (F)",False,True
+9254422,Charlie Bowers,UC DAVIS,Causeway Classic 2026,"Apr 24, 2026",PV,"3.12m10' 2.75""",,"3rd
+          (F)",False,True
+9254422,Charlie Bowers,UC DAVIS,Causeway Classic 2026,"Apr 24, 2026",JT,"39.19m128' 7""",,"5th
+          (F)",False,True
+9254422,Charlie Bowers,UC DAVIS,Brutus Hamilton 2026,"Apr  4, 2026",JT,"35.52m116' 6""",,"14th
+          (F)",False,True
+9254422,Charlie Bowers,UC DAVIS,2026 West Coast Relays,"Mar 27-28, 2026",400,53.08,53.08,"39th
+          (F)",False,True
+9254422,Charlie Bowers,UC DAVIS,2026 West Coast Relays,"Mar 27-28, 2026",LJ,"5.89m(+0.0)19' 4""",,"27th
+          (F)",False,True
+9254422,Charlie Bowers,UC DAVIS,2026 West Coast Relays,"Mar 27-28, 2026",DT,"32.23m105' 9""",,"26th
+          (F)",False,True
+9254422,Charlie Bowers,UC DAVIS,Aggie Open 2026,"Mar 20-21, 2026",100,11.30(2.0),11.3,"10th
+          (F)",False,True
+9254422,Charlie Bowers,UC DAVIS,Aggie Open 2026,"Mar 20-21, 2026",LJ,"6.02m(1.6)19' 9""",,"4th
+          (F)",False,True
+9254422,Charlie Bowers,UC DAVIS,Aggie Open 2026,"Mar 20-21, 2026",SP,"10.34m33' 11.25""",,"8th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Championships,"May  8-16, 2026",Hep,4753,,12th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Championships,"May  8-16, 2026",800,2:21.30,141.3,6th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Championships,"May  8-16, 2026",JT,"24.98m81' 11""",,13th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Championships,"May  8-16, 2026",LJ,"5.29m(0.8)17' 4.25""",,12th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Championships,"May  8-16, 2026",200,25.90(0.5),25.9,11th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Championships,"May  8-16, 2026",SP,"10.20m33' 5.75""",,11th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Championships,"May  8-16, 2026",HJ,"1.56m5' 1.25""",,8th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Championships,"May  8-16, 2026",100H,14.66(1.6),14.66,9th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Steve Scott Invitational,"May  1- 2, 2026",LJ,"5.39m(2.3)17' 8.25""",,"15th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Steve Scott Invitational,"May  1- 2, 2026",JT,FOULNM,,,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB Invite (Roster),"Apr 24-25, 2026",400,57.64,57.64,"6th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB Invite (Roster),"Apr 24-25, 2026",LJ,"5.46m(+0.0)17' 11""",,"8th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB Invite (Roster),"Apr 24-25, 2026",SP,"10.66m34' 11.75""",,"8th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",Hep,4648,,9th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",800,2:19.24,139.24,1st,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",JT,"25.62m84' 1""",,9th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",LJ,"5.32m(+0.0)17' 5.5""",,8th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",200,25.56(2.8),25.56,4th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",SP,"9.37m30' 9""",,11th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",HJ,"1.50m4' 11""",,12th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2026 Bryan Clay Multi Event,"Apr  9-10, 2026",100H,15.11(1.0),15.11,7th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 26-27, 2026",Hep,4678(0.1),,2nd,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 26-27, 2026",800,2:17.22,137.22,1st,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 26-27, 2026",JT,"19.21m63' 0""",,5th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 26-27, 2026",LJ,"5.16m(0.3)16' 11.25""",,2nd,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 26-27, 2026",200,25.75(-1.2),25.75,1st,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 26-27, 2026",SP,"10.00m32' 9.75""",,4th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 26-27, 2026",HJ,"1.61m5' 3.25""",,1st,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 26-27, 2026",100H,14.98(+0.0),14.98,2nd,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB @ Westmont,"Mar 13, 2026",4x400,DNS,,,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB @ Westmont,"Mar 13, 2026",LJ,"5.44m(+0.0)17' 10.25""",,"3rd
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB @ Westmont,"Mar 13, 2026",SP,"9.19m30' 2""",,"8th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB @ Westmont,"Mar 13, 2026",JT,"26.58m87' 2""",,"1st
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Gaucho Relays (Roster),"Mar  6- 7, 2026",SP,"9.92m32' 6.5""",,"9th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Gaucho Relays (Roster),"Mar  6- 7, 2026",JT,"24.19m79' 4""",,"7th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Outdoor Track & Field Championships,"May 16-17, 2025",Hep,4251,,14th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Outdoor Track & Field Championships,"May 16-17, 2025",100H,15.66(3.4),15.66,15th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Outdoor Track & Field Championships,"May 16-17, 2025",HJ,"1.42m4' 7.75""",,16th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Outdoor Track & Field Championships,"May 16-17, 2025",SP,"8.93m29' 3.75""",,13th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Outdoor Track & Field Championships,"May 16-17, 2025",200,26.22(3.4),26.22,10th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Outdoor Track & Field Championships,"May 16-17, 2025",LJ,"5.31m(0.7)17' 5.25""",,13th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Outdoor Track & Field Championships,"May 16-17, 2025",JT,"22.06m72' 4""",,14th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Big West Outdoor Track & Field Championships,"May 16-17, 2025",800,2:25.44,145.44,6th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB Invite,"Apr 26, 2025",200,26.29(-0.8),26.29,"17th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB Invite,"Apr 26, 2025",100H,16.21(0.9),16.21,"10th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB Invite,"Apr 26, 2025",4x400,4:00.19,240.19,"3rd
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,UCSB Invite,"Apr 26, 2025",LJ,"5.22m(-1.2)17' 1.5""",,"13th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",Hep,4116,,10th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",100H,16.58(0.7),16.58,13th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",HJ,"1.49m4' 10.5""",,9th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",SP,"8.60m28' 2.75""",,11th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",200,26.12(3.6),26.12,4th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",LJ,"5.08m(0.6)16' 8""",,10th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",JT,"19.24m63' 1""",,12th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2025 Bryan Clay Multi Event,"Apr 10-11, 2025",800,2:23.24,143.24,3rd,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 20-21, 2025",Hep,4103(+0.0),,8th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 20-21, 2025",800,2:27.27,147.27,4th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 20-21, 2025",JT,"20.86m68' 5""",,18th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 20-21, 2025",LJ,"5.20m(+0.0)17' 0.75""",,6th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 20-21, 2025",200,26.39(-0.7),26.39,3rd,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 20-21, 2025",SP,"8.26m27' 1.25""",,17th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 20-21, 2025",HJ,"1.48m4' 10.25""",,9th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Klein/ Nwaba Combined Events,"Mar 20-21, 2025",100H,16.29(0.4),16.29,8th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,2025 Beach Opener,"Mar  7- 8, 2025",SP,"8.25m27' 1""",,"26th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Gaucho Relays,"Mar  1, 2025",100H,18.29(1.2),18.29,"20th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Gaucho Relays,"Mar  1, 2025",LJ,"5.01m(-0.8)16' 5.25""",,"10th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Gaucho Relays,"Mar  1, 2025",SP,"8.25m27' 1""",,"15th
+          (F)",False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Nevada Invitational & Multi,"Jan 23-25, 2025",Pent,2985,,14th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Nevada Invitational & Multi,"Jan 23-25, 2025",60H,9.82,9.82,20th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Nevada Invitational & Multi,"Jan 23-25, 2025",HJ,"1.48m4' 10.25""",,17th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Nevada Invitational & Multi,"Jan 23-25, 2025",SP,"7.59m24' 11""",,24th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Nevada Invitational & Multi,"Jan 23-25, 2025",LJ,"5.16m16' 11.25""",,15th,False,True
+8986960,Amanda Eames,UC SANTA BARBARA,Nevada Invitational & Multi,"Jan 23-25, 2025",800,2:32.32,152.32,7th,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Beach Invitational,"Apr 17-18, 2026",HJ,"1.66m5' 5.25""",,"10th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Challenge Cup,"Apr 10, 2026",HJ,"1.66m5' 5.25""",,"2nd
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Beach Opener 2026,"Mar  6- 7, 2026",HJ,"1.66m5' 5.25""",,"2nd
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,2026 MPSF Indoor TF Championships,"Mar  1- 2, 2026",HJ,"1.64m5' 4.5""",,"12th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,New Mexico Team Open 2026,"Jan 30-31, 2026",HJ,"1.58m5' 2.25""",,"11th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Big West Outdoor Track & Field Championships,"May 16-17, 2025",Hep,1960,,16th,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Big West Outdoor Track & Field Championships,"May 16-17, 2025",100H,16.81(3.4),16.81,16th,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Big West Outdoor Track & Field Championships,"May 16-17, 2025",HJ,"1.63m5' 4.25""",,4th,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Big West Outdoor Track & Field Championships,"May 16-17, 2025",SP,"10.64m34' 11""",,6th,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Big West Outdoor Track & Field Championships,"May 16-17, 2025",200,DNF(3.6),,,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Big West Outdoor Track & Field Championships,"May 16-17, 2025",LJ,FOULNM,,,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Big West Outdoor Track & Field Championships,"May 16-17, 2025",JT,FOULNM,,,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Big West Outdoor Track & Field Championships,"May 16-17, 2025",800,DNF,,,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Steve Scott Invite,"May  2, 2025",SP,"10.83m35' 6.5""",,"27th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Beach Invite,"Apr 17-18, 2025",HJ,"1.58m5' 2.25""",,"19th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Pacific Coast Intercollegiate,"Apr 17, 2025",200,25.64(3.1),25.64,"53rd
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Pacific Coast Intercollegiate,"Apr 17, 2025",HJ,"1.57m5' 1.75""",,"27th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Pacific Coast Intercollegiate,"Apr 17, 2025",LJ,"5.22m(+0.0)17' 1.5""",,"40th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Battle at the Beach,"Apr  4, 2025",HJ,"1.61m5' 3.25""",,"4th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Battle at the Beach,"Apr  4, 2025",JT,"31.87m104' 7""",,"7th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,2025 Oregon Preview,"Mar 21-22, 2025",200,25.78(-0.1),25.78,"11th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,2025 Oregon Preview,"Mar 21-22, 2025",HJ,"1.60m5' 3""",,"6th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,2025 Oregon Preview,"Mar 21-22, 2025",LJ,"5.05m(-0.5)16' 7""",,"12th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Challenge Cup,"Mar 14, 2025",HJ,"1.56m5' 1.25""",,"10th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Challenge Cup,"Mar 14, 2025",LJ,"5.31m(+0.0)17' 5.25""",,"14th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,Challenge Cup,"Mar 14, 2025",JT,"33.95m111' 5""",,"4th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,2025 Beach Opener,"Mar  7- 8, 2025",200,25.22(1.3),25.22,"15th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,2025 Beach Opener,"Mar  7- 8, 2025",HJ,"1.61m5' 3.25""",,"12th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,2025 Beach Opener,"Mar  7- 8, 2025",LJ,"4.94m(+0.0)16' 2.5""",,"28th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,2025 Beach Opener,"Mar  7- 8, 2025",JT,"32.62m107' 0""",,"11th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,2025 MPSF Indoor TF Champs,"Feb 21-22, 2025",HJ,"1.60m5' 3""",,"17th
+          (F)",False,True
+8998432,Kendra Daniels,LONG BEACH ST.,New Mexico Collegiate Classic 2025 (16 Team Invite),"Feb  7- 8, 2025",HJ,NHNH,,,False,True
+8998432,Kendra Daniels,LONG BEACH ST.,New Mexico Collegiate Classic 2025 (16 Team Invite),"Feb  7- 8, 2025",SP,"10.77m35' 4""",,"27th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Championships,"May 10-11, 2024",Hep,4200,,14th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Championships,"May 10-11, 2024",100H,15.97(0.6),15.97,14th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Championships,"May 10-11, 2024",HJ,"1.46m4' 9.5""",,14th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Championships,"May 10-11, 2024",SP,"11.10m36' 5""",,3rd,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Championships,"May 10-11, 2024",200,27.06(-0.5),27.06,12th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Championships,"May 10-11, 2024",LJ,"4.89m(-1.2)16' 0.5""",,10th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Championships,"May 10-11, 2024",JT,"28.65m94' 0""",,10th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Championships,"May 10-11, 2024",800,2:36.35,156.35,14th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Steve Scott Invitational,"Apr 26-27, 2024",100H,16.62(1.6),16.62,"26th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Steve Scott Invitational,"Apr 26-27, 2024",LJ,"5.23m(3.3)17' 2""",,"22nd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Steve Scott Invitational,"Apr 26-27, 2024",JT,"27.18m89' 2""",,"6th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2024 Bryan Clay Invitational,"Apr 11-13, 2024",Hep,4074,,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2024 Bryan Clay Invitational,"Apr 11-13, 2024",100H,17.33(0.4),17.33,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2024 Bryan Clay Invitational,"Apr 11-13, 2024",HJ,"1.43m4' 8.25""",,10th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2024 Bryan Clay Invitational,"Apr 11-13, 2024",SP,"11.21m36' 9.5""",,6th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2024 Bryan Clay Invitational,"Apr 11-13, 2024",200,26.85(1.5),26.85,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2024 Bryan Clay Invitational,"Apr 11-13, 2024",LJ,"5.20m(2.3)17' 0.75""",,5th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2024 Bryan Clay Invitational,"Apr 11-13, 2024",JT,"26.19m85' 11""",,10th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2024 Bryan Clay Invitational,"Apr 11-13, 2024",800,2:36.13,156.13,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Triton Invite,"Apr  5- 6, 2024",100H,16.06(1.8),16.06,"33rd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Triton Invite,"Apr  5- 6, 2024",LJ,"5.29m17' 4.25""",,"18th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Vince O'Boyle Track and Field Classic,"Mar 29-30, 2024",200,27.51(0.4),27.51,"39th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Vince O'Boyle Track and Field Classic,"Mar 29-30, 2024",100H,17.42(1.2),17.42,"25th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Vince O'Boyle Track and Field Classic,"Mar 29-30, 2024",LJ,"5.27m(1.1)17' 3.5""",,"10th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Vince O'Boyle Track and Field Classic,"Mar 29-30, 2024",JT,"26.06m85' 6""",,"9th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UCR Spring Classic Multis,"Mar 21-22, 2024",Hep,4232,,7th,False,True
+7538344,Chaselyn Amos,UC IRVINE,UCR Spring Classic Multis,"Mar 21-22, 2024",100H,16.16(0.3),16.16,14th,False,True
+7538344,Chaselyn Amos,UC IRVINE,UCR Spring Classic Multis,"Mar 21-22, 2024",HJ,"1.47m4' 9.75""",,12th,False,True
+7538344,Chaselyn Amos,UC IRVINE,UCR Spring Classic Multis,"Mar 21-22, 2024",SP,"11.43m37' 6""",,4th,False,True
+7538344,Chaselyn Amos,UC IRVINE,UCR Spring Classic Multis,"Mar 21-22, 2024",200,27.25(-0.4),27.25,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,UCR Spring Classic Multis,"Mar 21-22, 2024",LJ,"5.21m(1.0)17' 1.25""",,7th,False,True
+7538344,Chaselyn Amos,UC IRVINE,UCR Spring Classic Multis,"Mar 21-22, 2024",JT,"26.31m86' 4""",,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,UCR Spring Classic Multis,"Mar 21-22, 2024",800,2:36.70,156.7,10th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Challenge Cup,"Mar 15, 2024",100H,16.54(-0.1),16.54,"19th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Challenge Cup,"Mar 15, 2024",LJ,"5.16m(1.2)16' 11.25""",,"14th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Ben Brown Invitational,"Mar  8- 9, 2024",100H,16.63(1.0),16.63,"43rd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Ben Brown Invitational,"Mar  8- 9, 2024",HJ,NHNH,,,False,True
+7538344,Chaselyn Amos,UC IRVINE,Ben Brown Invitational,"Mar  8- 9, 2024",LJ,"5.20m(0.9)17' 0.75""",,"17th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Ben Brown Invitational,"Mar  8- 9, 2024",SP,"11.03m36' 2.25""",,"26th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener 2024,"Mar  1- 2, 2024",200,27.14(2.7),27.14,"44th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener 2024,"Mar  1- 2, 2024",LJ,"5.11m16' 9.25""",,"22nd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener 2024,"Mar  1- 2, 2024",JT,"26.12m85' 8""",,"23rd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Dr. Martin Luther King Jr. Invitational 2024,"Jan 20, 2024",60H,10.74,10.74,"49th
+          (P)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Dr. Martin Luther King Jr. Invitational 2024,"Jan 20, 2024",LJ,"4.89m16' 0.5""",,"50th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Dr. Martin Luther King Jr. Invitational 2024,"Jan 20, 2024",SP,"10.57m34' 8.25""",,"37th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Champio,"May 12-13, 2023",Hep,4375,,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Champio,"May 12-13, 2023",100H,16.09(1.1),16.09,17th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Champio,"May 12-13, 2023",HJ,"1.46m4' 9.5""",,13th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Champio,"May 12-13, 2023",SP,"10.33m33' 10.75""",,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Champio,"May 12-13, 2023",200,26.53(0.9),26.53,12th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Champio,"May 12-13, 2023",LJ,"5.39m(1.9)17' 8.25""",,7th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Champio,"May 12-13, 2023",JT,"29.88m98' 0""",,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Track & Field Champio,"May 12-13, 2023",800,2:33.38,153.38,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Multi Championships,"May  5- 6, 2023",Hep,4375,,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Multi Championships,"May  5- 6, 2023",100H,16.09(1.1),16.09,17th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Multi Championships,"May  5- 6, 2023",HJ,"1.46m4' 9.5""",,13th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Multi Championships,"May  5- 6, 2023",SP,"10.33m33' 10.75""",,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Multi Championships,"May  5- 6, 2023",200,26.53(0.9),26.53,12th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Multi Championships,"May  5- 6, 2023",LJ,"5.39m(1.9)17' 8.25""",,7th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Multi Championships,"May  5- 6, 2023",JT,"29.88m98' 0""",,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Big West Multi Championships,"May  5- 6, 2023",800,2:33.38,153.38,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Steve Scott Invitational,"Apr 28-29, 2023",100H,16.30(1.5),16.3,"21st
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Steve Scott Invitational,"Apr 28-29, 2023",LJ,"5.41m(1.7)17' 9""",,"10th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Steve Scott Invitational,"Apr 28-29, 2023",JT,"28.43m93' 3""",,"14th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Battle in the OC (College),"Apr 20, 2023",100,12.66(1.3),12.66,"8th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Battle in the OC (College),"Apr 20, 2023",200,26.35(0.9),26.35,"13th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Battle in the OC (College),"Apr 20, 2023",SP,"10.19m33' 5.25""",,"10th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Battle in the OC (College),"Apr 20, 2023",JT,"27.63m90' 8""",,"1st
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Bryan Clay Invitational,"Apr 13-15, 2023",Hep,3963,,14th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Bryan Clay Invitational,"Apr 13-15, 2023",100H,17.57(0.9),17.57,26th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Bryan Clay Invitational,"Apr 13-15, 2023",HJ,"1.40m4' 7""",,22nd,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Bryan Clay Invitational,"Apr 13-15, 2023",SP,"10.53m34' 6.75""",,3rd,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Bryan Clay Invitational,"Apr 13-15, 2023",200,27.01(1.3),27.01,12th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Bryan Clay Invitational,"Apr 13-15, 2023",LJ,"5.02m(+0.0)16' 5.75""",,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Bryan Clay Invitational,"Apr 13-15, 2023",JT,"28.11m92' 3""",,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Bryan Clay Invitational,"Apr 13-15, 2023",800,2:34.65,154.65,12th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Challenge Cup Classic,"Apr  7, 2023",100H,17.12(0.8),17.12,"21st
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Challenge Cup Classic,"Apr  7, 2023",HJ,"1.46m4' 9.5""",,"10th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Vince O'Boyle Track and Field Classic,"Mar 31-Apr  1, 2023",100H,17.71(0.6),17.71,"24th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Vince O'Boyle Track and Field Classic,"Mar 31-Apr  1, 2023",SP,"10.00m32' 9.75""",,"19th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Vince O'Boyle Track and Field Classic,"Mar 31-Apr  1, 2023",JT,"31.46m103' 2""",,"14th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,RaferJohnson/Jackie Joyner-Kersee Collegiate,"Mar 25, 2023",100H,17.68(-0.5),17.68,"24th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,RaferJohnson/Jackie Joyner-Kersee Collegiate,"Mar 25, 2023",LJ,"5.37m(1.2)17' 7.5""",,"7th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Sam Adams Combined Events - UCSB,"Mar  8- 9, 2023",Hep,4155,,7th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Sam Adams Combined Events - UCSB,"Mar  8- 9, 2023",100H,17.85(2.3),17.85,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Sam Adams Combined Events - UCSB,"Mar  8- 9, 2023",HJ,"1.42m4' 7.75""",,8th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Sam Adams Combined Events - UCSB,"Mar  8- 9, 2023",SP,"11.22m36' 9.75""",,3rd,False,True
+7538344,Chaselyn Amos,UC IRVINE,Sam Adams Combined Events - UCSB,"Mar  8- 9, 2023",200,26.36(0.6),26.36,3rd,False,True
+7538344,Chaselyn Amos,UC IRVINE,Sam Adams Combined Events - UCSB,"Mar  8- 9, 2023",LJ,"5.02m(1.5)16' 5.75""",,5th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Sam Adams Combined Events - UCSB,"Mar  8- 9, 2023",JT,"30.92m101' 5""",,5th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Sam Adams Combined Events - UCSB,"Mar  8- 9, 2023",800,2:30.91,150.91,4th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener 2023,"Mar  3- 4, 2023",100H,18.51(2.6),18.51,"32nd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener 2023,"Mar  3- 4, 2023",LJ,"5.36m(4.3)17' 7""",,"11th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener 2023,"Mar  3- 4, 2023",JT,"32.17m105' 6""",,"13th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",Pent,2745,,16th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",60H,10.99,10.99,18th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",HJ,"1.41m4' 7.5""",,15th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",SP,"10.50m34' 5.5""",,3rd,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",LJ,"4.78m15' 8.25""",,13th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",800,2:35.83,155.82999999999998,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,New Mexico Team Open,"Jan 27-28, 2023",HJ,NHNH,,,False,True
+7538344,Chaselyn Amos,UC IRVINE,New Mexico Team Open,"Jan 27-28, 2023",SP,"10.39m34' 1.25""",,"23rd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Spokane Indoor Challenge,"Jan 13-14, 2023",60H,11.32,11.32,"31st
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Spokane Indoor Challenge,"Jan 13-14, 2023",HJ,"1.36m4' 5.5""",,"24th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Spokane Indoor Challenge,"Jan 13-14, 2023",LJ,"4.64m15' 2.75""",,"25th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2023 Spokane Indoor Challenge,"Jan 13-14, 2023",SP,"9.75m32' 0""",,"28th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,adidas/Steve Scott Invitational,"Apr 29-30, 2022",200,26.30(0.4),26.3,"27th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,adidas/Steve Scott Invitational,"Apr 29-30, 2022",100H,16.53(0.5),16.53,"28th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,adidas/Steve Scott Invitational,"Apr 29-30, 2022",LJ,"5.41m(1.3)17' 9""",,"16th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Battle in the OC,"Apr 22, 2022",100H,17.18(2.0),17.18,"6th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Battle in the OC,"Apr 22, 2022",HJ,"1.37m4' 6""",,"4th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Battle in the OC,"Apr 22, 2022",LJ,"5.07m(1.9)16' 7.75""",,"3rd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Battle in the OC,"Apr 22, 2022",JT,"24.21m79' 5""",,"7th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2022 Challenge Cup,"Apr  8, 2022",100H,16.33(1.0),16.33,"12th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2022 Challenge Cup,"Apr  8, 2022",LJ,"5.02m(-0.5)16' 5.75""",,"13th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2022 Challenge Cup,"Apr  8, 2022",JT,"26.59m87' 3""",,"9th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,The Vince O'Boyle Track and Field Classic,"Apr  1- 2, 2022",100H,17.66(0.4),17.66,"15th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,The Vince O'Boyle Track and Field Classic,"Apr  1- 2, 2022",HJ,NHNH,,,False,True
+7538344,Chaselyn Amos,UC IRVINE,The Vince O'Boyle Track and Field Classic,"Apr  1- 2, 2022",JT,"25.48m83' 7""",,"12th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Rafer Johnson & Jackie Joyner- Kersee Invite,"Mar 26, 2022",100,12.80(0.3),12.8,"22nd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Rafer Johnson & Jackie Joyner- Kersee Invite,"Mar 26, 2022",LJ,"5.10m(0.8)16' 8.75""",,"15th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Rafer Johnson & Jackie Joyner- Kersee Invite,"Mar 26, 2022",SP,"10.14m33' 3.25""",,"11th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UCSB Invite Late Afternoon Combined Events,"Mar  9-10, 2022",200,27.05(-1.2),27.05,"6th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UCSB Invite Late Afternoon Combined Events,"Mar  9-10, 2022",800,2:42.32,162.32,"8th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UCSB Invite Late Afternoon Combined Events,"Mar  9-10, 2022",100H,18.28(-1.1),18.28,"12th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UCSB Invite Late Afternoon Combined Events,"Mar  9-10, 2022",HJ,"1.37m4' 6""",,"11th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UCSB Invite Late Afternoon Combined Events,"Mar  9-10, 2022",LJ,"5.13m(1.5)16' 10""",,"9th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UCSB Invite Late Afternoon Combined Events,"Mar  9-10, 2022",SP,"10.12m33' 2.5""",,"6th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UCSB Invite Late Afternoon Combined Events,"Mar  9-10, 2022",JT,"24.80m81' 4""",,"11th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UCSB Invite Late Afternoon Combined Events,"Mar  9-10, 2022",Hep,3707,,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener 2022,"Mar  4- 5, 2022",HJ,"1.35m4' 5""",,"26th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener 2022,"Mar  4- 5, 2022",LJ,"4.89m(0.5)16' 0.5""",,"27th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener 2022,"Mar  4- 5, 2022",JT,"25.92m85' 0""",,"33rd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",Pent,2639,,7th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",60H,10.39,10.39,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",HJ,"1.36m4' 5.5""",,11th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",SP,"9.14m30' 0""",,6th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",LJ,"4.61m15' 1.5""",,9th,False,True
+7538344,Chaselyn Amos,UC IRVINE,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",800,2:37.75,157.75,5th,False,True
+7538344,Chaselyn Amos,UC IRVINE,Don Kirby Open & Elite,"Feb 11-12, 2022",200,27.26,27.26,"94th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Don Kirby Open & Elite,"Feb 11-12, 2022",60H,10.66,10.66,"53rd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Don Kirby Open & Elite,"Feb 11-12, 2022",LJ,NMNM,,,False,True
+7538344,Chaselyn Amos,UC IRVINE,Don Kirby Open & Elite,"Feb 11-12, 2022",SP,"9.48m31' 1.25""",,"43rd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,New Mexico Team Open,"Jan 29, 2022",800,2:37.91,157.91,"30th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,New Mexico Team Open,"Jan 29, 2022",LJ,"4.67m15' 4""",,"42nd
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,New Mexico Team Open,"Jan 29, 2022",SP,"9.56m31' 4.5""",,"31st
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Dr. MLK Jr. Collegiate Invitational,"Jan 22, 2022",200,27.70,27.7,"15th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Dr. MLK Jr. Collegiate Invitational,"Jan 22, 2022",LJ,"4.92m16' 1.75""",,"29th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Dr. MLK Jr. Collegiate Invitational,"Jan 22, 2022",SP,"9.40m30' 10.25""",,"26th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Long Beach Throws/Jumps,"Apr 30-May  1, 2021",LJ,"5.10m(4.4)16' 8.75""",,"9th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,UC-Riverisde Sprint Invitational,"Apr 30, 2021",100,13.06(1.5),13.06,"16th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Long Beach Invitational,"Apr 16-17, 2021",100,13.31(-1.0),13.31,"11th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Long Beach Invitational,"Apr 16-17, 2021",LJ,"4.87m(+0.0)15' 11.75""",,"10th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Fullerton Spring Invite,"Apr  8- 9, 2021",200,27.40(-0.4),27.4,"13th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Fullerton Spring Invite,"Apr  8- 9, 2021",LJ,"5.05m(+0.0)16' 7""",,"8th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Red and Black Invite,"Apr  2, 2021",100,13.03(0.3),13.03,"7th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Red and Black Invite,"Apr  2, 2021",LJ,"5.03m(0.5)16' 6""",,"6th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Ben Brown Invitational,"Mar 12-13, 2021",100,13.06(1.5),13.06,"12th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Ben Brown Invitational,"Mar 12-13, 2021",LJ,"5.09m(0.6)16' 8.5""",,"9th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener,"Mar  7, 2020",100,12.88(1.9),12.88,"28th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener,"Mar  7, 2020",200,26.47(4.3),26.47,"25th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,Beach Opener,"Mar  7, 2020",LJ,"5.01m(0.2)16' 5.25""",,"13th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2020 New Mexico Collegiate Classic,"Feb  7- 8, 2020",60,8.13,8.13,"49th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2020 New Mexico Collegiate Classic,"Feb  7- 8, 2020",LJ,"5.20m17' 0.75""",,"40th
+          (F)",False,True
+7538344,Chaselyn Amos,UC IRVINE,2020 UW Preview,"Jan 18, 2020",LJ,"4.68m15' 4.25""",,"32nd
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",Dec,6229,,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",100,11.60(1.4),11.6,7th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",LJ,"6.73m(1.0)22' 1""",,4th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",SP,"10.79m35' 5""",,7th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",HJ,"1.81m5' 11.25""",,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",400,54.16,54.16,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",110H,16.11(1.6),16.11,5th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",DT,"33.12m108' 8""",,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",PV,"3.51m11' 6.25""",,7th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",JT,"45.31m148' 8""",,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Track & Field Champio,"May 12-13, 2023",1500,4:37.81,277.81,3rd,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",Dec,6229,,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",100,11.60(1.4),11.6,7th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",LJ,"6.73m(1.0)22' 1""",,4th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",SP,"10.79m35' 5""",,7th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",HJ,"1.81m5' 11.25""",,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",400,54.16,54.16,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",110H,16.11(1.6),16.11,5th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",DT,"33.12m108' 8""",,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",PV,"3.51m11' 6.25""",,7th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",JT,"45.31m148' 8""",,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Big West Multi Championships,"May  5- 6, 2023",1500,4:37.81,277.81,3rd,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Steve Scott Invitational,"Apr 28-29, 2023",PV,NHNH,,,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Steve Scott Invitational,"Apr 28-29, 2023",LJ,"6.68m(0.5)21' 11""",,"19th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Steve Scott Invitational,"Apr 28-29, 2023",SP,"9.24m30' 3.75""",,"30th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Steve Scott Invitational,"Apr 28-29, 2023",DT,FOULNM,,,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Beach Invitational 2023,"Apr 14-15, 2023",110H,16.09(1.8),16.09,"30th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Beach Invitational 2023,"Apr 14-15, 2023",HJ,"1.76m5' 9.25""",,"6th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Beach Invitational 2023,"Apr 14-15, 2023",LJ,"6.66m(2.3)21' 10.25""",,"9th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,2023 Challenge Cup Classic,"Apr  7, 2023",110H,16.56(0.1),16.56,"13th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,2023 Challenge Cup Classic,"Apr  7, 2023",HJ,"1.81m5' 11.25""",,"6th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,2023 Challenge Cup Classic,"Apr  7, 2023",LJ,"6.54m(-2.1)21' 5.5""",,"11th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,2023 Challenge Cup Classic,"Apr  7, 2023",JT,"41.05m134' 8""",,"10th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",Dec,5811,,3rd,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",100,12.02(-0.3),12.02,5th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",LJ,"6.49m(+0.0)21' 3.5""",,3rd,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",SP,"8.79m28' 10.25""",,6th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",HJ,"1.80m5' 10.75""",,3rd,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",400,52.95,52.95,4th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",110H,16.31(+0.0),16.31,3rd,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",DT,"29.23m95' 11""",,4th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",PV,"3.65m11' 11.75""",,5th,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",JT,"41.53m136' 3""",,2nd,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,UCR Spring Classic Multis,"Mar 23-24, 2023",1500,4:51.11,291.11,1st,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Ben Brown Invite/AstroAI Distance Classic,"Mar 10-11, 2023",110H,16.64(0.6),16.64,"27th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Ben Brown Invite/AstroAI Distance Classic,"Mar 10-11, 2023",HJ,NHNH,,,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Beach Opener 2023,"Mar  3- 4, 2023",800,DNF,,,False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Beach Opener 2023,"Mar  3- 4, 2023",110H,16.57(2.7),16.57,"16th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Beach Opener 2023,"Mar  3- 4, 2023",HJ,"1.76m5' 9.25""",,"7th
+          (F)",False,True
+8450994,Temi Odugbola,LONG BEACH ST.,Beach Opener 2023,"Mar  3- 4, 2023",LJ,"6.50m(1.6)21' 4""",,"14th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,2024 Causeway Classic,"Apr 26, 2024",100H,18.12(0.2),18.12,"7th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,2024 Causeway Classic,"Apr 26, 2024",LJ,"4.98m(-0.5)16' 4.25""",,"10th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,2024 Causeway Classic,"Apr 26, 2024",JT,"26.64m87' 5""",,"4th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Multi 2024,"Apr  4- 5, 2024",Hep,3758,,8th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Multi 2024,"Apr  4- 5, 2024",100H,17.47(1.5),17.47,8th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Multi 2024,"Apr  4- 5, 2024",HJ,"1.43m4' 8.25""",,7th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Multi 2024,"Apr  4- 5, 2024",SP,"9.29m30' 5.75""",,7th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Multi 2024,"Apr  4- 5, 2024",200,28.94(-2.9),28.94,8th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Multi 2024,"Apr  4- 5, 2024",LJ,"4.98m(0.1)16' 4.25""",,5th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Multi 2024,"Apr  4- 5, 2024",JT,"28.05m92' 0""",,5th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Multi 2024,"Apr  4- 5, 2024",800,2:34.79,154.79,3rd,False,True
+7762370,Alyssa McKeever,UC DAVIS,2024 Hornet Invite,"Mar 15-16, 2024",100H,17.76(-0.5),17.76,"47th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Aggie Open 2024,"Mar  8- 9, 2024",200,28.37(+0.0),28.37,"24th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Aggie Open 2024,"Mar  8- 9, 2024",LJ,"5.01m(1.5)16' 5.25""",,"9th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Aggie Open 2024,"Mar  8- 9, 2024",JT,"27.42m89' 11""",,"11th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Causeway Classic,"Apr 28, 2023",400H,DNF,,,False,True
+7762370,Alyssa McKeever,UC DAVIS,Causeway Classic,"Apr 28, 2023",LJ,"4.84m(1.4)15' 10.5""",,"9th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Causeway Classic,"Apr 28, 2023",JT,"30.71m100' 9""",,"4th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 Brutus Hamilton Multis,"Apr  6- 7, 2023",Hep,3664,,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 Brutus Hamilton Multis,"Apr  6- 7, 2023",100H,17.82(0.6),17.82,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 Brutus Hamilton Multis,"Apr  6- 7, 2023",HJ,"1.46m4' 9.5""",,8th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 Brutus Hamilton Multis,"Apr  6- 7, 2023",SP,"8.84m29' 0""",,7th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 Brutus Hamilton Multis,"Apr  6- 7, 2023",200,28.65(-1.8),28.65,12th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 Brutus Hamilton Multis,"Apr  6- 7, 2023",LJ,"4.80m(2.1)15' 9""",,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 Brutus Hamilton Multis,"Apr  6- 7, 2023",JT,"27.00m88' 7""",,7th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 Brutus Hamilton Multis,"Apr  6- 7, 2023",800,2:36.08,156.07999999999998,5th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Cardinal Classic,"Mar 18, 2023",200,28.77(0.1),28.77,"53rd
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Cardinal Classic,"Mar 18, 2023",100H,18.49(0.4),18.49,"23rd
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Cardinal Classic,"Mar 18, 2023",LJ,"4.86m(1.6)15' 11.5""",,"18th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Aggie Open,"Mar 10-11, 2023",200,29.02(1.6),29.02,"24th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Aggie Open,"Mar 10-11, 2023",LJ,"4.79m(+0.0)15' 8.75""",,"13th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Aggie Open,"Mar 10-11, 2023",JT,"24.10m79' 1""",,"10th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",Pent,2634,,17th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",60H,10.33,10.33,16th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",HJ,"1.41m4' 7.5""",,15th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",SP,"8.66m28' 5""",,14th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",LJ,"4.37m14' 4""",,18th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",800,2:35.91,155.91,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Track Field Championships,"May 13-14, 2022",Hep,3292,,14th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Track Field Championships,"May 13-14, 2022",100H,16.81(-0.5),16.81,13th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Track Field Championships,"May 13-14, 2022",HJ,NHNH,,,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Track Field Championships,"May 13-14, 2022",SP,"8.88m29' 1.75""",,12th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Track Field Championships,"May 13-14, 2022",200,28.18(-1.2),28.18,13th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Track Field Championships,"May 13-14, 2022",LJ,"4.77m(1.0)15' 7.75""",,14th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Track Field Championships,"May 13-14, 2022",JT,"28.80m94' 6""",,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Track Field Championships,"May 13-14, 2022",800,2:33.56,153.56,8th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Multi Championships,"May  6- 7, 2022",Hep,3292,,14th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Multi Championships,"May  6- 7, 2022",100H,16.81(-0.5),16.81,13th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Multi Championships,"May  6- 7, 2022",HJ,NHNH,,,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Multi Championships,"May  6- 7, 2022",SP,"8.88m29' 1.75""",,12th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Multi Championships,"May  6- 7, 2022",200,28.18(-1.2),28.18,13th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Multi Championships,"May  6- 7, 2022",LJ,"4.77m(1.0)15' 7.75""",,14th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Multi Championships,"May  6- 7, 2022",JT,"28.80m94' 6""",,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Big West Multi Championships,"May  6- 7, 2022",800,2:33.56,153.56,8th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Causeway Classic,"Apr 29, 2022",100H,17.77(2.1),17.77,"4th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Causeway Classic,"Apr 29, 2022",LJ,"4.73m(2.2)15' 6.25""",,"4th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Causeway Classic,"Apr 29, 2022",JT,"28.17m92' 5""",,"5th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Invitational,"Apr  9, 2022",100H,18.27(2.3),18.27,"6th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Brutus Hamilton Invitational,"Apr  9, 2022",LJ,"4.69m(0.1)15' 4.75""",,"15th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,2022 Hornet Invite,"Mar 19, 2022",100H,18.34(3.0),18.34,"29th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,2022 Hornet Invite,"Mar 19, 2022",400H,1:10.77,70.77,"12th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Aggie Open,"Mar 11-12, 2022",100H,19.76(1.8),19.76,"29th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Aggie Open,"Mar 11-12, 2022",JT,"24.21m79' 5""",,"24th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",Pent,2571,,8th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",60H,10.48,10.48,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",HJ,"1.42m4' 7.75""",,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",SP,"7.93m26' 0.25""",,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",LJ,"4.54m14' 10.75""",,10th,False,True
+7762370,Alyssa McKeever,UC DAVIS,2022 MPSF Indoor Track & Field Championships,"Feb 18-19, 2022",800,2:39.43,159.43,7th,False,True
+7762370,Alyssa McKeever,UC DAVIS,Causeway Duel 2021,"Apr 30, 2021",400H,1:12.00,72.0,"3rd
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,2021 Sac State Invite,"Apr 17, 2021",400,1:05.85,65.85,"10th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Hornet Invite 2021,"Mar 20, 2021",400,1:05.50,65.5,"9th
+          (F)",False,True
+7762370,Alyssa McKeever,UC DAVIS,Tri Team Challenge,"Feb 27, 2021",200,29.44(3.9),29.44,"13th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",200,22.29(1.3),22.29,"14th
+          (P)",False,True
+6587051,Fabio Kammler,UC DAVIS,Causeway Duel 2021,"Apr 30, 2021",100,11.04(1.3),11.04,"5th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Causeway Duel 2021,"Apr 30, 2021",200,22.40(-0.4),22.4,"4th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Causeway Duel 2021,"Apr 30, 2021",4x100,DQ,,,False,True
+6587051,Fabio Kammler,UC DAVIS,Causeway Duel 2021,"Apr 30, 2021",4x400,3:16.57,196.57,"1st
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2021 Sac State Invite,"Apr 17, 2021",100,11.07(1.2),11.07,"7th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2021 Sac State Invite,"Apr 17, 2021",200,22.20(2.4),22.2,"9th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2021 Sac State Invite,"Apr 17, 2021",4x100,41.63,41.63,"1st
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Red and Black Invite,"Apr  2, 2021",100,11.06(0.2),11.06,"3rd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Red and Black Invite,"Apr  2, 2021",200,22.38(0.4),22.38,"3rd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Red and Black Invite,"Apr  2, 2021",4x400,3:12.48,192.48,"1st
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Hornet Invite 2021,"Mar 20, 2021",200,22.47(1.1),22.47,"10th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,"Tri-Meet (CSF, UCD, UCSB)","Mar  4, 2021",4x100,42.11,42.11,"2nd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2020 Cal Opener,"Mar  7, 2020",200,21.86(0.9),21.86,"1st
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2020 Cal Opener,"Mar  7, 2020",4x100,41.62,41.62,"1st
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Big West Outdoor Track & Field Championships,"May 10-11, 2019",100,11.01(1.6),11.01,"17th
+          (P)",False,True
+6587051,Fabio Kammler,UC DAVIS,Big West Outdoor Track & Field Championships,"May 10-11, 2019",200,22.36(0.7),22.36,"17th
+          (P)",False,True
+6587051,Fabio Kammler,UC DAVIS,Big West Outdoor Track & Field Championships,"May 10-11, 2019",4x100,41.17,41.17,"4th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,40th Sun Angel Track Classic,"Apr  5- 6, 2019",100,10.98(1.3),10.98,"14th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,40th Sun Angel Track Classic,"Apr  5- 6, 2019",200,22.41(0.5),22.41,"31st
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Jim Bush Legends Invitational,"Mar 30, 2019",100,10.98(+0.0),10.98,"16th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Aggie Open 2019,"Mar  9, 2019",4x100,42.13,42.13,"1st
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2019 Cal Opener,"Mar  2, 2019",100,10.82(-1.9),10.82,"3rd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2019 Cal Opener,"Mar  2, 2019",200,22.02(-0.3),22.02,"2nd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2018 Big West Championships,"May 11-12, 2018",100,10.99(0.7),10.99,"9th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2018 Big West Championships,"May 11-12, 2018",100,10.57(3.7),10.57,"7th
+          (P)",False,True
+6587051,Fabio Kammler,UC DAVIS,2018 Big West Championships,"May 11-12, 2018",200,22.09(-1.6),22.09,"8th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2018 Big West Championships,"May 11-12, 2018",200,21.58(0.6),21.58,"9th
+          (P)",False,True
+6587051,Fabio Kammler,UC DAVIS,2018 Big West Championships,"May 11-12, 2018",4x100,40.88,40.88,"3rd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Causeway Classic Dual Meet,"Apr 27, 2018",400,55.61,55.61,"8th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Causeway Classic Dual Meet,"Apr 27, 2018",4x100,40.91,40.91,"1st
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Beach Invitational,"Apr 20-21, 2018",200,21.84(0.6),21.84,"11th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Beach Invitational,"Apr 20-21, 2018",400,50.20,50.2,"58th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Beach Invitational,"Apr 20-21, 2018",4x100,40.97,40.97,"3rd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Bryan Clay Invitational,"Apr 19-20, 2018",100,11.04(+0.0),11.04,"42nd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Woody Wilson Classic College/Open,"Apr 14, 2018",200,22.18(0.1),22.18,"5th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Woody Wilson Classic College/Open,"Apr 14, 2018",400,49.93,49.93,"5th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Woody Wilson Classic College/Open,"Apr 14, 2018",4x100,40.74,40.74,"1st
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,39th Sun Angel Classic,"Apr  5- 7, 2018",200,22.23(-0.7),22.23,"18th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Titan Team Challenge,"Mar 31, 2018",100,11.14(0.7),11.14,"14th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Titan Team Challenge,"Mar 31, 2018",200,22.30(0.2),22.3,"8th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,USC Trojan Invitational,"Mar 16-17, 2018",100,11.06(1.5),11.06,"16th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,USC Trojan Invitational,"Mar 16-17, 2018",200,21.89(0.2),21.89,"15th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Aggie Open 2018,"Mar 10, 2018",100,11.18(0.9),11.18,"12th
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,Aggie Open 2018,"Mar 10, 2018",200,22.21(0.2),22.21,"3rd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2018 Cal Opener,"Mar  3, 2018",200,22.02(3.3),22.02,"3rd
+          (F)",False,True
+6587051,Fabio Kammler,UC DAVIS,2018 Cal Opener,"Mar  3, 2018",400,50.74,50.74,"4th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Vince O'Boyle Track and Field Classic,"Mar 31-Apr  1, 2023",800,2:05.63,125.63,"21st
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Beach Opener 2023,"Mar  3- 4, 2023",800,2:03.97,123.97,"41st
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,John Elders Titan Invite,"Oct 21, 2022",8k,27:20.0,1640.0,111th,True,False
+7371423,Jason Messner,UC IRVINE,UCR 41st Annual Cross Country Invitational,"Sep 17, 2022",8k,28:16.6,1696.6,168th,True,False
+7371423,Jason Messner,UC IRVINE,Anteater Opener,"Sep  1, 2022",6k,22:14.1,1334.1,35th,True,False
+7371423,Jason Messner,UC IRVINE,adidas/Steve Scott Invitational,"Apr 29-30, 2022",800,1:58.23,118.22999999999999,"30th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Battle in the OC,"Apr 22, 2022",800,1:58.00,118.0,"3rd
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Bryan Clay Invitational,"Apr 13-15, 2022",800,1:59.50,119.5,"189th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,2022 Challenge Cup,"Apr  8, 2022",800,2:04.30,124.3,"15th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,The Vince O'Boyle Track and Field Classic,"Apr  1- 2, 2022",800,1:58.33,118.33,"11th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Beach Opener 2022,"Mar  4- 5, 2022",800,2:03.16,123.16,"27th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",800,1:57.35,117.35,"10th
+          (P)",False,True
+7371423,Jason Messner,UC IRVINE,UC-Riverside Distance Invite,"Apr 29, 2021",800,1:58.34,118.34,"4th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,OC Dual,"Apr 22, 2021",800,1:56.90,116.9,"1st
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Long Beach Invitational,"Apr 16-17, 2021",800,1:58.16,118.16,"4th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Fullerton Spring Invite,"Apr  8- 9, 2021",800,1:57.34,117.34,"6th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Red and Black Invite,"Apr  2, 2021",800,1:58.57,118.57,"3rd
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Anteater Distance Twilight,"Mar 25, 2021",800,2:00.75,120.75,"5th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Anteater Distance Twilight,"Mar 25, 2021",4x400,3:40.35,220.35,"1st
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Ben Brown Invitational,"Mar 12-13, 2021",800,1:59.65,119.65,"8th
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Beach Opener,"Mar  7, 2020",800,2:01.05,121.05,"22nd
+          (F)",False,True
+7371423,Jason Messner,UC IRVINE,Beach Opener,"Mar  7, 2020",4x400,DNF,,,False,True
+7371423,Jason Messner,UC IRVINE,Big West Championships,"Nov  2, 2019",8k,30:50.8,1850.8,56th,True,False
+7371423,Jason Messner,UC IRVINE,2019 Highlander Invitational,"Oct 19, 2019",8k,28:33.7,1713.7,194th,True,False
+7371423,Jason Messner,UC IRVINE,UCR 39th Annual Cross Country Invitational,"Sep 14, 2019",8k,28:52.5,1732.5,186th,True,False
+7371423,Jason Messner,UC IRVINE,Mark Covert Classic,"Aug 31, 2019",8k,28:56.1,1736.1,158th,True,False
+7753248,Justin Larson,CAL ST. FULLERTON,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",800,1:57.91,117.91,"11th
+          (P)",False,True
+7753248,Justin Larson,CAL ST. FULLERTON,UC-Riverside Distance Invite,"Apr 29, 2021",800,1:59.49,119.49000000000001,"6th
+          (F)",False,True
+7753248,Justin Larson,CAL ST. FULLERTON,OC Dual,"Apr 22, 2021",800,1:56.92,116.92,"2nd
+          (F)",False,True
+7753248,Justin Larson,CAL ST. FULLERTON,Bryan Clay Invitational,"Apr 16-17, 2021",800,1:56.45,116.45,"17th
+          (F)",False,True
+7753248,Justin Larson,CAL ST. FULLERTON,Fullerton Spring Invite,"Apr  8- 9, 2021",800,1:56.50,116.5,"3rd
+          (F)",False,True
+7753248,Justin Larson,CAL ST. FULLERTON,Anteater Distance Twilight,"Mar 25, 2021",800,1:58.93,118.93,"4th
+          (F)",False,True
+7753248,Justin Larson,CAL ST. FULLERTON,Ben Brown Invitational,"Mar 12-13, 2021",800,1:54.26,114.25999999999999,"2nd
+          (F)",False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",Dec,5423,,8th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",100,11.77(2.3),11.77,6th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",LJ,"6.46m(1.6)21' 2.5""",,5th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",SP,"10.47m34' 4.25""",,6th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",HJ,"1.72m5' 7.75""",,7th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",400,54.50,54.5,6th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",110H,18.52(1.9),18.52,8th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",DT,"25.79m84' 7""",,8th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",PV,"3.51m11' 6.25""",,7th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",JT,"38.21m125' 4""",,8th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",1500,4:55.37,295.37,6th,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,Long Beach Throws/Jumps,"Apr 30-May  1, 2021",HJ,"1.84m6' 0.5""",,"5th
+          (F)",False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,Long Beach Throws/Jumps,"Apr 30-May  1, 2021",DT,"28.21m92' 7""",,"16th
+          (F)",False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,Matador Invite,"Apr 23, 2021",400,53.49,53.49,"10th
+          (F)",False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,Matador Invite,"Apr 23, 2021",HJ,NHNH,,,False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,Fullerton Spring Invite,"Apr  8- 9, 2021",HJ,"1.81m5' 11.25""",,"6th
+          (F)",False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,Fullerton Spring Invite,"Apr  8- 9, 2021",LJ,"6.04m(1.4)19' 9.75""",,"11th
+          (F)",False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,Bob Larsen Track Meet,"Mar 27, 2021",LJ,"6.09m(0.8)19' 11.75""",,"7th
+          (F)",False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,Bob Larsen Track Meet,"Mar 27, 2021",SP,"10.01m32' 10.25""",,"6th
+          (F)",False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,USC Trojan Invitational,"Mar 19-20, 2021",4x400,3:23.45,203.45,"4th
+          (F)",False,True
+7781422,Justin Yaskowitz,LONG BEACH ST.,USC Trojan Invitational,"Mar 19-20, 2021",HJ,NHNH,,,False,True
+6901254,Anitha Graves,LONG BEACH ST.,Beach Opener 2023,"Mar  3- 4, 2023",4x400,4:12.24,252.24,"11th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",800,2:11.33,131.33,"3rd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,2023 MPSF Indoor Track & Field Championships,"Feb 17-18, 2023",DMR,11:43.84,703.84,"5th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,New Mexico Collegiate Classic,"Feb  3- 4, 2023",800,2:10.24,130.24,"2nd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,2023 UW Invite,"Jan 27-28, 2023",800,2:11.97,131.97,"17th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,NCAA Division I West Region Cross Country Championships,"Nov 11, 2022",6k,22:01.7,1321.7,190th,True,False
+6901254,Anitha Graves,LONG BEACH ST.,Big West Cross Country Championships,"Oct 29, 2022",6k,22:12.1,1332.1,52nd,True,False
+6901254,Anitha Graves,LONG BEACH ST.,Santa Clara Bronco Invitational,"Oct 15, 2022",6k,21:40.5,1300.5,80th,True,False
+6901254,Anitha Graves,LONG BEACH ST.,UCR 41st Annual Cross Country Invitational,"Sep 17, 2022",6k,21:24.1,1284.1,50th,True,False
+6901254,Anitha Graves,LONG BEACH ST.,Anteater Opener,"Sep  1, 2022",4k,14:47.4,887.4,16th,False,True
+6901254,Anitha Graves,LONG BEACH ST.,Beach Invitational 2022,"Apr 15-16, 2022",800,2:12.32,132.32,"16th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Pacific Coast Invitational 2022,"Apr 14, 2022",400,59.06,59.06,"19th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,2022 Challenge Cup,"Apr  8, 2022",800,2:13.52,133.52,"3rd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,New Mexico Collegiate Classic - Multis,"Feb  4- 5, 2022",600,1:34.92,94.92,"5th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,New Mexico Collegiate Classic - Multis,"Feb  4- 5, 2022",800,2:15.84,135.84,"3rd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,New Mexico Classic,"Feb  4- 5, 2022",600,1:34.92,94.92,"5th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,New Mexico Classic,"Feb  4- 5, 2022",800,2:15.84,135.84,"3rd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Air Force Invitational,"Jan 20-22, 2022",800,2:16.95,136.95,"1st
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Air Force Invitational,"Jan 20-22, 2022",4x440y,4:06.51,246.51,"4th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,NCAA Division I West Region Cross Country Championships,"Nov 12, 2021",6k,22:25.0,1345.0,140th,True,False
+6901254,Anitha Graves,LONG BEACH ST.,Big West Cross Country Championships,"Oct 29, 2021",6k,22:29.4,1349.4,40th,True,False
+6901254,Anitha Graves,LONG BEACH ST.,2021 Highlander Invitational,"Oct 16, 2021",6k,22:15.3,1335.3,61st,True,False
+6901254,Anitha Graves,LONG BEACH ST.,Chile Pepper XC Festival,"Oct  1, 2021",5k,18:17.3,1097.3,78th,True,False
+6901254,Anitha Graves,LONG BEACH ST.,UCR 40th Annual Cross Country Invitational,"Sep 18, 2021",6k,22:14.0,1334.0,76th,True,False
+6901254,Anitha Graves,LONG BEACH ST.,Anteater Opener,"Sep  1, 2021",4k,14:57.0,897.0,19th,False,True
+6901254,Anitha Graves,LONG BEACH ST.,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",800,2:12.52,132.52,"9th
+          (P)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,UC-Riverisde Sprint Invitational,"Apr 30, 2021",800,2:13.58,133.58,"3rd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,UC-Riverside Distance Invite,"Apr 29, 2021",800,2:15.22,135.22,"4th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Long Beach Invitational,"Apr 16-17, 2021",800,2:13.09,133.09,"3rd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Fullerton Spring Invite,"Apr  8- 9, 2021",800,2:14.01,134.01,"2nd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Anteater Distance Twilight,"Mar 25, 2021",800,2:14.78,134.78,"1st
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Anteater Distance Twilight,"Mar 25, 2021",4x400,DNF,,,False,True
+6901254,Anitha Graves,LONG BEACH ST.,USC Trojan Invitational,"Mar 19-20, 2021",800,2:12.11,132.11,"6th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Beach Opener,"Mar  7, 2020",800,2:18.97,138.97,"15th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Beach Opener,"Mar  7, 2020",4x400,4:01.95,241.95,"5th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,2020 MPSF Indoor Track & Field Championships,"Feb 28-29, 2020",800,2:19.54,139.54,"37th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Don Kirby Elite Invitational,"Feb 13-14, 2020",600,1:38.27,98.27000000000001,"11th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Don Kirby Elite Invitational,"Feb 13-14, 2020",800,2:21.15,141.15,"38th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Air Force Team Challenge,"Feb  7, 2020",800,2:26.16,146.16,"6th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Air Force Team Challenge,"Feb  7, 2020",4x440y,4:07.17,247.17,"4th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Titan Invite,"Oct 25, 2019",5k,20:38.9,1238.9,42nd,True,False
+6901254,Anitha Graves,LONG BEACH ST.,UCR 39th Annual Cross Country Invitational,"Sep 14, 2019",5k,20:49.3,1249.3,133rd,True,False
+6901254,Anitha Graves,LONG BEACH ST.,Big West Outdoor Track & Field Championships,"May 10-11, 2019",800,2:14.96,134.96,"12th
+          (P)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,adidas/Steve Scott Invitational,"Apr 26-27, 2019",800,2:15.01,135.01,"12th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,adidas/Steve Scott Invitational,"Apr 26-27, 2019",4x400,4:17.52,257.52,"12th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Beach Invitational,"Apr 19-20, 2019",800,2:14.35,134.35,"30th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Pacific Coast Intercollegiate,"Apr 18, 2019",800,2:14.59,134.59,"8th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Big West Challenge,"Apr  5, 2019",800,2:16.44,136.44,"5th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Jim Bush Legends Invitational,"Mar 30, 2019",800,2:14.85,134.85,"7th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,USC Trojan Invite,"Mar 15-16, 2019",800,2:16.04,136.04,"9th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Beach Opener,"Mar  1- 2, 2019",800,2:19.01,139.01,"5th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,2019 MPSF Indoor Track & Field Championships,"Feb 22-23, 2019",800,2:14.74,134.74,"32nd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Don Kirby Elite Invitational,"Feb  8- 9, 2019",800,2:22.79,142.79,"17th
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Air Force Invitational,"Jan 24-26, 2019",800,2:25.61,145.61,"2nd
+          (F)",False,True
+6901254,Anitha Graves,LONG BEACH ST.,Air Force Invitational,"Jan 24-26, 2019",4x440y,DNS,,,False,True
+6901254,Anitha Graves,LONG BEACH ST.,2018 Highlander Invitational,"Oct 13, 2018",5k,19:55.8,1195.8,133rd,True,False
+6901254,Anitha Graves,LONG BEACH ST.,UCR 38th Annual Cross Country Invitational,"Sep 15, 2018",5k,19:48.8,1188.8,90th,True,False
+7382599,Sarriah Brown,HAWAII,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",800,2:18.32,138.32,"14th
+          (P)",False,True
+7382599,Sarriah Brown,HAWAII,2021 Big West Outdoor Track & Field Championships,"May 12-15, 2021",4x400,3:55.56,235.56,"6th
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,OSU High Performance Meet,"Apr 30-May  1, 2021",800,2:17.40,137.4,"15th
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,Fullerton Spring Invite,"Apr  8- 9, 2021",800,2:21.09,141.09,"8th
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,Fullerton Spring Invite,"Apr  8- 9, 2021",4x400,4:10.85,250.85,,False,True
+7382599,Sarriah Brown,HAWAII,Ben Brown Invitational,"Mar 12-13, 2021",800,2:20.30,140.3,"6th
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,2020 MPSF Indoor Track & Field Championships,"Feb 28-29, 2020",DMR,12:18.73,738.73,"14th
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,2020 Boise State Challenge,"Feb 14-15, 2020",800,2:19.68,139.68,"15th
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,2020 Boise State Challenge,"Feb 14-15, 2020",4x400,3:54.46,234.46,"1st
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,2020 New Mexico Collegiate Classic,"Feb  7- 8, 2020",600,1:39.72,99.72,"19th
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,2020 New Mexico Collegiate Classic,"Feb  7- 8, 2020",4x400,3:53.42,233.42000000000002,"17th
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,2020 Ed Jacoby Invite,"Jan 24-25, 2020",DMR,12:32.27,752.27,"3rd
+          (F)",False,True
+7382599,Sarriah Brown,HAWAII,NCAA Division I West Region Cross Country Championships,"Nov 15, 2019",6k,23:58.8,1438.8,234th,True,False
+7382599,Sarriah Brown,HAWAII,Big West Championships,"Nov  2, 2019",6k,23:33.7,1413.7,62nd,True,False
+7382599,Sarriah Brown,HAWAII,Santa Clara Bronco Invitational,"Oct 19, 2019",6k,23:08.9,1388.9,171st,True,False
+7382599,Sarriah Brown,HAWAII,HPU Sharks Invitational,"Oct  5, 2019",5k,20:40.9,1240.9,6th,True,False
+7382599,Sarriah Brown,HAWAII,Capital Cross Challenge,"Sep 28, 2019",6k,24:00.5,1440.5,269th,True,False
+7382599,Sarriah Brown,HAWAII,UCR 39th Annual Cross Country Invitational,"Sep 14, 2019",6k,23:18.3,1398.3,114th,True,False
+7382599,Sarriah Brown,HAWAII,2019 Big Wave Invitational,"Aug 31, 2019",5k,21:11.0,1271.0,28th,True,False
