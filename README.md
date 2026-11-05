@@ -40,7 +40,7 @@ big-west-predictor/
 
 ### Getting the data
 
-**All data needed to reproduce our results is committed to this repo.** Cloning it gives you everything (about 130 MB, mostly saved web pages). Keep the folder structure as is: the notebooks read `../data/processed/...` relative to `notebooks/`, and `model_bigwest.py` finds the data relative to its own location.
+**All data needed to reproduce our results is committed to this repo.** Cloning it gives you everything. Keep the folder structure as is: the notebooks read `../data/processed/...` relative to `notebooks/`, and `model_bigwest.py` finds the data relative to its own location.
 
 ```bash
 git clone https://github.com/ChidiebereAgunanne/DSC180.git
