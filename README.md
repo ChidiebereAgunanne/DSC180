@@ -26,7 +26,7 @@ big-west-predictor/
 │   ├── bigwest_2021_2026_data_wrangling.ipynb   # parses the saved championship pages
 │   ├── meet_temperatures.ipynb                  # adds `temp`, `precip_in`, `humidity_max`; builds meet_weather.csv
 │   ├── risk_score.ipynb                         # adds `risk_score`
-│   └── bigwest_2021_predictor.ipynb             # single-feature models (SB, median, ...)
+│   └── bigwest_predictor.ipynb                  # single-feature models (SB, median, ...)
 └── modeling/
     ├── model_bigwest.py              # combined model: cross-validation, selection, 2026 test
     ├── results.md                    # full generated report (tables, answers, figures)
@@ -126,7 +126,7 @@ python modeling/model_bigwest.py
 
 # 3. Single-feature models: 2021 analysis and the 2021–2025 → 2026 test (~15 s)
 #    Run after step 2: it compares against modeling/predictions_2026.csv
-jupyter nbconvert --to notebook --execute --inplace notebooks/bigwest_2021_predictor.ipynb
+jupyter nbconvert --to notebook --execute --inplace notebooks/bigwest_predictor.ipynb
 ```
 
 | Step | Writes |
@@ -145,7 +145,7 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/bigwest_2021_predi
 
 1. **Understanding the data.** We compared the `audit` (every round) and `results` (one row per athlete-event) tables. We also flagged non-races, such as a 100.56 s 400m (likely an injury). Championship marks more than 50% worse than the athlete's season best are dropped.
 2. **Choosing a fair metric.** One R² across all events comes out around 0.99 only because it separates 100m times from 5000m times. All comparisons use **within-event R²**: how well a predictor ranks athletes *within the same event*.
-3. **Single-feature models** (`bigwest_2021_predictor.ipynb`). We compared season best (SB), season median, mean of the last 3 meets, most recent meet, and wind-legal SB.
+3. **Single-feature models** (`bigwest_predictor.ipynb`). We compared season best (SB), season median, mean of the last 3 meets, most recent meet, and wind-legal SB.
    - Each was fit as one line per event, first on 2021 alone. The main test fits on 2021–2025 and tests on 2026.
    - We split results by track vs field and by event, and compared "SB as-is" (no fitting).
 4. **New features.** We added meet temperature (`temp`) and an athlete reliability measure (`risk_score`).
