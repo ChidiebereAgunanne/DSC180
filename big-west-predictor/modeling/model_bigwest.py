@@ -88,7 +88,7 @@ def to_number(mark):
 # ── Data ───────────────────────────────────────────────────────────────────────
 
 def load_inputs():
-    results = pd.read_csv(DATA_DIR / 'bigwest_2021_2026_results.csv', dtype={'athlete_id': 'Int64'})
+    results = pd.read_csv(DATA_DIR / 'bigwest_2019_2026_results.csv', dtype={'athlete_id': 'Int64'})
     season = pd.read_csv(DATA_DIR / 'regular_season.csv', dtype={'athlete_id': 'Int64'}, low_memory=False)
     weather = pd.read_csv(DATA_DIR / 'meet_weather.csv')
 
@@ -1152,7 +1152,7 @@ def write_report(**v):
       + '. Adding it does not lower out-of-sample error.\n')
 
     w('## Assumptions\n')
-    w(f'- **Data:** `data/processed/bigwest_2021_2026_results.csv` (championship marks, one row per athlete-event) and '
+    w(f'- **Data:** `data/processed/bigwest_2019_2026_results.csv` (championship marks, one row per athlete-event) and '
       f'`regular_season.csv`. Relays and multi-events are excluded (no individual season best on the same scale).')
     w('- **Column names:** the prompt\'s `temperature` is the `temp` column: the mean daily high (°F, Open-Meteo, '
       'city-level) over the championship\'s main-meet days. 2026 was corrected to **May 15–16** (TFRRS lists May 8–16 '

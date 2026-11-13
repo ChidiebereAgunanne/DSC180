@@ -24,7 +24,7 @@ big-west-predictor/
 │   └── processed/                    # cleaned tables used by all analysis code
 ├── notebooks/
 │   ├── bigwest_2021_2026_data_wrangling.ipynb   # parses the saved championship pages
-│   ├── meet_temperatures.ipynb                  # adds `temp`, builds meet_weather.csv
+│   ├── meet_temperatures.ipynb                  # adds `temp`, `precip_in`, `humidity_max`; builds meet_weather.csv
 │   ├── risk_score.ipynb                         # adds `risk_score`
 │   └── bigwest_2021_predictor.ipynb             # single-feature models (SB, median, ...)
 └── modeling/
@@ -54,22 +54,24 @@ cd DSC180/big-west-predictor
 | [TFRRS](https://www.tfrrs.org) | Big West championship results, 2021–2026 | Results pages saved as HTML in `data/raw/championships/` |
 | TFRRS (via the parse.bot TFRRS scraper API) | Every regular-season mark for athletes who competed at Big West | Athlete-page scrape → `regular_season.csv` |
 | TFRRS meet pages | Venue and city of each meet | `meet_temperatures.ipynb` |
-| [Open-Meteo](https://open-meteo.com) (free, no key) | City coordinates and daily high temperatures | `meet_temperatures.ipynb` |
+| [Open-Meteo](https://open-meteo.com) (free, no key) | City coordinates and daily weather (high temperature, precipitation, peak humidity) | `meet_temperatures.ipynb` |
 
 ### Processed tables (`big-west-predictor/data/processed/`)
 
 | File | Rows | Contents |
 |---|---|---|
-| `bigwest_2021_2026_results.csv` | 4,579 | One row per athlete-event at each championship: the final if the athlete ran one, otherwise their prelim. Includes `temp`. **This is the prediction target.** |
+| `bigwest_2019_2026_results.csv` | 5,257 | One row per athlete-event at each championship: the final if the athlete ran one, otherwise their prelim. Includes `temp`, `precip_in`, `humidity_max`. **This is the prediction target.** |
 | `bigwest_2021_2026_audit.csv` | 5,303 | Every round kept separately (prelims and finals). `results` is a de-duplicated version of this. |
-| `regular_season.csv` | 41,493 | Every regular-season mark (indoor and outdoor) for those athletes, with `temp` and `risk_score`. |
-| `meet_weather.csv` | 378 | One row per meet (372 regular-season + 6 championships): TFRRS link, venue, city, coordinates, indoor flag, `temp`. Lets anyone check each temperature. |
+| `regular_season.csv` | 57,300 | Every regular-season mark (indoor and outdoor) for those athletes, with `temp`, `precip_in`, `humidity_max` and `risk_score`. |
+| `meet_weather.csv` | 444 | One row per meet (437 regular-season + 7 championships): TFRRS link, venue, city, coordinates, indoor flag, `temp`, `precip_in`, `humidity_max`. Lets anyone check each weather value. |
 | `bigwest_2021_2026_team_scores.csv` | 118 | Team scores per championship. |
 | `bigwest_roster.csv` | 5,338 | `athlete_id`, year, school. |
 | `national_event_ranking.csv` | 642 | National event rankings for Big West teams (2024–2026 only). |
 
 **Features we added:**
 - **`temp`:** the mean daily high (°F) at the meet's city over the meet's days, from Open-Meteo's historical weather. It's modeled weather for the city, not a thermometer at the track. Indoor meets are left blank.
+- **`precip_in`:** the mean daily precipitation (inches) at the meet's city over the meet's days, from the same source. Model precipitation is approximate: it can show a trace on dry days. Indoor meets are left blank.
+- **`humidity_max`:** the mean of each meet day's highest relative humidity (%), from the same source. Usually reached around dawn, so it runs high (median ~90%). Indoor meets are left blank.
   - Championship values: 70.1 (2021, Irvine), 89.8 (2022, Davis), 75.6 (2023, Fullerton), 75.2 (2024, San Luis Obispo), 65.2 (2025, Long Beach), 68.1 (2026, Long Beach).
   - TFRRS lists the 2026 meet as May 8–16 because it includes the multi-events weekend. We use the main meet, **May 15–16**.
 - **`risk_score`:** each athlete-season's share of "bad" individual races: DQ or false start, DNF, field no-mark (FOUL/NH/NM), or an outlier mark far off their own season best.
@@ -83,8 +85,8 @@ You don't need this to reproduce our results.
 
 - **Championship tables:** `bigwest_2021_2026_data_wrangling.ipynb` parses the saved pages in `data/raw/championships/`. TFRRS field-event tables have several `MARK` columns, so the notebook has you approve the correct column per event before exporting.
 - **Regular-season marks:** scraping these needs a parse.bot API key and the team's scraping notebooks, which are kept out of git. Ask the team.
-- **`temp` and `risk_score`:** run `meet_temperatures.ipynb`, then `risk_score.ipynb` (commands below). Each one only rewrites its own column.
-  - `meet_temperatures.ipynb` reuses the meet locations saved in `meet_weather.csv`. Set `REFRESH_LOCATIONS = True` at the top to look every meet up on TFRRS again (about 400 page requests, one per second).
+- **Weather columns and `risk_score`:** run `meet_temperatures.ipynb`, then `risk_score.ipynb` (commands below). Each one only rewrites its own columns.
+  - `meet_temperatures.ipynb` reuses the meet locations saved in `meet_weather.csv`. Set `REFRESH_LOCATIONS = True` at the top to look every meet up on TFRRS again (about 500 page requests, one per second).
 
 ## Software dependencies
 
@@ -129,7 +131,7 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/bigwest_2021_predi
 
 | Step | Writes |
 |---|---|
-| 1 | `temp` in `regular_season.csv` and `bigwest_2021_2026_results.csv`; `meet_weather.csv`; `risk_score` in `regular_season.csv` |
+| 1 | `temp`, `precip_in`, `humidity_max` in `regular_season.csv` and `bigwest_2019_2026_results.csv`; `meet_weather.csv`; `risk_score` in `regular_season.csv` |
 | 2 | `modeling/results.md`, `predictions_2026.csv`, `chosen_model.pkl`, `figures/*.png`, `tables/*.csv` |
 | 3 | The notebook's tables and charts (saved in the notebook) |
 
