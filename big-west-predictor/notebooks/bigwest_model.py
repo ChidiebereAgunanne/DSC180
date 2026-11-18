@@ -22,10 +22,14 @@ Pipeline per fold (training seasons -> one test season)
  6. evaluate           against a TFRRS-style performance-list meet calculator (the baseline):
                        Brier, CRPS, MAE of the median prediction, 80% coverage, Spearman
 
-Final model (chosen on the 2023-2025 validation folds; see notebooks/model_history.ipynb):
-    offset_model="regression", pfail_model="logistic", two_rounds=True, round_rho=0.43,
-    2019 in the training seasons. Tested and not kept: virtual multi scores, year-to-year
-    improvement for last-season profiles, team form. field_mode="everyone" is a planning mode.
+Final model: V13 (see notebooks/model_history.ipynb for every version and the tests behind it)
+    V2-V5   athlete-specific offset (ridge regression) and failure chance (ridge logistic), 2019 in
+            training, prelims + finals with round_rho = 0.43 measured from the data
+    V8      data-based settings: k_spread estimated per fold, cal_prior_n = 5 (empirical Bayes),
+            Big West scratches not counted as failures, imputed athletes' spread x 3 (measured)
+    V13     relays centred on their season best
+Every other option tested is still in CONFIG, switched off, so the history can be reproduced.
+field_mode="everyone" is a planning mode (no entry lists).
 
 Usage
 -----
@@ -50,47 +54,61 @@ warnings.filterwarnings("ignore", category=RuntimeWarning)
 # ============================================================== configuration
 CONFIG = dict(
     # ---- athlete profiles
-    half_life_days=45,     # recency weighting; "auto" = estimated per fold (~20 days), tested and not kept [8a]
-    k_spread=4,            # shrinkage of athlete spread toward event spread; "auto" = estimated per fold (~15),
-                           # essentially identical results [8b]
+    half_life_days=45,     # recency half-life in days. "auto" = one value estimated per fold (~20);
+                           # "auto_group" = one per event group. Both tested, not kept          [8a, 10b]
+    k_spread="auto",       # shrinkage of athlete spread toward the event spread, estimated per fold (~15) [8b, V8]
+    mu_method="mean",      # athlete level: recency-weighted "mean" or weighted "median"                  [10d: mean]
     reg_blowup_z=5,        # regular-season mark this many event spreads below the athlete's median = failure (0 = off)
     multi_min_frac=0.6,    # multi-event score below this share of the event median = unfinished (failed)
     drop_wind_aided=False, # True: drop wind-aided sprint/hurdle/horizontal-jump marks (EDA: not needed)
+    relay_mu="best",       # relay centre: "best" (season best; teams run their best four at Big West), "mean"
+                           # (average of the season's relay races), or built from the four best open
+                           # 100 / 400 runners: "legs", "blend", "best_legs", "legs_bw", "best_legs_bw" [11, V13]
 
     # ---- conversions between events
     conv_weight=0.5,       # weight of a converted mark vs a direct one; "auto" = inverse-variance weight per
-                           # conversion (~0.25), tested and not kept [8c]
-    min_conv_pairs=10,     # athlete-seasons needed to fit a conversion
-    conv_trim_z=4,         # refit conversion lines without points this many robust sds off the line (0 = off)
+                           # conversion (~0.25), tested and not kept                                    [8c]
+    min_conv_pairs=10,     # athlete-seasons needed to fit a conversion                                  [8d]
+    conv_trim_z=4,         # refit conversion lines without points this many robust sds off the line (0 = off) [8d]
 
     # ---- calibration to the championship (training seasons only)
-    cal_prior_n=8,         # shrinkage of per-event calibration toward the pooled value
-    blowup_z=4.0,          # Big West result this many (robust) spreads below prediction = failure, not noise
-    dns_as_fail=True,      # Big West DNS / scratches count toward the event's failure rate
+    cal_prior_n=5,         # shrinkage of per-event calibration toward the pooled value (empirical Bayes 4.6) [8e, V8]
+    blowup_z=4.0,          # Big West result this many (robust) spreads below prediction = failure, not noise [8e]
+    dns_as_fail=False,     # Big West DNS / scratches do not count toward the event's failure rate         [8e, V8]
     offset_model="regression",  # "event": one offset per event; "regression": athlete-specific offset from
-                           # SB level, consistency gap, risk, starts, event group and gender      [kept, V2]
-    pfail_model="logistic",     # "event": p_fail from p_fail_source; "logistic": athlete-specific p_fail  [kept, V3]
-    p_fail_source="bigwest",    # used when pfail_model="event" or no features: "bigwest" / "athlete" / "blend"
-    ridge=1.0,             # small ridge penalty for the two regressions (stabilises small samples)
-    mu_shrink=0,           # pull mu toward the field average: "auto" = learned, or a fraction (0 = off)
+                           # SB level, consistency gap, risk, starts, event group and gender               [V2]
+    pfail_model="logistic",     # "event": p_fail from p_fail_source; "logistic": athlete-specific p_fail      [V3]
+    p_fail_source="bigwest",    # used when pfail_model="event" or no features: "bigwest" / "athlete" / "blend" [8e]
+    ridge=1.0,             # small ridge penalty for the two regressions (stabilises small samples)      [8e]
+    mu_shrink=0,           # pull mu toward the field average: "auto" = learned, or a fraction (0 = off)   [8e]
 
     # ---- field and simulation
     field_mode="entrants", # "entrants": that year's declared Big West entrants;
                            # "everyone": every athlete with an outdoor mark in the event (planning mode, goals 2/3)
-    impute_q="auto",       # where entrants with no marks are placed in the field: "auto" = learned per fold, or a quantile
-    impute_sd_mult=1.5,    # spread of imputed athletes = field's median spread x this
+    impute_q="auto",       # where entrants with no marks are placed in the field: "auto" = learned per fold [8f]
+    impute_sd_mult=3.0,    # spread of imputed athletes = field's median spread x this (measured ~3)      [8f, V8]
     day_form_rho="auto",   # athlete form shared across events: "auto" = estimate per fold; a number fixes it (0 = off)
-    two_rounds=True,       # prelims then finals in TWO_ROUND_EVENTS (top 8 advance; only finalists score)  [kept, V5]
+    two_rounds=True,       # prelims then finals in TWO_ROUND_EVENTS (top 8 advance; only finalists score) [V5]
     round_rho=0.43,        # share of an athlete's noise shared by prelim and final; measured from 660 finalists,
-                           # 2019-2025 (model_history.ipynb, step 2)
+                           # 2019-2025 (model_history.ipynb, step 2)                                      [V5]
     n_sims=20000,
     seed=0,
 
     # ---- tested and NOT kept (left in, switched off, so the history can be reproduced)
-    virtual_multi=False,   # athletes with no multi score get one built from their component events     [V6a: no]
+    virtual_multi=False,   # athletes with no multi score get one built from their component events     [3, V6a]
     virtual_multi_min=4,   # component events needed for a virtual multi score
-    prior_improve="off",   # last-season profiles + typical year-to-year change: "off" / "group" / "level"  [V6b: no]
-    team_form_sd=0,        # shared team good/bad day on the p scale: 0 = off, "auto", or a number            [V6c: no]
+    prior_improve="off",   # last-season profiles + typical year-to-year change: "off" / "group" / "level" [4, V6b]
+    team_form_sd=0,        # shared team good/bad day on the p scale: 0 = off, "auto", or a number        [5, V6c]
+    gender_interactions=False,  # separate men's slopes in both regressions                               [10a]
+    recent_form=False,     # extra regression feature: last two marks vs the weighted mean                   [10b]
+    noise_df=0,            # Student-t noise: 0 = normal, "auto" = df estimated per fold, or a number        [10c]
+    bar_ties=False,        # HJ/PV marks rounded to bar heights; tied athletes may share points              [10e]
+    fail_ranked=False,     # a blowup finishes last and scores by place; only NM/DNF/DQ/DNS score 0          [10e]
+    multi_sd_floor=0,      # minimum spread for Dec/Hep: 0 = off, "auto" = pooled from training, or a number [10e]
+    multi_mu="mean",       # Dec/Hep centre: "mean" or "best" (season best)                                  [10f]
+    scale_within_race=False,   # measure the spread scale within each race (remove the race-wide shift)    [10g]
+    scale_after_offset=False,  # re-measure the spread scale around the athlete-specific offset            [10g]
+    team_offset=False,     # persistent team effect on athletes' centres, from past championships           [10h]
 )
 
 FOLDS = [([2019, 2021, 2022], 2023),
@@ -736,7 +754,10 @@ def athlete_profiles(marks, as_of, cfg):
     m = marks[marks["date"] < pd.Timestamp(as_of)].copy()
     m = flag_season_blowups(m, cfg)
     age = (pd.Timestamp(as_of) - m["date"]).dt.days
-    m["wt"] = m["w"] * 0.5 ** (age / cfg["half_life_days"])
+    hl = cfg["half_life_days"]
+    if isinstance(hl, dict):                        # (10b) one half-life per event group
+        hl = m["event"].map(event_group).map(hl).fillna(hl.get("_all", 45)).to_numpy()
+    m["wt"] = m["w"] * 0.5 ** (age / hl)
     v = m[m["status"] == "VALID"].copy()
     d = v[v["kind"] == "direct"]
 
@@ -751,6 +772,8 @@ def athlete_profiles(marks, as_of, cfg):
     agg = v.groupby(KEYS).agg(sw=("wt", "sum"), swp=("wp", "sum"))
     agg["sw2"] = (v["wt"] ** 2).groupby([v[k] for k in KEYS]).sum()
     agg["mu"] = agg["swp"] / agg["sw"]
+    if cfg.get("mu_method", "mean") == "median":    # (10d) weighted median instead of weighted mean
+        agg["mu"] = _weighted_median(v, KEYS).reindex(agg.index)
     v = v.join(agg["mu"], on=KEYS)
     v["wdev2"] = v["wt"] * (v["p"] - v["mu"]) ** 2
     v["wxv"] = v["wt"] * v["xv"]
@@ -777,10 +800,134 @@ def athlete_profiles(marks, as_of, cfg):
 
     last_team = m.sort_values("date").groupby(KEYS)["team"].last()
     agg["team"] = last_team.reindex(agg.index)
-    return agg[["team", "mu", "sd", "best", "p_fail", "n_fail", "n_entries", "n_eff", "n_direct"]].reset_index()
+    out = agg[["team", "mu", "sd", "best", "p_fail", "n_fail", "n_entries", "n_eff", "n_direct"]].reset_index()
+    mode = cfg.get("relay_mu", "mean")
+    if mode in ("best", "legs", "blend", "best_legs"):  # (11) relay centre; the "legs_bw" modes need the fitted
+        out = relay_from_legs(out, mode)                 # offsets, see relay_from_predicted
+    if cfg.get("multi_mu", "mean") == "best":            # (10f) multis centred on their season best
+        mul = out["event"].isin(MULTIS)
+        out.loc[mul, "mu"] = out.loc[mul, "best"]
+    floor = cfg.get("multi_sd_floor", 0)
+    if isinstance(floor, dict) or (floor and floor != "auto"):   # (10e) minimum spread for multi events
+        fl = [floor.get((g, e), 0.0) if isinstance(floor, dict) else (float(floor) if e in MULTIS else 0.0)
+              for g, e in zip(out["gender"], out["event"])]
+        out["sd"] = np.maximum(out["sd"], fl)
+    return out
 
 
-def estimate_half_life(reg_train, bw, seasons, cdates, bw_events, cfg):
+def _weighted_median(v, keys):
+    """
+    (10d) Weighted median of p within each group: the first mark (sorted by p) where the cumulative weight
+    reaches half the group's total weight.
+
+    Args:
+        v: valid marks with p and wt (recency x source weight).
+        keys: grouping columns.
+    Returns:
+        Series of weighted medians indexed by keys.
+    """
+    srt = v.sort_values(keys + ["p"])
+    cw = srt.groupby(keys)["wt"].cumsum()
+    tot = srt.groupby(keys)["wt"].transform("sum")
+    return srt[cw >= 0.5 * tot].groupby(keys)["p"].first()
+
+
+# ============================================================== relays from their runners (section 11)
+RELAY_LEGS = {"4x100": "100", "4x400": "400"}   # open event whose runners make up each relay
+
+
+def relay_legs(prof):
+    """
+    (11) A relay's strength built from its team's four best runners in the open event (100 for the
+    4x100, 400 for the 4x400): the sum of their typical times, on the p scale. Relays are run with flying
+    starts, so a relay is faster than the sum of open times; that ratio is measured from the same
+    season's regular-season data (median over teams with both a relay profile and four runners).
+
+    Args:
+        prof: athlete profiles (athlete_profiles output) for one season.
+    Returns:
+        DataFrame: gender, event (relay), team, p_legs (predicted relay level on the p scale), n_legs.
+    """
+    rows = []
+    for rel, leg in RELAY_LEGS.items():
+        ind = prof[prof["event"] == leg].sort_values("mu", ascending=False)
+        top = ind.groupby(["gender", "team"]).head(4)
+        g = top.groupby(["gender", "team"]).agg(t4=("mu", lambda x: np.exp(-x).sum()), n_legs=("mu", "size"))
+        g = g[g["n_legs"] == 4].reset_index()
+        g["event"] = rel
+        g["p_raw"] = -np.log(g["t4"])
+        rows.append(g)
+    legs = pd.concat(rows, ignore_index=True)
+    own = prof[prof["event"].isin(list(RELAY_LEGS))][["gender", "event", "team", "mu"]]
+    both = legs.merge(own, on=["gender", "event", "team"])
+    shift = both.assign(d=both["mu"] - both["p_raw"]).groupby(["gender", "event"])["d"].median()
+    legs["p_legs"] = legs["p_raw"] + [shift.get((g, e), np.nan) for g, e in zip(legs["gender"], legs["event"])]
+    return legs[["gender", "event", "team", "p_legs", "n_legs"]]
+
+
+def relay_from_predicted(prof, feats, cal, mode="legs_bw"):
+    """
+    (11) Relay centre from the four runners the model expects to be fastest AT BIG WEST in the open
+    100 / 400: each runner's regular-season level plus their predicted championship shift (the
+    athlete-specific offset where the regression has features, else the event offset). Their predicted
+    times are summed as in relay_legs. mode "legs_bw": use that estimate; "best_legs_bw": average it with
+    the relay's season best. Teams without four runners keep the relay's own profile.
+
+    Args:
+        prof: athlete profiles for one season.
+        feats: athlete_features rows for that season with an offset_i column (or None).
+        cal: calibration dict (event offsets and offset_left for the 100 / 400).
+        mode: "legs_bw" or "best_legs_bw".
+    Returns:
+        prof with relay mu replaced.
+    """
+    ind = prof["event"].isin(list(RELAY_LEGS.values()))
+    tmp = prof.copy()
+    if feats is not None and "offset_i" in feats:
+        oi = tmp.loc[ind, KEYS].merge(feats[KEYS + ["offset_i"]].drop_duplicates(KEYS), on=KEYS, how="left")["offset_i"].to_numpy()
+    else:
+        oi = np.full(int(ind.sum()), np.nan)
+    c = [cal.get((g, e), cal["_pooled"]) for g, e in zip(tmp.loc[ind, "gender"], tmp.loc[ind, "event"])]
+    ev_off = np.array([x.get("offset", 0.0) for x in c])
+    left = np.array([x.get("offset_left", 0.0) for x in c])
+    tmp.loc[ind, "mu"] = tmp.loc[ind, "mu"].to_numpy() + np.where(np.isfinite(oi), oi + left, ev_off)
+    legs = relay_legs(tmp)
+    out = prof.copy()
+    rel = out["event"].isin(list(RELAY_LEGS))
+    m = out.loc[rel, ["gender", "event", "team"]].merge(legs, on=["gender", "event", "team"], how="left")
+    pl = m["p_legs"].to_numpy()
+    own = out.loc[rel, "mu"].to_numpy()
+    if mode == "best_legs_bw":
+        pl = 0.5 * (pl + out.loc[rel, "best"].to_numpy())
+        own = out.loc[rel, "best"].to_numpy()
+    out.loc[rel, "mu"] = np.where(np.isfinite(pl), pl, own)
+    return out
+
+
+def relay_from_legs(prof, mode):
+    """
+    (11) Replace relay centres. mode "best": the relay's season best. mode "legs": the four-runner
+    estimate (relay_legs), falling back to the relay's own marks for teams without four runners.
+    mode "blend": average of the relay's own mean and the four-runner estimate. mode "best_legs": average
+    of the relay's season best and the four-runner estimate (season best alone without four runners).
+    """
+    prof = prof.copy()
+    rel = prof["event"].isin(list(RELAY_LEGS))
+    if mode == "best":
+        r = prof["event"].isin(RELAYS)
+        prof.loc[r, "mu"] = prof.loc[r, "best"]
+        return prof
+    legs = relay_legs(prof)
+    m = prof.loc[rel, ["gender", "event", "team"]].merge(legs, on=["gender", "event", "team"], how="left")
+    pl = m["p_legs"].to_numpy()
+    own = prof.loc[rel, "mu"].to_numpy()
+    if mode == "best_legs":                       # season best and four-runner estimate, averaged
+        own = prof.loc[rel, "best"].to_numpy()
+    new = np.where(np.isfinite(pl), pl if mode == "legs" else 0.5 * (own + pl), own)
+    prof.loc[rel, "mu"] = new
+    return prof
+
+def estimate_half_life(reg_train, bw, seasons, cdates, bw_events, cfg, events=None):
     """
     Recency half-life measured from the training seasons: the value that makes each athlete's weighted
     average land closest to their Big West mark.
@@ -797,6 +944,7 @@ def estimate_half_life(reg_train, bw, seasons, cdates, bw_events, cfg):
         cdates: {season: profile date}.
         bw_events: {gender: set of Big West event codes}.
         cfg: settings (other profile settings are held fixed).
+        events: only use these Big West events (None = all individual events).
     Returns:
         float: estimated half-life in days.
     """
@@ -804,6 +952,8 @@ def estimate_half_life(reg_train, bw, seasons, cdates, bw_events, cfg):
     direct = expand_marks(reg_train, {}, bw_events, cfg)
     direct = direct[direct["kind"] == "direct"]
     act = bw[bw["season"].isin(seasons) & (bw["status"] == "VALID") & ~bw["event"].isin(RELAYS)]
+    if events is not None:
+        act = act[act["event"].isin(events)]
 
     def err(log_h):
         c = {**cfg, "half_life_days": float(np.exp(log_h))}
@@ -819,6 +969,26 @@ def estimate_half_life(reg_train, bw, seasons, cdates, bw_events, cfg):
 
     best = minimize_scalar(err, bounds=(np.log(3), np.log(365)), method="bounded", options={"xatol": 0.02})
     return float(np.exp(best.x))
+
+def estimate_half_life_by_group(reg_train, bw, seasons, cdates, bw_events, cfg, min_results=60):
+    """
+    (10b) Recency half-life estimated separately for each event group (sprint, distance, jumps, throws,
+    multis), with estimate_half_life restricted to that group's events. Groups with fewer than min_results
+    training championship results use the pooled estimate.
+
+    Returns:
+        dict {group: half-life in days, "_all": pooled half-life}.
+    """
+    pooled = estimate_half_life(reg_train, bw, seasons, cdates, bw_events, cfg)
+    out = {"_all": pooled}
+    act = bw[bw["season"].isin(seasons) & (bw["status"] == "VALID") & ~bw["event"].isin(RELAYS)]
+    for grp in ["sprint", "distance", "horizontal", "vertical", "throw", "multi"]:
+        evs = {e for e in act["event"].unique() if event_group(e) == grp}
+        n = int(act["event"].isin(evs).sum())
+        out[grp] = (estimate_half_life(reg_train, bw, seasons, cdates, bw_events, cfg, events=evs)
+                    if n >= min_results else pooled)
+    return out
+
 
 def estimate_k_spread(reg_train, bw, seasons, cdates, bw_events, cfg):
     """
@@ -939,18 +1109,27 @@ def athlete_features(prof, entries, marks_season, as_of, cfg, ref_k=None):
     f["risk"] = f["athlete_id"].map(r["mean"]).fillna(0.0)
     f["n_starts"] = f["athlete_id"].map(r["size"]).fillna(0.0)
     f["group"] = f["event"].map(event_group)
+    if cfg.get("recent_form", False):   # (10b) average of the last two direct marks minus the weighted mean, in %
+        d = marks_season[(marks_season["date"] < pd.Timestamp(as_of)) & (marks_season["kind"] == "direct")
+                         & (marks_season["status"] == "VALID")]
+        last2 = d.sort_values("date").groupby(KEYS).tail(2).groupby(KEYS)["p"].mean().rename("last2").reset_index()
+        f = f.merge(last2, on=KEYS, how="left")
+        f["recent_form"] = (100 * (f["last2"] - f["mu"])).clip(-10, 10).fillna(0.0)
+        f = f.drop(columns="last2")
     return f
 
 
-def _design(f):
+def _design(f, cfg=None):
     """
     Design matrix for the two regressions.
 
     Args:
         f: features from athlete_features (needs group, gender, sb_level, gap, risk, n_starts).
+        cfg: settings (recent_form and gender_interactions add columns; None = neither).
     Returns:
         DataFrame, same rows as f: intercept, one dummy per event group (sprint is the reference), men,
-        sb_level, gap, risk x 10 (so the coefficient is per +0.10), log_starts = log(1 + n_starts).
+        sb_level, gap, risk x 10 (so the coefficient is per +0.10), log_starts = log(1 + n_starts);
+        plus recent_form (10b) and men_x_* slopes for men (10a) when switched on.
     """
     X = pd.DataFrame({"intercept": 1.0}, index=f.index)
     for grp in FEATURE_GROUPS:
@@ -960,6 +1139,12 @@ def _design(f):
     X["gap"] = f["gap"]
     X["risk"] = f["risk"] * 10                       # per +0.10
     X["log_starts"] = np.log1p(f["n_starts"])
+    cfg = cfg or {}
+    if cfg.get("recent_form", False) and "recent_form" in f:         # (10b)
+        X["recent_form"] = f["recent_form"]
+    if cfg.get("gender_interactions", False):                         # (10a) men's own slopes
+        for col in ["sb_level", "gap", "risk", "log_starts"]:
+            X[f"men_x_{col}"] = X["men"] * X[col]
     return X
 
 
@@ -1048,8 +1233,10 @@ def fit_calibration(marks, bw, seasons, cdates, cfg):
     """
     recs, nohist, feats = [], [], []
     hybrid = cfg.get("offset_model", "event") == "regression" or cfg.get("pfail_model", "event") == "logistic"
+    profs = {}
     for s in seasons:
         prof = athlete_profiles(marks[marks["season"] == s], cdates[s], cfg)
+        profs[s] = prof
         act = bw[(bw["season"] == s) & (bw["status"] == "VALID")][KEYS + ["p"]]
         recs.append(act.rename(columns={"p": "p_act"}).merge(prof, on=KEYS).assign(season=s))
         if hybrid:
@@ -1094,11 +1281,23 @@ def fit_calibration(marks, bw, seasons, cdates, cfg):
     pf_all = fails["sum"].sum() / max(fails["size"].sum(), 1)
 
     n0 = cfg["cal_prior_n"]
+    # (10g) part of the championship spread is shared by everyone in the race (wind, heat, a slow tactical
+    # pace). It moves marks but not places, so for the ranking noise measure the spread within each race.
+    within = cfg.get("scale_within_race", False)
+    if within:
+        race = ok.groupby(["season", "gender", "event"])["res"]
+        nr = race.transform("size")
+        ok["z_w"] = (ok["res"] - race.transform("mean")) / ok["sd"] * np.sqrt(nr / (nr - 1).clip(lower=1))
+        okw = ok[nr >= 4]
+        scale_all = _mad_sd(okw["z_w"])
     cal = {}
     for (g, e), grp in ok.groupby(["gender", "event"]):
         n = len(grp)
         off = (n * grp["res"].mean() + n0 * off_all) / (n + n0)
         sc = _mad_sd((grp["res"] - off) / grp["sd"]) if n > 4 else scale_all
+        if within:
+            gw = okw[(okw["gender"] == g) & (okw["event"] == e)]["z_w"]
+            sc = _mad_sd(gw) if len(gw) > 4 else scale_all
         sc = (n * sc + n0 * scale_all) / (n + n0)
         nf, nt = fails.loc[(g, e)] if (g, e) in fails.index else (0, 0)
         pf = (nf + n0 * pf_all) / (nt + n0)
@@ -1111,12 +1310,26 @@ def fit_calibration(marks, bw, seasons, cdates, cfg):
 
     cal["_pooled"]["team_sd"] = estimate_team_sd(ok, cfg)
 
+    # (10e) share of championship failures that were blowups (finished, but far back), shrunk to the pooled share
+    if cfg.get("fail_ranked", False):
+        nb = m[m["blowup"]].groupby(["gender", "event"]).size()
+        bs_all = float(nb.sum() / max(fails["sum"].sum(), 1))
+        for key in [k for k in cal if k != "_pooled"]:
+            nf = fails.loc[key, "sum"] if key in fails.index else 0
+            cal[key]["blow_share"] = float((nb.get(key, 0) + n0 * bs_all) / (nf + n0))
+        cal["_pooled"]["blow_share"] = bs_all
+    # (10e) bar heights and countback ties in HJ / PV
+    if cfg.get("bar_ties", False):
+        for key, st in estimate_bar_steps(bw[bw["season"].isin(seasons)]).items():
+            if key in cal:
+                cal[key].update(st)
+
     if hybrid and feats:
         F = pd.concat(feats, ignore_index=True)
         # (a) athlete-specific offset: regress the championship residual on the features
         if cfg.get("offset_model", "event") == "regression":
             d = ok[~ok["event"].isin(RELAYS)][["season"] + KEYS + ["res"]].merge(F, on=["season"] + KEYS)
-            X = _design(d).to_numpy()
+            X = _design(d, cfg).to_numpy()
             beta = _ridge_ols(X, d["res"].to_numpy(), cfg.get("ridge", 1.0))
             d["res_left"] = d["res"] - X @ beta
             # what's left per event, shrunk toward 0 like the plain offsets
@@ -1124,7 +1337,25 @@ def fit_calibration(marks, bw, seasons, cdates, cfg):
             for (g, e), r in left.iterrows():
                 if (g, e) in cal:
                     cal[(g, e)]["offset_left"] = float(r["mean"] * r["size"] / (r["size"] + n0))
-            cal["_pooled"]["offset_beta"] = pd.Series(beta, index=_design(d).columns)
+            # (10g) re-measure the spread scale around the athlete-specific offset the simulation uses
+            if cfg.get("scale_after_offset", False):
+                dd = d.merge(ok[["season"] + KEYS + ["sd"]], on=["season"] + KEYS)
+                dd["z_left"] = dd["res_left"] / dd["sd"]
+                sc_all = _mad_sd(dd["z_left"] - dd["z_left"].median())
+                for (g, e), grp in dd.groupby(["gender", "event"]):
+                    if (g, e) not in cal:
+                        continue
+                    n = len(grp)
+                    z = (grp["res_left"] - cal[(g, e)].get("offset_left", 0.0)) / grp["sd"]
+                    sc = _mad_sd(z) if n > 4 else sc_all
+                    sc = (n * sc + n0 * sc_all) / (n + n0)
+                    cal[(g, e)]["scale"] = float(np.clip(sc, 0.5, 3.0))
+            if cfg.get("team_offset", False):               # (10h) persistent team effect
+                dt = d.merge(ok[["season"] + KEYS + ["team"]], on=["season"] + KEYS)
+                ol = pd.Series({k: v.get("offset_left", 0.0) for k, v in cal.items() if k != "_pooled"})
+                dt["y"] = dt["res_left"] - [ol.get((g, e), 0.0) for g, e in zip(dt["gender"], dt["event"])]
+                cal["_pooled"]["team_off"], cal["_pooled"]["team_off_info"] = estimate_team_offsets(dt)
+            cal["_pooled"]["offset_beta"] = pd.Series(beta, index=_design(d, cfg).columns)
             cal["_pooled"]["offset_n"] = len(d)
         # (b) athlete-specific failure chance: logistic on the features
         if cfg.get("pfail_model", "event") == "logistic":
@@ -1135,10 +1366,140 @@ def fit_calibration(marks, bw, seasons, cdates, cfg):
             blown = m[m["blowup"]][["season"] + KEYS].assign(blown=True)
             ent = ent.merge(blown, on=["season"] + KEYS, how="left")
             y = (ent["status"].isin(no_score) | ent["blown"].fillna(False).astype(bool)).astype(float).to_numpy()
-            beta = _ridge_logit(_design(ent).to_numpy(), y, cfg.get("ridge", 1.0))
-            cal["_pooled"]["pfail_beta"] = pd.Series(beta, index=_design(ent).columns)
+            beta = _ridge_logit(_design(ent, cfg).to_numpy(), y, cfg.get("ridge", 1.0))
+            cal["_pooled"]["pfail_beta"] = pd.Series(beta, index=_design(ent, cfg).columns)
             cal["_pooled"]["pfail_n"] = len(ent)
+        # (11) relays from the runners' predicted Big West times: rebuild the training relays the same way
+        # and re-measure the relay offsets / spreads on them
+        if str(cfg.get("relay_mu", "mean")).endswith("legs_bw") and "offset_beta" in cal["_pooled"]:
+            beta = cal["_pooled"]["offset_beta"]
+            F = F.copy()
+            F["offset_i"] = _design(F, cfg)[beta.index].to_numpy() @ beta.to_numpy()
+            rr = []
+            for s in seasons:
+                p2 = relay_from_predicted(profs[s], F[F["season"] == s], cal, cfg["relay_mu"])
+                act = bw[(bw["season"] == s) & (bw["status"] == "VALID") & bw["event"].isin(list(RELAY_LEGS))]
+                rr.append(act[KEYS + ["p"]].rename(columns={"p": "p_act"}).merge(p2, on=KEYS))
+            r = pd.concat(rr, ignore_index=True)
+            r["res"] = r["p_act"] - r["mu"]
+            for (g, e), grp in r.groupby(["gender", "event"]):
+                if (g, e) not in cal:
+                    continue
+                z = (grp["res"] - grp["res"].median()) / grp["sd"]
+                sc0 = _mad_sd(z)
+                if np.isfinite(sc0) and sc0 > 0:
+                    grp = grp[~(z < -cfg["blowup_z"] * sc0)]
+                n = len(grp)
+                off = (n * grp["res"].mean() + n0 * off_all) / (n + n0)
+                sc = _mad_sd((grp["res"] - off) / grp["sd"]) if n > 4 else scale_all
+                sc = (n * sc + n0 * scale_all) / (n + n0)
+                cal[(g, e)].update(offset=float(off), scale=float(np.clip(sc, 0.5, 3.0)))
+
+    # (10c) Student-t noise: degrees of freedom from the training residuals (blowups excluded)
+    nd = cfg.get("noise_df", 0)
+    if nd == "auto":
+        off_ev = np.array([cal.get((g, e), cal["_pooled"])["offset"] for g, e in zip(ok["gender"], ok["event"])])
+        sc_ev = np.array([cal.get((g, e), cal["_pooled"])["scale"] for g, e in zip(ok["gender"], ok["event"])])
+        nd = estimate_noise_df(((ok["res"] - off_ev) / (ok["sd"] * sc_ev)).to_numpy())
+    if nd:
+        for k in cal:
+            cal[k]["noise_df"] = float(nd)
     return cal
+
+
+def estimate_noise_df(z):
+    """
+    (10c) Degrees of freedom of a Student-t fitted by maximum likelihood to standardised championship
+    residuals (centre fixed at 0, scale free). Small df = heavy tails; large df = close to normal.
+
+    Args:
+        z: standardised residuals (blowups already removed).
+    Returns:
+        float between 2.5 and 100.
+    """
+    from scipy.stats import t as student_t
+    z = np.asarray(z, dtype=float)
+    z = z[np.isfinite(z)]
+    df, _, _ = student_t.fit(z, floc=0)
+    return float(np.clip(df, 2.5, 100))
+
+
+def estimate_team_offsets(d):
+    """
+    (10h) Persistent team effect: how much a program's athletes beat (+) or miss (-) their individual
+    predictions at Big West, season after season. Estimated per gender from the training championships
+    and shrunk by how repeatable it is (empirical Bayes), so a team with one unusual year gets ~0.
+
+    Args:
+        d: one row per training championship result: season, gender, team, y (the residual on the p
+           scale left over after the athlete-specific offset).
+    Returns:
+        (offsets, info): offsets = {(gender, team): shift on the p scale}; info = {gender: {tau (sd of
+        the persistent team effect), n_teams}}.
+    """
+    out, info = {}, {}
+    ts = d.groupby(["gender", "team", "season"])["y"].agg(["mean", "size"]).reset_index()
+    ts = ts[ts["size"] >= 5]
+    for g, tg in ts.groupby("gender"):
+        piv = tg.pivot(index="team", columns="season", values="mean")
+        c = piv - piv.mean()                               # centre each season across teams
+        S = c.notna().sum(axis=1)
+        tm = c.mean(axis=1)
+        z = c.fillna(0.0)
+        # persistent variance = average product of the same team's effect in two different seasons
+        cross = ((z.sum(axis=1) ** 2 - (z ** 2).sum(axis=1)) / (S * (S - 1)))[S > 1]
+        tau2 = max(float(cross.mean()), 0.0) if len(cross) else 0.0
+        within = ((c.sub(tm, axis=0) ** 2).sum(axis=1) / (S - 1))[S > 1]
+        v_w = float(within.mean()) if len(within) else np.inf
+        info[g] = dict(tau=float(np.sqrt(tau2)), n_teams=int((S > 0).sum()))
+        for t in piv.index:
+            if S[t] > 0 and tau2 > 0:
+                out[(g, t)] = float(tm[t] * tau2 / (tau2 + v_w / S[t]))
+    return out, info
+
+
+def estimate_multi_sd(reg_train):
+    """
+    (10e) Race-to-race spread of multi-event scores, pooled over the training seasons. Each season has only
+    a handful of athletes with 2+ multis, so the per-season event spread used in athlete_profiles swings
+    from about 1% to 5%; pooling the seasons gives a stable minimum.
+
+    Args:
+        reg_train: regular-season marks from the training seasons.
+    Returns:
+        dict {(gender, event): median within-athlete sd of p} for Dec / Hep (athletes with 2+ valid scores
+        in a season).
+    """
+    v = reg_train[(reg_train["status"] == "VALID") & reg_train["event"].isin(MULTIS)]
+    s = v.groupby(["gender", "event", "season", "athlete_id"])["p"].agg(["std", "size"])
+    s = s[s["size"] >= 2]
+    return {k: float(x) for k, x in s.groupby(level=["gender", "event"])["std"].median().items()}
+
+
+def estimate_bar_steps(bw_train):
+    """
+    (10e) Bar progression and tie behaviour in HJ / PV at Big West, from the training championships.
+
+    Args:
+        bw_train: Big West results from the training seasons.
+    Returns:
+        dict {(gender, event): {bar_step: median gap (m) between consecutive heights cleared by the top 8,
+        tie_split: share of same-height groups in the top 8 that stayed tied after countback (split points)}}.
+    """
+    out = {}
+    v = bw_train[(bw_train["status"] == "VALID") & bw_train["event"].isin(["HJ", "PV"])]
+    for (g, e), d in v.groupby(["gender", "event"]):
+        top = d[d["place"] <= 8]
+        gaps = top.groupby("season")["value"].apply(lambda x: np.diff(np.sort(x.unique())))
+        gaps = np.concatenate(gaps.to_numpy()) if len(gaps) else np.array([])
+        gaps = gaps[gaps > 0.005]
+        grp = top.groupby(["season", "value"])["place"].agg(["size", "nunique"])
+        grp = grp[grp["size"] >= 2]
+        if len(gaps) == 0 or len(grp) == 0:
+            continue
+        out[(g, e)] = dict(bar_step=float(np.median(gaps)),
+                           tie_split=float((grp["nunique"] < grp["size"]).mean()))
+    return out
 
 
 def estimate_team_sd(ok, cfg):
@@ -1291,7 +1652,11 @@ def simulate_field(f, cal, pts, n_sims, rng, p_fail_source="athlete", day_form=N
     Monte Carlo one event: draw every athlete's performance n_sims times and turn places into points.
 
     Each athlete's centre = mu + athlete-specific offset (offset_i + offset_left) or the event offset;
-    spread = sd x the event's scale. Failures (probability p_fail_i or p_fail) score 0. With day form,
+    spread = sd x the event's scale. Noise is normal, or Student-t with cal["noise_df"] (10c). Failures
+    (probability p_fail_i or p_fail) score 0, except that with cal["blow_share"] (10e) that share of failures
+    are blowups: ranked last and scored by place. With cal["bar_step"] (10e, HJ/PV) marks are floored to
+    bar heights and athletes on the same height share their places' points with probability
+    cal["tie_split"]. With day form,
     an athlete's noise is shared across their events: sqrt(rho) * day_form + sqrt(1 - rho) * own.
     With two_rounds, a prelim and a final are drawn (sharing round_rho of the noise), the top len(pts)
     from the prelim advance, and only the final decides their places.
@@ -1336,33 +1701,40 @@ def simulate_field(f, cal, pts, n_sims, rng, p_fail_source="athlete", day_form=N
         pi = f["p_fail_i"].to_numpy(dtype=float)
         f = f.assign(p_fail=np.where(np.isfinite(pi), pi, f["p_fail"].to_numpy(dtype=float)))
     sd = f["sd"].to_numpy() * cal["scale"]
-    eps = rng.standard_normal((n_sims, n))
+    ndf = cal.get("noise_df")
+    eps = _noise(rng, (n_sims, n), ndf)
     if day_form is not None and rho > 0:
         shared = np.column_stack([day_form(a) for a in f["athlete_id"]])
         eps = np.sqrt(rho) * shared + np.sqrt(1 - rho) * eps
     if team_form is not None and team_sd > 0:   # shared team day: same draw for every athlete on a team
         mu = mu + team_sd * np.column_stack([team_form(t) for t in f["team"]])
     fail = rng.random((n_sims, n)) < f["p_fail"].to_numpy()
+    bs = cal.get("blow_share", 0.0)
+    blow = fail & (rng.random((n_sims, n)) < bs) if bs else np.zeros_like(fail)   # (10e) finishes, but last
+    LAST = -1e3                                                                     # below any real mark
     k_pts = len(pts)
     if two_rounds and n > k_pts:
         # Prelim and final each get their own draw; round_rho of the noise is shared (the athlete's form
         # that day), the rest is round-specific. Each round keeps the same overall spread.
         a, b = np.sqrt(round_rho), np.sqrt(1 - round_rho)
-        p1 = mu + sd * (a * eps + b * rng.standard_normal((n_sims, n)))
-        p2 = mu + sd * (a * eps + b * rng.standard_normal((n_sims, n)))
+        p1 = mu + sd * (a * eps + b * _noise(rng, (n_sims, n), ndf))
+        p2 = mu + sd * (a * eps + b * _noise(rng, (n_sims, n), ndf))
         in_final_fail = rng.random((n_sims, n)) < 0.5            # a failure happens in either round
         fail1, fail2 = fail & ~in_final_fail, fail & in_final_fail
         p1[fail1] = -np.inf
+        p1[fail1 & blow] = LAST
         # top k_pts prelim marks advance
         rank1 = np.argsort(np.argsort(-p1, axis=1), axis=1)
         finalist = rank1 < k_pts
         p2[fail2] = -np.inf
+        p2[fail2 & blow] = LAST
         # finalists are ranked by the final, everyone else by the prelim, below all finalists
         perf = np.where(finalist, 1e6 + p2, p1)
         fail = fail1 | (fail2 & finalist)
     else:
         perf = mu + sd * eps
         perf[fail] = -np.inf
+        perf[blow] = LAST
     order = np.argsort(-perf, axis=1)
     places = np.empty_like(order)
     places[np.arange(n_sims)[:, None], order] = np.arange(1, n + 1)
@@ -1370,8 +1742,33 @@ def simulate_field(f, cal, pts, n_sims, rng, p_fail_source="athlete", day_form=N
     k = min(n, len(pts))
     table[1:k + 1] = pts[:k]
     out = table[places]
-    out[fail] = 0
+    step = cal.get("bar_step")
+    if step and not (two_rounds and n > k_pts):     # (10e) bar heights: same height -> may share points
+        h = np.where(np.isfinite(perf), np.floor(np.exp(np.clip(perf, -50, 50)) / step + 1e-9), -1.0)
+        hs = np.take_along_axis(h, order, 1)            # heights in finishing order
+        ps = np.take_along_axis(out, order, 1)          # points in finishing order
+        new = np.ones_like(hs, dtype=bool)
+        new[:, 1:] = hs[:, 1:] != hs[:, :-1]
+        gid = (np.cumsum(new, 1) - 1) + (np.arange(n_sims) * n)[:, None]
+        cnt = np.bincount(gid.ravel(), minlength=n_sims * n)
+        avg = np.bincount(gid.ravel(), ps.ravel(), minlength=n_sims * n) / np.maximum(cnt, 1)
+        stay = rng.random(n_sims * n) < cal.get("tie_split", 1.0)
+        tied = stay[gid] & (cnt[gid] > 1) & (hs >= 0)
+        ps = np.where(tied, avg[gid], ps)
+        np.put_along_axis(out, order, ps, 1)
+    out[fail & ~blow] = 0
     return out
+
+
+def _noise(rng, size, df=None):
+    """
+    Standard-normal draws, or (10c) Student-t draws with df degrees of freedom rescaled to the same robust
+    spread (equal interquartile range), so the event scale keeps its meaning and only the tails change.
+    """
+    if not df:
+        return rng.standard_normal(size)
+    from scipy.stats import t as student_t
+    return rng.standard_t(df, size) * (0.6745 / student_t.ppf(0.75, df))
 
 
 def crps(samples, y):
@@ -1561,7 +1958,7 @@ def predict_features(prof, entries, marks_season, as_of, pooled, cfg, ref_k=None
     feats = athlete_features(prof, entries, marks_season, as_of, cfg, ref_k)
     if feats.empty:
         return None
-    X = _design(feats)
+    X = _design(feats, cfg)
     if "offset_beta" in pooled:
         feats["offset_i"] = X[pooled["offset_beta"].index].to_numpy() @ pooled["offset_beta"].to_numpy()
     if "pfail_beta" in pooled:
@@ -1609,7 +2006,8 @@ def round_settings(cfg, event):
 
 
 # ============================================================== one fold
-def run_fold(reg, bw, cal_seasons, test, cdates, bw_events, cfg, verbose=True):
+def run_fold(reg, bw, cal_seasons, test, cdates, bw_events, cfg, verbose=True, keep_samples=False,
+             prof_transform=None):
     """
     Fit the model on the training seasons and predict and score one test season.
 
@@ -1626,6 +2024,9 @@ def run_fold(reg, bw, cal_seasons, test, cdates, bw_events, cfg, verbose=True):
         bw_events: {gender: set of Big West event codes}.
         cfg: settings (CONFIG or a modified copy).
         verbose: print a short summary of the fold.
+        keep_samples: also return every team's simulated totals (for the noise-floor check, step 9b).
+        prof_transform: function (profiles, rng) -> profiles applied to the test season's profiles before
+            simulating (for the permutation check, step 9c). None in normal use.
     Returns:
         dict:
           summary     one row of metrics: mark_mae_pct, mark_bias_pct, brier_model, brier_plist,
@@ -1636,9 +2037,15 @@ def run_fold(reg, bw, cal_seasons, test, cdates, bw_events, cfg, verbose=True):
           team_event  one row per team-event: exp_pts, med, lo80, hi80, actual, crps, plist_pts
           totals      one row per team: exp_pts, med, lo80, hi80, p_win, actual, crps, plist_pts
           ctx         everything the coaching tools need (profiles, calibration, entries, features, cfg)
+          samples     (only with keep_samples) {gender: {team: array of n_sims simulated totals}}
     """
     rng = np.random.default_rng(cfg["seed"] + test)
 
+    if cfg.get("half_life_days") == "auto_group":     # (10b) one half-life per event group
+        cfg = {**cfg, "half_life_days": estimate_half_life_by_group(reg[reg["season"].isin(cal_seasons)], bw,
+                                                                    cal_seasons, cdates, bw_events, cfg)}
+    if cfg.get("multi_sd_floor") == "auto":           # (10e) pooled multi spread from the training seasons
+        cfg = {**cfg, "multi_sd_floor": estimate_multi_sd(reg[reg["season"].isin(cal_seasons)])}
     if cfg.get("half_life_days") == "auto":           # measure recency weighting from the training seasons
         cfg = {**cfg, "half_life_days": estimate_half_life(reg[reg["season"].isin(cal_seasons)], bw, cal_seasons,
                                                            cdates, bw_events, cfg)}
@@ -1657,6 +2064,8 @@ def run_fold(reg, bw, cal_seasons, test, cdates, bw_events, cfg, verbose=True):
     cal = fit_calibration(marks, bw, cal_seasons, cdates, cfg)
     pts_tab = points_tables(bw[bw["season"].isin(cal_seasons)])
     prof = athlete_profiles(marks[marks["season"] == test], cdates[test], cfg)
+    if prof_transform is not None:
+        prof = prof_transform(prof, np.random.default_rng(cfg["seed"] + test + 999))
     prof_prev = previous_profiles(marks, bw, test - 1, cdates, cfg)
     if cfg.get("prior_improve", "off") != "off":
         prof_prev = apply_year_change(prof_prev, fit_year_change(reg[reg["season"].isin(cal_seasons)],
@@ -1674,6 +2083,8 @@ def run_fold(reg, bw, cal_seasons, test, cdates, bw_events, cfg, verbose=True):
     team_actual = bw_test.groupby(["gender", "event", "team"])["points"].sum().to_dict()
     marks_test = marks[marks["season"] == test]
     feats = predict_features(prof, entries, marks_test, cdates[test], cal["_pooled"], cfg, ref_k)
+    if str(cfg.get("relay_mu", "mean")).endswith("legs_bw") and feats is not None:   # (11)
+        prof = relay_from_predicted(prof, feats, cal, cfg["relay_mu"])
     mark_rows = []
 
     # shared day form for athletes entered in 2+ individual events (same draws across their events)
@@ -1703,6 +2114,9 @@ def run_fold(reg, bw, cal_seasons, test, cdates, bw_events, cfg, verbose=True):
             continue
         c = cal.get((g, e), cal["_pooled"])
         f = attach_features(f, feats, g, e)
+        team_off = cal["_pooled"].get("team_off")
+        if team_off and e not in RELAYS:                    # (10h) shift every athlete by their team's effect
+            f["mu"] = f["mu"] + f["team"].map(lambda t: team_off.get((g, t), 0.0)).to_numpy()
         pts = pts_tab["relay" if e in RELAYS else "ind"]
         # predicted centre (log scale) for the mark-level metric
         if e not in RELAYS:
@@ -1830,7 +2244,10 @@ def run_fold(reg, bw, cal_seasons, test, cdates, bw_events, cfg, verbose=True):
 
     ctx = dict(prof=prof, prof_prev=prof_prev, impute_q=impute_q, cal=cal, pts=pts_tab, entries=entries, cfg=cfg,
                season=test, feats=feats, marks_season=marks_test, as_of=cdates[test], ref_k=ref_k)
-    return dict(summary=summ, athletes=ath, team_event=te, totals=tot, ctx=ctx)
+    out = dict(summary=summ, athletes=ath, team_event=te, totals=tot, ctx=ctx)
+    if keep_samples:
+        out["samples"] = totals
+    return out
 
 
 # ============================================================== coaching tools
